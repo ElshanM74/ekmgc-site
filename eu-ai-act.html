@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="de" data-lang="de" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EU AI Act Readiness — EKM Global Consulting</title>
+  <meta name="description" content="EU AI Act Compliance für DACH-Unternehmen. Readiness Assessment, Automation Sprint, Strategic Advisory. Unabhängig, evidenzbasiert, anbieterneutral — vor dem Inkrafttreten am 02.08.2026.">
+  <meta property="og:title" content="EU AI Act Readiness — EKM Global Consulting">
+  <meta property="og:description" content="Drei klare Pakete: Readiness Assessment, Automation Sprint, Strategic Advisory. Starten Sie mit dem kostenlosen 10-Minuten Quick Scan.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ekmgc.de/eu-ai-act.html">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M16 2L4 9v14l12 7 12-7V9L16 2z' fill='none' stroke='%2300d4aa' stroke-width='2'/%3E%3Cpath d='M16 8l-6 3.5v7L16 22l6-3.5v-7L16 8z' fill='%2300d4aa' opacity='0.3'/%3E%3Ccircle cx='16' cy='15' r='3' fill='%2300d4aa'/%3E%3C/svg%3E">
+
+  <!-- Fonts -->
+  <link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@400,500,700,800&f[]=satoshi@300,400,500,700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./base.css">
+  <link rel="stylesheet" href="./style.css">
+
+  <style>
+    /* Page-local styles — merge with style.css later if promoted. */
+    .aia-hero {
+      padding: calc(var(--space-10) + 60px) 0 var(--space-8);
+      background: linear-gradient(180deg, var(--color-surface-offset) 0%, var(--color-bg) 100%);
+      border-bottom: 1px solid var(--color-border);
+    }
+    .aia-hero__eyebrow {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--color-accent);
+      margin-bottom: var(--space-3);
+    }
+    .aia-hero__title {
+      font-family: var(--font-display, 'Cabinet Grotesk', sans-serif);
+      font-size: clamp(32px, 5vw, 56px);
+      font-weight: 800;
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+      margin: 0 0 var(--space-4);
+      max-width: 900px;
+    }
+    .aia-hero__subtitle {
+      font-size: clamp(16px, 1.8vw, 19px);
+      max-width: 720px;
+      color: var(--color-text-muted);
+      margin: 0 0 var(--space-5);
+    }
+    .aia-hero__facts {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: var(--space-3);
+      margin: var(--space-6) 0;
+      max-width: 820px;
+    }
+    .aia-fact {
+      padding: var(--space-3);
+      border-left: 3px solid var(--color-accent);
+      background: var(--color-surface-offset);
+      border-radius: 0 var(--radius-sm, 6px) var(--radius-sm, 6px) 0;
+    }
+    .aia-fact__num {
+      display: block;
+      font-family: var(--font-display, 'Cabinet Grotesk', sans-serif);
+      font-size: 28px;
+      font-weight: 800;
+      color: var(--color-accent);
+      line-height: 1;
+    }
+    .aia-fact__label {
+      font-size: 12px;
+      color: var(--color-text-muted);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-top: 4px;
+      display: block;
+    }
+
+    .aia-scan {
+      margin: var(--space-6) 0;
+      padding: var(--space-5);
+      border: 1px solid var(--color-accent);
+      border-radius: var(--radius-md, 10px);
+      background: linear-gradient(135deg, rgba(0, 212, 170, 0.08), transparent);
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: var(--space-4);
+      align-items: center;
+    }
+    @media (max-width: 640px) {
+      .aia-scan { grid-template-columns: 1fr; }
+    }
+    .aia-scan__label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--color-accent);
+    }
+    .aia-scan__title {
+      font-family: var(--font-display, 'Cabinet Grotesk', sans-serif);
+      font-size: 24px;
+      font-weight: 700;
+      margin: var(--space-2) 0 var(--space-1);
+    }
+    .aia-scan__desc {
+      color: var(--color-text-muted);
+      margin: 0;
+    }
+
+    .aia-packages {
+      padding: var(--space-9) 0;
+    }
+    .aia-packages__grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: var(--space-5);
+      margin-top: var(--space-6);
+    }
+    .aia-pkg {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      padding: var(--space-5);
+      background: var(--color-surface-offset);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md, 10px);
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+    .aia-pkg:hover {
+      transform: translateY(-3px);
+      border-color: var(--color-accent);
+    }
+    .aia-pkg--featured {
+      border-color: var(--color-accent);
+      box-shadow: 0 0 0 1px var(--color-accent);
+    }
+    .aia-pkg__badge {
+      position: absolute;
+      top: -12px;
+      left: var(--space-4);
+      padding: 4px 12px;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      border-radius: 100px;
+      background: var(--color-accent);
+      color: var(--color-bg);
+    }
+    .aia-pkg__title {
+      font-family: var(--font-display, 'Cabinet Grotesk', sans-serif);
+      font-size: 22px;
+      font-weight: 800;
+      margin: 0 0 var(--space-1);
+      line-height: 1.2;
+    }
+    .aia-pkg__price {
+      font-family: var(--font-display, 'Cabinet Grotesk', sans-serif);
+      font-size: 28px;
+      font-weight: 800;
+      color: var(--color-accent);
+      margin: var(--space-2) 0 0;
+    }
+    .aia-pkg__price-note {
+      font-size: 13px;
+      color: var(--color-text-muted);
+      margin: 0 0 var(--space-3);
+    }
+    .aia-pkg__duration {
+      display: inline-block;
+      padding: 3px 10px;
+      font-size: 12px;
+      font-weight: 500;
+      background: var(--color-bg);
+      border: 1px solid var(--color-border);
+      border-radius: 100px;
+      margin-bottom: var(--space-4);
+    }
+    .aia-pkg__features {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 var(--space-5);
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-2);
+      flex-grow: 1;
+    }
+    .aia-pkg__features li {
+      position: relative;
+      padding-left: 24px;
+      font-size: 14px;
+      line-height: 1.5;
+      color: var(--color-text);
+    }
+    .aia-pkg__features li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 6px;
+      width: 14px;
+      height: 14px;
+      background: var(--color-accent);
+      mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>');
+      -webkit-mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>');
+      mask-size: contain;
+      -webkit-mask-size: contain;
+      mask-repeat: no-repeat;
+      -webkit-mask-repeat: no-repeat;
+    }
+    .aia-pkg__subtiers {
+      display: grid;
+      gap: var(--space-2);
+      margin: 0 0 var(--space-5);
+      list-style: none;
+      padding: 0;
+    }
+    .aia-pkg__subtier {
+      padding: var(--space-2) var(--space-3);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-sm, 6px);
+      font-size: 13px;
+    }
+    .aia-pkg__subtier-name {
+      font-weight: 700;
+      color: var(--color-accent);
+      margin-right: 6px;
+    }
+    .aia-pkg__cta {
+      margin-top: auto;
+    }
+
+    .aia-nav-crumb {
+      font-size: 13px;
+      color: var(--color-text-muted);
+      margin-bottom: var(--space-3);
+    }
+    .aia-nav-crumb a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
+    .aia-nav-crumb a:hover { color: var(--color-accent); }
+  </style>
+</head>
+<body>
+  <!-- ============ HEADER ============ -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="./" class="header__logo" aria-label="EKM Global Consulting">
+        <img src="./assets/logo-dark.jpg" alt="EKM Global Consulting — think smarter" class="header__logo-img" id="siteLogo">
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Main navigation">
+        <ul class="nav__list" role="list">
+          <li><a href="./#services" class="nav__link" lang="de">Leistungen</a><a href="./#services" class="nav__link" lang="en">Services</a></li>
+          <li><a href="./eu-ai-act.html" class="nav__link nav__link--active" lang="de">EU AI Act</a><a href="./eu-ai-act.html" class="nav__link nav__link--active" lang="en">EU AI Act</a></li>
+          <li><a href="./#approach" class="nav__link" lang="de">Methodik</a><a href="./#approach" class="nav__link" lang="en">Approach</a></li>
+          <li><a href="./#about" class="nav__link" lang="de">Über uns</a><a href="./#about" class="nav__link" lang="en">About</a></li>
+          <li><a href="./#contact" class="nav__link" lang="de">Kontakt</a><a href="./#contact" class="nav__link" lang="en">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header__controls">
+        <button class="toggle-btn lang-toggle" id="langToggle" aria-label="Switch language">EN</button>
+        <button class="toggle-btn" id="themeToggle" data-theme-toggle aria-label="Switch theme">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+        </button>
+        <button class="menu-toggle" id="menuToggle" aria-label="Menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ HERO ============ -->
+  <section class="aia-hero">
+    <div class="container">
+      <div class="aia-nav-crumb">
+        <a href="./" lang="de">Startseite</a><a href="./" lang="en">Home</a> ·
+        <span lang="de">EU AI Act Readiness</span><span lang="en">EU AI Act Readiness</span>
+      </div>
+
+      <div class="aia-hero__eyebrow" lang="de">EU AI Act · Verordnung (EU) 2024/1689</div>
+      <div class="aia-hero__eyebrow" lang="en">EU AI Act · Regulation (EU) 2024/1689</div>
+
+      <h1 class="aia-hero__title" lang="de">
+        Drei Pakete für Ihre <span class="highlight">EU-KI-Verordnung</span> Compliance.
+      </h1>
+      <h1 class="aia-hero__title" lang="en">
+        Three packages for your <span class="highlight">EU AI Act</span> compliance.
+      </h1>
+
+      <p class="aia-hero__subtitle" lang="de">
+        Unabhängig, anbieterneutral, evidenzbasiert. Vom kostenlosen 10-Minuten Quick Scan bis zum vollen Advisory Mandat — mit klaren Deliverables vor dem Inkrafttreten am 02.08.2026.
+      </p>
+      <p class="aia-hero__subtitle" lang="en">
+        Independent, vendor-neutral, evidence-based. From a free 10-minute Quick Scan to a full advisory mandate — with clear deliverables before enforcement on 02.08.2026.
+      </p>
+
+      <div class="aia-hero__facts">
+        <div class="aia-fact">
+          <span class="aia-fact__num" id="daysLeft">—</span>
+          <span class="aia-fact__label" lang="de">Tage bis Inkrafttreten</span>
+          <span class="aia-fact__label" lang="en">days to enforcement</span>
+        </div>
+        <div class="aia-fact">
+          <span class="aia-fact__num">€35M</span>
+          <span class="aia-fact__label" lang="de">max. Bußgeld oder 7 % Umsatz</span>
+          <span class="aia-fact__label" lang="en">max fine or 7% turnover</span>
+        </div>
+        <div class="aia-fact">
+          <span class="aia-fact__num">8</span>
+          <span class="aia-fact__label" lang="de">Anhang-III-Kategorien</span>
+          <span class="aia-fact__label" lang="en">Annex III categories</span>
+        </div>
+        <div class="aia-fact">
+          <span class="aia-fact__num">5</span>
+          <span class="aia-fact__label" lang="de">Artikel als Ihre Kernpflichten</span>
+          <span class="aia-fact__label" lang="en">articles are your core duties</span>
+        </div>
+      </div>
+
+      <!-- Free Quick Scan entry -->
+      <div class="aia-scan">
+        <div>
+          <div class="aia-scan__label" lang="de">KOSTENLOSER EINSTIEG</div>
+          <div class="aia-scan__label" lang="en">FREE ENTRY POINT</div>
+          <h2 class="aia-scan__title" lang="de">10-Minuten Quick Scan</h2>
+          <h2 class="aia-scan__title" lang="en">10-Minute Quick Scan</h2>
+          <p class="aia-scan__desc" lang="de">
+            Fünfzehn Fragen. Personalisierte Risikostufe, Pflichtenliste, 30-Tage-Plan und PDF — direkt im Browser, ohne Anmeldung.
+          </p>
+          <p class="aia-scan__desc" lang="en">
+            Fifteen questions. Personalised risk tier, obligations list, 30-day plan and PDF — in your browser, no sign-up.
+          </p>
+        </div>
+        <div>
+          <a href="https://app.ekmgc.de/" class="btn btn--primary" target="_blank" rel="noopener">
+            <span lang="de">Quick Scan starten</span>
+            <span lang="en">Start Quick Scan</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PACKAGES ============ -->
+  <section class="aia-packages">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-label" lang="de">Bezahlte Leistungen</span>
+        <span class="section-label" lang="en">Paid engagements</span>
+        <h2 class="section-title" lang="de">Drei Wege, in Compliance zu kommen</h2>
+        <h2 class="section-title" lang="en">Three paths into compliance</h2>
+      </div>
+
+      <div class="aia-packages__grid">
+
+        <!-- Package 1 — Readiness Assessment (FEATURED) -->
+        <article class="aia-pkg aia-pkg--featured fade-in">
+          <span class="aia-pkg__badge" lang="de">DRINGENDSTE</span>
+          <span class="aia-pkg__badge" lang="en">MOST URGENT</span>
+
+          <h3 class="aia-pkg__title" lang="de">EU AI Act Bereitschaftsbewertung</h3>
+          <h3 class="aia-pkg__title" lang="en">EU AI Act Readiness Assessment</h3>
+
+          <div class="aia-pkg__price">EUR 3.000 – 15.000</div>
+          <p class="aia-pkg__price-note" lang="de">einmalig, je nach Umfang</p>
+          <p class="aia-pkg__price-note" lang="en">one-time, scope-based</p>
+
+          <span class="aia-pkg__duration" lang="de">2–3 Wochen</span>
+          <span class="aia-pkg__duration" lang="en">2–3 weeks</span>
+
+          <ul class="aia-pkg__features">
+            <li lang="de">Vollständiges Inventar aller KI-Systeme Ihrer Organisation</li>
+            <li lang="en">Complete inventory of all AI systems in your organization</li>
+
+            <li lang="de">Risikoklassifizierung nach EU AI Act Anhang III (4 Risikostufen)</li>
+            <li lang="en">Risk classification according to EU AI Act Annex III (4 risk levels)</li>
+
+            <li lang="de">Compliance-Score (0–100 %) für jedes System</li>
+            <li lang="en">Compliance score (0–100%) for each system</li>
+
+            <li lang="de">Gap-Analyse: Wo Sie stehen vs. was das Gesetz verlangt</li>
+            <li lang="en">Gap analysis: where you stand vs. what the law requires</li>
+
+            <li lang="de">Priorisierter Maßnahmenplan mit Zeitlinien</li>
+            <li lang="en">Prioritized remediation roadmap with timelines</li>
+          </ul>
+
+          <a href="mailto:elshan.musayev@ekmgc.de?subject=EU%20AI%20Act%20Readiness%20Assessment%20-%20Anfrage" class="btn btn--primary aia-pkg__cta">
+            <span lang="de">Assessment anfragen</span>
+            <span lang="en">Request Assessment</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </article>
+
+        <!-- Package 2 — Automation Sprint -->
+        <article class="aia-pkg fade-in">
+          <span class="aia-pkg__badge" lang="de">HOHER ROI</span>
+          <span class="aia-pkg__badge" lang="en">HIGH ROI</span>
+
+          <h3 class="aia-pkg__title" lang="de">KI-Automatisierungs-Sprint</h3>
+          <h3 class="aia-pkg__title" lang="en">AI Automation Sprint</h3>
+
+          <div class="aia-pkg__price">EUR 8.000 – 20.000</div>
+          <p class="aia-pkg__price-note" lang="de">einmalig, 4-Wochen-Sprint</p>
+          <p class="aia-pkg__price-note" lang="en">one-time, 4-week sprint</p>
+
+          <span class="aia-pkg__duration" lang="de">4 Wochen</span>
+          <span class="aia-pkg__duration" lang="en">4 weeks</span>
+
+          <ul class="aia-pkg__features">
+            <li lang="de"><strong>Woche 1:</strong> Prozess-Mapping, Stakeholder-Interviews, Identifikation von Automatisierungs-Kandidaten</li>
+            <li lang="en"><strong>Week 1:</strong> Process mapping, stakeholder interviews, automation candidate identification</li>
+
+            <li lang="de"><strong>Woche 2:</strong> Machbarkeitsbewertung, ROI-Modell, Technologie-Evaluierung (anbieterneutral)</li>
+            <li lang="en"><strong>Week 2:</strong> Feasibility assessment, ROI modelling, technology evaluation (vendor-neutral)</li>
+
+            <li lang="de"><strong>Woche 3:</strong> Solution-Architektur, EU AI Act Compliance-Vorprüfung, Implementierungs-Roadmap</li>
+            <li lang="en"><strong>Week 3:</strong> Solution architecture, EU AI Act compliance pre-check, implementation roadmap</li>
+
+            <li lang="de"><strong>Woche 4:</strong> Board-Präsentation, priorisiertes Projektportfolio, Go/No-Go-Framework</li>
+            <li lang="en"><strong>Week 4:</strong> Board presentation, prioritized project portfolio, go/no-go framework</li>
+          </ul>
+
+          <a href="mailto:elshan.musayev@ekmgc.de?subject=KI-Automatisierungs-Sprint%20-%20Anfrage" class="btn btn--ghost aia-pkg__cta">
+            <span lang="de">Sprint anfragen</span>
+            <span lang="en">Request Sprint</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </article>
+
+        <!-- Package 3 — Strategic Advisory (retainer) -->
+        <article class="aia-pkg fade-in">
+          <span class="aia-pkg__badge" lang="de">LAUFEND</span>
+          <span class="aia-pkg__badge" lang="en">ONGOING</span>
+
+          <h3 class="aia-pkg__title" lang="de">Strategische KI-Beratung</h3>
+          <h3 class="aia-pkg__title" lang="en">Strategic AI Advisory</h3>
+
+          <div class="aia-pkg__price" lang="de">ab EUR 1.500 / Monat</div>
+          <div class="aia-pkg__price" lang="en">from EUR 1,500 / month</div>
+          <p class="aia-pkg__price-note" lang="de">Retainer, monatlich kündbar nach 3 Monaten</p>
+          <p class="aia-pkg__price-note" lang="en">Retainer, cancellable monthly after 3 months</p>
+
+          <span class="aia-pkg__duration" lang="de">Fortlaufend</span>
+          <span class="aia-pkg__duration" lang="en">Ongoing</span>
+
+          <ul class="aia-pkg__subtiers">
+            <li class="aia-pkg__subtier">
+              <span class="aia-pkg__subtier-name">Essential</span>
+              <span lang="de">(EUR 1.500/Mo): Quartals-Review, E-Mail-Support, Regulatorik-Monitoring</span>
+              <span lang="en">(EUR 1,500/mo): Quarterly review, email support, regulatory monitoring</span>
+            </li>
+            <li class="aia-pkg__subtier">
+              <span class="aia-pkg__subtier-name">Professional</span>
+              <span lang="de">(EUR 3.500/Mo): Monats-Review, Anbieter-Audit, Board-Briefings</span>
+              <span lang="en">(EUR 3,500/mo): Monthly review, vendor audit, board briefings</span>
+            </li>
+            <li class="aia-pkg__subtier">
+              <span class="aia-pkg__subtier-name">Enterprise</span>
+              <span lang="de">(EUR 7.500/Mo): Dedizierter Advisor, Incident Response, Anbieter-Due-Diligence</span>
+              <span lang="en">(EUR 7,500/mo): Dedicated advisor, incident response, vendor due diligence</span>
+            </li>
+          </ul>
+
+          <a href="mailto:elshan.musayev@ekmgc.de?subject=Strategic%20AI%20Advisory%20-%20Anfrage" class="btn btn--ghost aia-pkg__cta">
+            <span lang="de">Retainer besprechen</span>
+            <span lang="en">Discuss Retainer</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ AI ACT BANNER (reused) ============ -->
+  <section class="ai-act-banner" id="ai-act">
+    <div class="container" style="padding-block: var(--space-10);">
+      <div class="ai-act-badge">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+        <span lang="de">EU AI Act Deadline</span>
+        <span lang="en">EU AI Act Deadline</span>
+      </div>
+      <div class="ai-act-text">
+        <h3 lang="de">2. August 2026 — Bußgelder bis €35 Mio.</h3>
+        <h3 lang="en">2 August 2026 — Fines up to €35M</h3>
+        <p lang="de">Die EU-KI-Verordnung tritt in Kraft. Beginnen Sie jetzt mit der Compliance-Prüfung — am schnellsten über den kostenlosen Quick Scan.</p>
+        <p lang="en">The EU AI Act takes effect. Start your compliance assessment now — fastest via the free Quick Scan.</p>
+      </div>
+      <a href="https://app.ekmgc.de/" class="btn btn--primary btn--sm" target="_blank" rel="noopener" lang="de">Quick Scan starten</a>
+      <a href="https://app.ekmgc.de/" class="btn btn--primary btn--sm" target="_blank" rel="noopener" lang="en">Start Quick Scan</a>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__copy">&copy; 2026 EKM Global Consulting GmbH. Baden-Baden, Germany.</div>
+      <ul class="footer__links" role="list">
+        <li><a href="#" lang="de">Impressum</a><a href="#" lang="en">Imprint</a></li>
+        <li><a href="#" lang="de">Datenschutz</a><a href="#" lang="en">Privacy</a></li>
+      </ul>
+      <div class="footer__social">
+        <a href="https://www.linkedin.com/company/ekm-global-consulting/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </a>
+        <a href="https://www.xing.com" target="_blank" rel="noopener noreferrer" aria-label="Xing">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.188 0c-.517 0-.741.325-.927.66 0 0-7.455 13.224-7.702 13.657.015.024 4.919 9.023 4.919 9.023.17.308.436.66.967.66h3.454c.211 0 .375-.078.463-.22.089-.151.089-.346-.009-.536l-4.879-8.916c-.004-.006-.004-.016 0-.022L22.139.756c.095-.191.097-.387.006-.535C22.056.078 21.894 0 21.686 0h-3.498zM3.648 4.74c-.211 0-.385.074-.473.216-.09.149-.078.339.02.531l2.34 4.05c.004.01.004.016 0 .021L3.169 13.89c-.09.182-.09.371 0 .525.078.149.236.227.452.227h3.462c.516 0 .748-.317.93-.65 0 0 2.378-4.272 2.462-4.418-.024-.037-2.384-4.141-2.384-4.141-.181-.319-.42-.692-.93-.692H3.648z"/></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============ SCRIPTS ============ -->
+  <script>
+    // Theme toggle
+    (function(){
+      const t = document.getElementById('themeToggle');
+      const r = document.documentElement;
+      const logo = document.getElementById('siteLogo');
+      let d = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      r.setAttribute('data-theme', d);
+
+      function updateLogo() {
+        logo.src = d === 'dark' ? './assets/logo-dark.jpg' : './assets/logo-light.jpg';
+      }
+      function updateIcon() {
+        t.innerHTML = d === 'dark'
+          ? '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>'
+          : '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
+        t.setAttribute('aria-label', 'Switch to ' + (d === 'dark' ? 'light' : 'dark') + ' mode');
+      }
+      updateLogo();
+      updateIcon();
+      t.addEventListener('click', () => {
+        d = d === 'dark' ? 'light' : 'dark';
+        r.setAttribute('data-theme', d);
+        updateLogo();
+        updateIcon();
+      });
+    })();
+
+    // Language toggle
+    (function(){
+      const btn = document.getElementById('langToggle');
+      const root = document.documentElement;
+      let lang = 'de';
+
+      btn.addEventListener('click', () => {
+        lang = lang === 'de' ? 'en' : 'de';
+        root.setAttribute('data-lang', lang);
+        root.setAttribute('lang', lang);
+        btn.textContent = lang === 'de' ? 'EN' : 'DE';
+        document.title = lang === 'de'
+          ? 'EU AI Act Readiness — EKM Global Consulting'
+          : 'EU AI Act Readiness — EKM Global Consulting';
+      });
+    })();
+
+    // Mobile menu toggle
+    (function(){
+      const toggle = document.getElementById('menuToggle');
+      const nav = document.getElementById('nav');
+      toggle.addEventListener('click', () => {
+        const open = nav.classList.toggle('open');
+        toggle.classList.toggle('active');
+        toggle.setAttribute('aria-expanded', open);
+      });
+      nav.querySelectorAll('.nav__link').forEach(link => {
+        link.addEventListener('click', () => {
+          nav.classList.remove('open');
+          toggle.classList.remove('active');
+          toggle.setAttribute('aria-expanded', 'false');
+        });
+      });
+    })();
+
+    // Days-to-deadline counter
+    (function(){
+      const target = new Date('2026-08-02T00:00:00Z');
+      const now = new Date();
+      const days = Math.max(0, Math.ceil((target - now) / 86400000));
+      const el = document.getElementById('daysLeft');
+      if (el) el.textContent = days;
+    })();
+
+    // Fade-in on scroll (matches index.html)
+    (function(){
+      const els = document.querySelectorAll('.fade-in');
+      if (!('IntersectionObserver' in window)) { els.forEach(e => e.classList.add('is-visible')); return; }
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            io.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12 });
+      els.forEach(e => io.observe(e));
+    })();
+  </script>
+
+</body>
+</html>

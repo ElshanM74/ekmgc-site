@@ -28,6 +28,7 @@
       <nav class="nav" id="nav" aria-label="Main navigation">
         <ul class="nav__list" role="list">
           <li><a href="#services" class="nav__link" lang="de">Leistungen</a><a href="#services" class="nav__link" lang="en">Services</a></li>
+          <li><a href="./eu-ai-act.html" class="nav__link" lang="de">EU AI Act</a><a href="./eu-ai-act.html" class="nav__link" lang="en">EU AI Act</a></li>
           <li><a href="#approach" class="nav__link" lang="de">Methodik</a><a href="#approach" class="nav__link" lang="en">Approach</a></li>
           <li><a href="#about" class="nav__link" lang="de">Über uns</a><a href="#about" class="nav__link" lang="en">About</a></li>
           <li><a href="#projects" class="nav__link" lang="de">Projekte</a><a href="#projects" class="nav__link" lang="en">Projects</a></li>
@@ -165,24 +166,24 @@
         </div>
 
         <!-- Service 3: EU AI Act -->
-        <div class="service-card fade-in">
+        <a href="./eu-ai-act.html" class="service-card fade-in" style="text-decoration: none; color: inherit;">
           <div class="service-card__icon">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
           </div>
           <h3 class="service-card__title" lang="de">EU AI Act Readiness</h3>
           <h3 class="service-card__title" lang="en">EU AI Act Readiness</h3>
           <p class="service-card__desc" lang="de">
-            Compliance-Audit Ihrer KI-Systeme gegen die EU-KI-Verordnung (2024/1689). Risiko-Klassifizierung, Gap-Analyse und priorisierter Maßnahmenplan — vor dem August 2026 Deadline.
+            Drei Pakete: Bereitschaftsbewertung, Automatisierungs-Sprint, Strategische Beratung. Start mit kostenlosem 10-Min Quick Scan. Vor dem Inkrafttreten am 02.08.2026.
           </p>
           <p class="service-card__desc" lang="en">
-            Compliance audit of your AI systems against the EU AI Act (Regulation 2024/1689). Risk classification, gap analysis and prioritised remediation roadmap — before the August 2026 deadline.
+            Three packages: Readiness Assessment, Automation Sprint, Strategic Advisory. Start with the free 10-min Quick Scan. Before enforcement on 02.08.2026.
           </p>
           <div class="service-card__tags">
-            <span class="tag">Compliance Audit</span>
-            <span class="tag">Risk Classification</span>
-            <span class="tag">Remediation</span>
+            <span class="tag">Quick Scan</span>
+            <span class="tag">Readiness Assessment</span>
+            <span class="tag">Advisory Retainer</span>
           </div>
-        </div>
+        </a>
 
         <!-- Service 4: Implementation Risk -->
         <div class="service-card fade-in">
@@ -484,7 +485,7 @@
           </div>
         </div>
 
-        <form class="contact__form fade-in" onsubmit="event.preventDefault(); alert('Nachricht gesendet / Message sent');">
+        <form class="contact__form fade-in" id="contactForm">
           <div class="form-row">
             <div class="form-group">
               <label for="name" lang="de">Name</label>
@@ -579,6 +580,35 @@
         document.title = lang === 'de' 
           ? 'EKM Global Consulting — AI Strategie & Beratung'
           : 'EKM Global Consulting — AI Strategy & Advisory';
+      });
+    })();
+
+    // Contact form — opens pre-filled email client (mailto)
+    (function(){
+      const form = document.getElementById('contactForm');
+      if (!form) return;
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const name    = form.querySelector('#name')?.value.trim()    || '';
+        const company = form.querySelector('#company')?.value.trim() || '';
+        const email   = form.querySelector('#email')?.value.trim()   || '';
+        const message = form.querySelector('#message')?.value.trim() || '';
+        const de = document.documentElement.getAttribute('data-lang') === 'de';
+        const subject = de
+          ? `Anfrage von ${name || 'ekmgc.de'}${company ? ' · ' + company : ''}`
+          : `Inquiry from ${name || 'ekmgc.de'}${company ? ' · ' + company : ''}`;
+        const bodyLines = [
+          `${de ? 'Name' : 'Name'}: ${name}`,
+          `${de ? 'Unternehmen' : 'Company'}: ${company}`,
+          `${de ? 'E-Mail' : 'Email'}: ${email}`,
+          '',
+          `${de ? 'Nachricht' : 'Message'}:`,
+          message,
+        ];
+        const mailto = 'mailto:elshan.musayev@ekmgc.de'
+          + '?subject=' + encodeURIComponent(subject)
+          + '&body=' + encodeURIComponent(bodyLines.join('\n'));
+        window.location.href = mailto;
       });
     })();
 

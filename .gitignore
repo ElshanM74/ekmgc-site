@@ -1,0 +1,15 @@
+# Secrets
+.env
+.env.local
+*.key
+
+# Editor / OS
+.DS_Store
+.vscode/
+.idea/
+*.swp
+
+# Dependencies (if any build step added later)
+node_modules/
+dist/
+build/
