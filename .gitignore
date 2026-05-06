@@ -3,10 +3,11 @@
 .env.local
 *.key
 
-# Editor / OS
+# Editor / OS / tooling
 .DS_Store
 .vscode/
 .idea/
+.claude/
 *.swp
 
 # Dependencies (if any build step added later)

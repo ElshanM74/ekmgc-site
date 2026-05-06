@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EU AI Act conformity assessment: Annex VI internal vs Annex VII notified body — EKM Global Consulting</title>
+  <meta name="description" content="Decision criteria for conformity assessment under Regulation (EU) 2024/1689: when Annex VI internal control applies, when Annex VII notified body assessment is required, and what each route involves.">
+  <link rel="canonical" href="https://ekmgc.de/insights/conformity-assessment-annex-vi-vii.html">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="EU AI Act conformity assessment: Annex VI internal vs Annex VII notified body">
+  <meta property="og:description" content="Decision criteria for conformity assessment under Regulation (EU) 2024/1689: when Annex VI internal control applies, when Annex VII notified body assessment is required, and what each route involves.">
+  <meta property="og:url" content="https://ekmgc.de/insights/conformity-assessment-annex-vi-vii.html">
+  <meta property="og:image" content="https://app.ekmgc.de/assets/og-image.png">
+  <meta property="og:site_name" content="EKM Global Consulting">
+  <meta property="article:published_time" content="2026-05-06T00:00:00+00:00">
+  <meta property="article:author" content="Elshan Musayev">
+  <meta property="article:section" content="EU AI Compliance">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="EU AI Act conformity assessment: Annex VI internal vs Annex VII notified body">
+  <meta name="twitter:description" content="Decision criteria for conformity assessment under Regulation (EU) 2024/1689: when Annex VI internal control applies, when Annex VII notified body assessment is required, and what each route involves.">
+  <meta name="twitter:image" content="https://app.ekmgc.de/assets/og-image.png">
+
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M16 2L4 9v14l12 7 12-7V9L16 2z' fill='none' stroke='%2300d4aa' stroke-width='2'/%3E%3Cpath d='M16 8l-6 3.5v7L16 22l6-3.5v-7L16 8z' fill='%2300d4aa' opacity='0.3'/%3E%3Ccircle cx='16' cy='15' r='3' fill='%2300d4aa'/%3E%3C/svg%3E">
+
+  <!-- Fonts -->
+  <link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@400,500,700,800&f[]=satoshi@300,400,500,700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/base.css">
+  <link rel="stylesheet" href="/style.css">
+
+  <style>
+    /* Insight article page-local styles */
+    .insight-hero {
+      padding: calc(var(--space-10, 80px) + 60px) 0 var(--space-7, 56px);
+      background: linear-gradient(180deg, var(--color-surface-offset, #1a2338) 0%, var(--color-bg, #0a0e17) 100%);
+      border-bottom: 1px solid var(--color-border, #253350);
+    }
+    .insight-crumb {
+      font-size: 13px;
+      color: var(--color-text-muted, #8899b0);
+      margin-bottom: var(--space-3, 16px);
+    }
+    .insight-crumb a {
+      color: var(--color-text-muted, #8899b0);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.15s;
+    }
+    .insight-crumb a:hover { border-bottom-color: var(--color-primary, #00d4aa); }
+    .insight-eyebrow {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--color-primary, #00d4aa);
+      margin-bottom: var(--space-3, 16px);
+    }
+    .insight-headline {
+      font-family: var(--font-display, 'Cabinet Grotesk', sans-serif);
+      font-size: clamp(32px, 5vw, 56px);
+      font-weight: 800;
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+      margin: 0 0 var(--space-4, 24px);
+      max-width: 900px;
+    }
+    .insight-headline .accent { color: var(--color-primary, #00d4aa); }
+    .insight-meta {
+      display: flex;
+      gap: var(--space-4, 24px);
+      flex-wrap: wrap;
+      font-size: 14px;
+      color: var(--color-text-muted, #8899b0);
+      margin-bottom: var(--space-3, 16px);
+    }
+    .insight-meta strong { color: var(--color-text, #e2e8f0); font-weight: 500; }
+    .insight-tldr {
+      max-width: 820px;
+      padding: var(--space-4, 24px) var(--space-5, 32px);
+      border-left: 3px solid var(--color-primary, #00d4aa);
+      background: var(--color-surface-offset, #1a2338);
+      border-radius: 0 var(--radius-md, 10px) var(--radius-md, 10px) 0;
+      font-size: 17px;
+      line-height: 1.6;
+      color: var(--color-text, #e2e8f0);
+      margin-top: var(--space-5, 32px);
+    }
+    .insight-body {
+      padding: var(--space-8, 64px) 0;
+      max-width: 820px;
+      margin: 0 auto;
+    }
+    .insight-body h2 {
+      font-family: var(--font-display, 'Cabinet Grotesk', sans-serif);
+      font-size: clamp(24px, 3vw, 32px);
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      line-height: 1.2;
+      margin: var(--space-7, 56px) 0 var(--space-3, 16px);
+      color: var(--color-text, #e2e8f0);
+    }
+    .insight-body h3 {
+      font-family: var(--font-display, 'Cabinet Grotesk', sans-serif);
+      font-size: 20px;
+      font-weight: 600;
+      margin: var(--space-5, 32px) 0 var(--space-2, 8px);
+      color: var(--color-text, #e2e8f0);
+    }
+    .insight-body p {
+      font-size: 17px;
+      line-height: 1.7;
+      color: var(--color-text, #e2e8f0);
+      margin: 0 0 var(--space-3, 16px);
+    }
+    .insight-body ul, .insight-body ol {
+      font-size: 17px;
+      line-height: 1.7;
+      color: var(--color-text, #e2e8f0);
+      padding-left: 1.4em;
+      margin: 0 0 var(--space-4, 24px);
+    }
+    .insight-body li { margin-bottom: var(--space-2, 8px); }
+    .insight-body li::marker { color: var(--color-primary, #00d4aa); }
+    .insight-body strong { color: var(--color-text, #e2e8f0); font-weight: 600; }
+    .insight-body em { font-style: italic; color: var(--color-text-muted, #8899b0); }
+    .insight-body a {
+      color: var(--color-primary, #00d4aa);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(0, 212, 170, 0.4);
+      transition: border-color 0.15s;
+    }
+    .insight-body a:hover { border-bottom-color: var(--color-primary, #00d4aa); }
+    .insight-body blockquote {
+      margin: var(--space-5, 32px) 0;
+      padding: var(--space-3, 16px) var(--space-4, 24px);
+      border-left: 3px solid var(--color-primary, #00d4aa);
+      background: var(--color-surface-offset, #1a2338);
+      border-radius: 0 var(--radius-sm, 6px) var(--radius-sm, 6px) 0;
+      color: var(--color-text-muted, #8899b0);
+      font-style: italic;
+    }
+    .insight-body blockquote p:first-child { margin-top: 0; }
+    .insight-body blockquote p:last-child { margin-bottom: 0; }
+    .insight-body table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: var(--space-5, 32px) 0;
+      font-size: 15px;
+    }
+    .insight-body th, .insight-body td {
+      padding: var(--space-2, 8px) var(--space-3, 16px);
+      border: 1px solid var(--color-border, #253350);
+      text-align: left;
+      vertical-align: top;
+    }
+    .insight-body th {
+      background: var(--color-surface-offset, #1a2338);
+      font-weight: 600;
+      color: var(--color-text, #e2e8f0);
+    }
+    .insight-body code {
+      background: var(--color-surface-offset, #1a2338);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 0.92em;
+      color: var(--color-primary, #00d4aa);
+    }
+    .insight-body hr {
+      border: none;
+      border-top: 1px solid var(--color-border, #253350);
+      margin: var(--space-7, 56px) 0;
+    }
+    .insight-related {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: var(--space-7, 56px) 0;
+      border-top: 1px solid var(--color-border, #253350);
+    }
+    .insight-related h3 {
+      font-family: var(--font-display, 'Cabinet Grotesk', sans-serif);
+      font-size: 22px;
+      font-weight: 700;
+      margin-bottom: var(--space-4, 24px);
+    }
+    .insight-related ul {
+      list-style: none;
+      padding: 0;
+    }
+    .insight-related li {
+      padding: var(--space-3, 16px) 0;
+      border-bottom: 1px solid var(--color-border, #253350);
+    }
+    .insight-related li:last-child { border-bottom: none; }
+    .insight-related a {
+      color: var(--color-text, #e2e8f0);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.15s;
+    }
+    .insight-related a:hover { color: var(--color-primary, #00d4aa); }
+  </style>
+
+  <!-- Schema.org JSON-LD: Article + BreadcrumbList -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://ekmgc.de/insights/conformity-assessment-annex-vi-vii.html#article",
+      "headline": "EU AI Act conformity assessment: Annex VI internal vs Annex VII notified body",
+      "description": "Decision criteria for conformity assessment under Regulation (EU) 2024/1689: when Annex VI internal control applies, when Annex VII notified body assessment is required, and what each route involves.",
+      "url": "https://ekmgc.de/insights/conformity-assessment-annex-vi-vii.html",
+      "mainEntityOfPage": "https://ekmgc.de/insights/conformity-assessment-annex-vi-vii.html",
+      "datePublished": "2026-05-06",
+      "dateModified": "2026-05-06",
+      "inLanguage": "en-GB",
+      "isAccessibleForFree": true,
+      "keywords": "EU AI Act, Regulation (EU) 2024/1689, Annex III, Article 9, Article 26, conformity assessment, GPAI, AI compliance, RegTech, BSI C5, BaFin",
+      "articleSection": "EU AI Compliance",
+      "author": {
+        "@type": "Person",
+        "@id": "https://www.linkedin.com/in/elshan-musayev/#person",
+        "name": "Elshan Musayev",
+        "url": "https://www.linkedin.com/in/elshan-musayev/",
+        "jobTitle": "Founder & CEO",
+        "sameAs": [
+          "https://www.linkedin.com/in/elshan-musayev/",
+          "https://www.linkedin.com/in/elshanmusayev/",
+          "https://elshanmusayev.com"
+        ]
+      },
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://ekmgc.de/#organization",
+        "name": "EKM Global Consulting GmbH",
+        "url": "https://ekmgc.de",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://app.ekmgc.de/assets/logo_ekm_icon.png",
+          "width": 1024,
+          "height": 1024
+        },
+        "sameAs": [
+          "https://www.linkedin.com/company/ekm-global-consulting-gmbh/",
+          "https://www.linkedin.com/showcase/121553912/",
+          "https://www.linkedin.com/showcase/121603994/",
+          "https://www.crunchbase.com/organization/ekm-global-consulting"
+        ]
+      },
+      "about": {
+        "@type": "Legislation",
+        "name": "Regulation (EU) 2024/1689 (Artificial Intelligence Act)",
+        "legislationJurisdiction": "European Union",
+        "legislationDate": "2024-06-13"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://ekmgc.de/insights/conformity-assessment-annex-vi-vii.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://ekmgc.de/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "EU AI Act",
+          "item": "https://ekmgc.de/eu-ai-act.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Insights",
+          "item": "https://ekmgc.de/insights/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "EU AI Act conformity assessment: Annex VI internal vs Annex VII notified body",
+          "item": "https://ekmgc.de/insights/conformity-assessment-annex-vi-vii.html"
+        }
+      ]
+    }
+  ]
+}
+  </script>
+</head>
+
+<body>
+  <!-- ============ HEADER ============ -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="/" class="header__logo" aria-label="EKM Global Consulting">
+        <img src="/assets/logo-dark.jpg" alt="EKM Global Consulting — think smarter" class="header__logo-img" id="siteLogo">
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Main navigation">
+        <ul class="nav__list" role="list">
+          <li><a href="/#services" class="nav__link">Services</a></li>
+          <li><a href="/eu-ai-act.html" class="nav__link">EU AI Act</a></li>
+          <li><a href="/insights/" class="nav__link nav__link--active">Insights</a></li>
+          <li><a href="/#approach" class="nav__link">Approach</a></li>
+          <li><a href="/#contact" class="nav__link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header__controls">
+        <button class="toggle-btn" id="themeToggle" data-theme-toggle aria-label="Switch theme">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+        </button>
+        <button class="menu-toggle" id="menuToggle" aria-label="Menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ HERO ============ -->
+  <section class="insight-hero">
+    <div class="container">
+      <div class="insight-crumb">
+        <a href="/">Home</a> · <a href="/eu-ai-act.html">EU AI Act</a> · <a href="/insights/">Insights</a> · EU AI Act conformity assessment: Annex VI internal vs Annex VII notified body
+      </div>
+      <div class="insight-eyebrow">Cluster · EU AI Act</div>
+      <h1 class="insight-headline">Conformity assessment: <span class="accent">Annex VI vs Annex VII</span>.</h1>
+      <div class="insight-meta">
+        <span><strong>By</strong> Elshan Musayev</span>
+        <span><strong>Published</strong> 2026-05-06</span>
+        <span><strong>8 min read</strong></span>
+      </div>
+      <div class="insight-tldr">
+        <strong>TL;DR.</strong> For most high-risk AI systems listed in Annex III of Regulation (EU) 2024/1689, the provider may self-certify through internal control under Annex VI — provided applicable harmonised standards are fully applied. The notified body route under Annex VII is mandatory for biometric remote identification systems when those systems are not covered by harmonised standards. For all other Annex III categories, Annex VI is the default where harmonised standards exist and are applied in full.
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ BODY ============ -->
+  <section class="container">
+    <article class="insight-body">
+<hr>
+<p>title: "EU AI Act Conformity Assessment: Annex VI vs Annex VII"
+meta_description: "Internal control (Annex VI) or notified body (Annex VII)? Which conformity assessment route applies to your high-risk AI system under EU AI Act Art. 43."
+slug: /insights/conformity-assessment-annex-vi-vii.html
+canonical: https://ekmgc.de/insights/conformity-assessment-annex-vi-vii.html
+lang: en
+schema: FAQPage, Article
+pillar: /insights/article-9-rms-practitioner-guide.html
+date: 2026-05-06
+author: EKM Global Consulting GmbH</p>
+<hr>
+<hr>
+<h2>Table of Contents</h2>
+<ol>
+<li><a href="#the-core-question">The Core Question Every Provider Must Answer</a></li>
+<li><a href="#annex-vi-internal-control">Annex VI: Internal Control by the Provider</a></li>
+<li><a href="#annex-vii-notified-body">Annex VII: Third-Party Assessment via Notified Body</a></li>
+<li><a href="#decision-tree">Decision Tree: Which Route Applies?</a></li>
+<li><a href="#annex-iv-technical-documentation">Annex IV Technical Documentation: Required on Both Routes</a></li>
+<li><a href="#substantial-modification">Substantial Modification and Re-Assessment Triggers</a></li>
+<li><a href="#dach-specific-considerations">DACH-Specific Considerations</a></li>
+<li><a href="#closing">Closing: Next Steps for Providers</a></li>
+<li><a href="#faq">FAQ</a></li>
+</ol>
+<hr>
+<h2 id="the-core-question">The Core Question Every Provider Must Answer</h2>
+<p>Before a high-risk AI system may be placed on the EU market or put into service, the provider must complete a conformity assessment (Art. 43, Regulation (EU) 2024/1689). The assessment generates the evidence base for the EU declaration of conformity (Art. 47) and is a prerequisite for CE marking (Art. 48) and registration in the EU database (Art. 49).</p>
+<p>Article 43 distinguishes two procedural routes:</p>
+<ul>
+<li><strong>Annex VI</strong> — Conformity assessment based on internal control. The provider conducts and documents the assessment without external certification.</li>
+<li><strong>Annex VII</strong> — Conformity assessment involving assessment of the quality management system (QMS) and technical documentation by a notified body designated under Art. 28 et seq.</li>
+</ul>
+<p>The route is determined primarily by the <strong>category of the high-risk system</strong> and secondarily by whether applicable <strong>harmonised standards</strong> have been applied in full. A system placed on the market under the wrong procedure is not CE-marked in conformity, regardless of the thoroughness of the internal work.</p>
+<hr>
+<h2 id="annex-vi-internal-control">Annex VI: Internal Control by the Provider</h2>
+<h3>When It Applies</h3>
+<p>Annex VI applies to all Annex III high-risk AI systems — except biometric remote identification under Art. 6(2) when harmonised standards are absent — where the provider applies harmonised standards covering all relevant AI Act requirements.</p>
+<p>As of mid-2026, the Commission has not published AI Act-specific harmonised standards in the Official Journal. ISO/IEC 42001:2023 (AI management system) and ISO/IEC 23894:2023 (AI risk management) are the practical reference standards currently used to structure conformity work. They carry no legal presumption of conformity until formally harmonised. Providers must document which AI Act requirements each standard addresses and identify gaps requiring supplementary evidence.</p>
+<h3>What the Procedure Requires</h3>
+<p>The provider must:</p>
+<ol>
+<li>Establish, implement, document, and maintain a QMS in accordance with Art. 17, covering the full lifecycle from design through post-market monitoring.</li>
+<li>Compile technical documentation under Annex IV before placing the system on the market — see <a href="#annex-iv-technical-documentation">Section 5</a> and the risk management layer in the <a href="/insights/article-9-rms-practitioner-guide.html">pillar article</a>.</li>
+<li>Draw up the EU declaration of conformity under Art. 47.</li>
+<li>Affix the CE marking under Art. 48.</li>
+<li>Register the system in the EU database before placement on the market (Art. 49).</li>
+</ol>
+<h3>Evidentiary Burden</h3>
+<p>Internal control does not mean a light-touch process. Every affirmation in the declaration of conformity must be traceable to documented evidence. The risk management system under <a href="/insights/article-9-rms-practitioner-guide.html">Art. 9</a> — a continuous, iterative process running throughout the AI system's lifecycle — must be documented with versioned records. Accuracy, robustness, cybersecurity (Art. 15), data governance (Art. 10), human oversight measures (Art. 14), and transparency (Art. 13) each require contemporaneous evidence, not retrospective reconstruction.</p>
+<hr>
+<h2 id="annex-vii-notified-body">Annex VII: Third-Party Assessment via Notified Body</h2>
+<h3>When It Is Mandatory</h3>
+<p>Article 43(1) requires the Annex VII procedure for <strong>AI systems intended for biometric remote identification</strong> of natural persons (Annex III, point 1(a)) when the provider has not applied harmonised standards in full. Given that no harmonised standards for biometric remote identification AI systems had been formally published under the AI Act as of this writing, providers of such systems must engage a notified body.</p>
+<p>A provider may also voluntarily elect Annex VII for other Annex III systems — for instance where third-party attestation strengthens the provider's contractual position with deployers.</p>
+<h3>What Annex VII Assessment Involves</h3>
+<p>The notified body performs two distinct assessments:</p>
+<ol>
+<li><strong>QMS assessment.</strong> The body examines whether the provider's QMS satisfies Art. 17, through documentation review and on-site or remote audit. It issues an approval decision and must notify the Commission and other Member States of any suspension.</li>
+<li><strong>Technical documentation assessment.</strong> The body reviews the Annex IV file for the specific AI system or category of systems and issues a technical documentation assessment certificate. It may request additional evidence, require design changes, or impose conditions.</li>
+</ol>
+<p>A QMS approval does not automatically certify any particular AI system. Technical documentation assessments for each high-risk system are required separately.</p>
+<h3>Timeline and Resource Expectations</h3>
+<p>Providers should plan for a minimum of <strong>three to six months</strong> from a complete application submission to receipt of a certificate, drawing on experience from analogous regulated domains (medical devices, industrial machinery). Incomplete documentation or first-time applicants consistently fall toward the longer end. Budget planning should be conservative: AI Act notified body fees are not regulated and reflect specialised auditing capacity. The detailed interaction between the Annex VII audit scope and the Art. 9 risk management system is covered in the <a href="/insights/article-9-rms-practitioner-guide.html">pillar article</a>.</p>
+<hr>
+<h2 id="decision-tree">Decision Tree: Which Route Applies?</h2>
+<p><strong>Step 1.</strong> Is the system a high-risk AI system under Annex III?
+- No — the conformity assessment obligations of Chapter 5 do not apply.
+- Yes — proceed to Step 2.</p>
+<p><strong>Step 2.</strong> Is the system intended for <strong>biometric remote identification</strong> of natural persons (Annex III, point 1(a))?
+- Yes — proceed to Step 3.
+- No — proceed to Step 5.</p>
+<p><strong>Step 3.</strong> Are applicable harmonised standards published in the Official Journal and applied in full?
+- Yes — Annex VI is permissible; proceed to Step 4.
+- No or partial — <strong>Annex VII is mandatory.</strong> Engage a notified body.</p>
+<p><strong>Step 4.</strong> Does the provider elect voluntary third-party assessment despite harmonised standards being applied?
+- Yes — proceed under Annex VII voluntarily.
+- No — proceed under Annex VI.</p>
+<p><strong>Step 5.</strong> For non-biometric Annex III systems: are applicable harmonised standards published and applied in full?
+- Yes — <strong>Annex VI applies.</strong>
+- No or partial — Annex VI still applies but the evidentiary burden intensifies. Voluntary Annex VII engagement may be advisable for high-exposure systems.</p>
+<p><strong>Step 6.</strong> Has a substantial modification occurred after initial conformity assessment?
+- Yes — re-assessment is required (see <a href="#substantial-modification">Section 6</a>).
+- No — maintain records and post-market monitoring obligations.</p>
+<hr>
+<h2 id="annex-iv-technical-documentation">Annex IV Technical Documentation: Required on Both Routes</h2>
+<p>Regardless of assessment route, the provider must compile and maintain technical documentation in accordance with Annex IV before placing the system on the market and for ten years thereafter. The Annex IV file must include:</p>
+<ol>
+<li><strong>General description</strong> — intended purpose, affected persons and sectors, hardware context.</li>
+<li><strong>System architecture and components</strong> — software, firmware, algorithms, training methods.</li>
+<li><strong>Data governance measures</strong> under Art. 10 — dataset provenance, quality criteria, bias mitigation.</li>
+<li><strong>Risk management system</strong> under Art. 9 — the iterative identification, estimation, evaluation, and mitigation process throughout the lifecycle. Full detail is in the <a href="/insights/article-9-rms-practitioner-guide.html">pillar article</a>.</li>
+<li><strong>Accuracy, robustness, and cybersecurity measures</strong> under Art. 15, including validation results.</li>
+<li><strong>Human oversight measures</strong> under Art. 14 — override capabilities and operator controls.</li>
+<li><strong>Post-market monitoring plan</strong> under Art. 72.</li>
+<li><strong>Instructions for use</strong> for deployers (Art. 13) — intended purpose, foreseeable misuse, limitations.</li>
+<li><strong>EU declaration of conformity</strong> template (Art. 47).</li>
+</ol>
+<p>The file is a living document. Any significant update to the system may signal a substantial modification requiring re-assessment.</p>
+<hr>
+<h2 id="substantial-modification">Substantial Modification and Re-Assessment Triggers</h2>
+<p>Article 43(4) requires that where a high-risk AI system has been <strong>substantially modified</strong> after initial conformity assessment, the full procedure must be repeated. Substantial modification is defined in Art. 3(23) as a change affecting compliance with Title III, Chapter 2 or resulting in a change in intended purpose.</p>
+<p>Changes that routinely trigger re-assessment:</p>
+<ul>
+<li><strong>Risk management scope changes</strong> — altered risk identification criteria, new mitigation measures, or revised residual risk acceptance. Changes to the <a href="/insights/article-9-rms-practitioner-guide.html">Art. 9 RMS</a> documented in the QMS baseline require particular scrutiny.</li>
+<li><strong>Material dataset changes</strong> — retraining on new data sources or datasets with materially different distributional properties.</li>
+<li><strong>Change in intended purpose or user group</strong> — expanding to a new Annex III sector or category of affected persons.</li>
+<li><strong>Architectural changes</strong> — modifications to model type, inference engine, or inference boundary.</li>
+<li><strong>Cybersecurity measure revisions</strong> — revisions in response to identified vulnerabilities that alter the documented risk posture.</li>
+</ul>
+<p>Minor updates — security patches that do not alter functionality, performance improvements within the documented accuracy range — do not automatically constitute substantial modifications, but providers must document their materiality assessment for each change and retain that record.</p>
+<hr>
+<h2 id="dach-specific-considerations">DACH-Specific Considerations</h2>
+<p><strong>BSI and DAkkS designation.</strong> The Bundesamt für Sicherheit in der Informationstechnik (BSI) holds market surveillance responsibility in Germany. Notified bodies under the AI Act will be designated by DAkkS (Deutsche Akkreditierungsstelle). An existing BSI C5 Type II attestation may provide partial evidentiary support for Annex IV cybersecurity documentation but does not substitute for AI Act conformity assessment.</p>
+<p><strong>BaFin MaRisk AT 9 alignment.</strong> For AI systems deployed within BaFin-supervised institutions, the provider's Annex IV documentation and QMS must be coherent with MaRisk AT 9 outsourcing requirements. A well-structured Annex IV file substantially reduces the effort required to respond to deployer audit requests under MaRisk.</p>
+<p><strong>GDPR Art. 35 DPIA timing.</strong> Where a high-risk AI system processes personal data, a Data Protection Impact Assessment must be completed under GDPR Art. 35 before processing begins — not in parallel with CE marking. DPIA outputs must be reflected in the Annex IV data governance and risk management sections. Completing CE marking before the DPIA closes creates concurrent AI Act and GDPR supervisory exposure.</p>
+<p><strong>Post-market monitoring data flows.</strong> DACH-headquartered providers collecting post-market data from deployers across Germany, Austria, and Switzerland encounter three distinct data protection jurisdictions. Switzerland is not an EU member state; transfers rely on the Commission's adequacy decision. Post-market monitoring architectures must account for these flows from the design stage.</p>
+<hr>
+<h2 id="closing">Closing: Next Steps for Providers</h2>
+<p>Conformity assessment is not a one-time project milestone. The evidentiary file must remain current and auditable for the entire operational life of the system and for ten years after placement on the market.</p>
+<p>Providers who have not yet determined which route applies — or who are uncertain whether existing documentation meets the evidentiary standard — should begin with a structured gap assessment against Annex IV and the Art. 9 risk management requirements before committing to a launch timeline.</p>
+<p>EKM Global Consulting GmbH offers a structured <strong>10-minute Quick Scan</strong> at <a href="https://app.ekmgc.de">app.ekmgc.de</a> to identify which conformity assessment route applies and the key documentation gaps to address. For advisory mandates covering full Annex IV build-out, QMS alignment, or notified body preparation, see <a href="https://ekmgc.de/eu-ai-act.html">ekmgc.de/eu-ai-act.html</a>.</p>
+<hr>
+<h2 id="faq">FAQ</h2>
+<p><strong>Q1: Can any Annex III high-risk AI system use the Annex VI internal control route?</strong></p>
+<p>With one mandatory exception: biometric remote identification systems under Annex III, point 1(a) must use Annex VII when harmonised standards are not yet published and applied in full. For all other Annex III categories, Annex VI is the default. Where no harmonised standards have been adopted, Annex VI remains available but the provider bears a heavier evidentiary burden to demonstrate conformity without a standards presumption.</p>
+<p><strong>Q2: What is a notified body and how is it designated under the AI Act?</strong></p>
+<p>A notified body is a conformity assessment body designated by a Member State authority and notified to the Commission under Art. 28. Designation requires independence, documented technical competence in the relevant AI domains, and national accreditation (DAkkS in Germany). The list of designated bodies is published in the Commission's NANDO database.</p>
+<p><strong>Q3: Do harmonised standards under the AI Act already exist?</strong></p>
+<p>As of mid-2026, no AI Act-specific harmonised standards had been published in the Official Journal. Standardisation work continues under CEN/CENELEC mandate M/612. ISO/IEC 42001:2023 and ISO/IEC 23894:2023 are the reference standards used in practice but carry no legal presumption of conformity until formally harmonised.</p>
+<p><strong>Q4: How long does Annex VI internal control take compared to Annex VII?</strong></p>
+<p>Annex VI is entirely within the provider's control. For providers building the compliance infrastructure from scratch, three to five months is a realistic estimate. Annex VII adds an external assessment cycle of three to six months on top of internal preparation time. First-time applicants and complex multi-component systems typically require longer.</p>
+<p><strong>Q5: What triggers re-assessment after initial conformity assessment?</strong></p>
+<p>Art. 43(4) requires re-assessment after a substantial modification under Art. 3(23). Changes that routinely trigger this include: retraining on materially different data, changes to intended purpose, architectural changes, and risk management revisions that alter the documented risk posture. Providers should maintain a change-log protocol evaluating each update against the substantial modification threshold.</p>
+<p><strong>Q6: Does CE marking expire?</strong></p>
+<p>CE marking carries no fixed expiry date, but it is contingent on the accuracy of the declaration of conformity and the underlying technical documentation. A substantial modification means the existing marking no longer attests to the modified system's conformity, and re-assessment is required before the modified system is placed on the market.</p>
+<p><strong>Q7: How does a GDPR DPIA relate to AI Act conformity assessment?</strong></p>
+<p>The DPIA under GDPR Art. 35 is a separate obligation that must be completed before processing begins — prior to finalising the conformity assessment. Its outputs must feed into the Annex IV data governance and risk management documentation. Sequencing these correctly is a common gap in DACH-regulated sectors where both AI Act and GDPR supervisory authorities hold jurisdiction.</p>
+<p><strong>Q8: Can the provider use a notified body voluntarily for non-biometric Annex III systems?</strong></p>
+<p>Yes. Art. 43 permits providers to elect Annex VII voluntarily for any Annex III high-risk system. This may be commercially rational where deployers — particularly in banking, insurance, or healthcare — contractually require third-party attestation as a condition of procurement, or where the provider anticipates heightened market surveillance attention.</p>
+<hr>
+<p><em>Published by EKM Global Consulting GmbH, Baden-Baden. This article is informational and does not constitute legal advice. Regulation (EU) 2024/1689 and its implementing acts should be read in full.</em></p>
+<hr>
+<h3>Internal Link Plan</h3>
+<table>
+<thead>
+<tr>
+<th>Link anchor</th>
+<th>Destination</th>
+<th>Section</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>pillar article / Art. 9 RMS</td>
+<td><code>/insights/article-9-rms-practitioner-guide.html</code></td>
+<td>Sections 2, 3, 5, 6</td>
+</tr>
+<tr>
+<td>Quick Scan</td>
+<td><code>https://app.ekmgc.de</code></td>
+<td>Section 8 (CTA)</td>
+</tr>
+<tr>
+<td>EU AI Act advisory</td>
+<td><code>https://ekmgc.de/eu-ai-act.html</code></td>
+<td>Section 8 (CTA)</td>
+</tr>
+</tbody>
+</table>
+<h3>Schema.org Recommendation</h3>
+<p>Apply <code>FAQPage</code> schema to the FAQ block (Q1–Q8). Apply <code>Article</code> schema at the page level: <code>author</code> EKM Global Consulting GmbH, <code>datePublished</code> 2026-05-06, <code>about</code> "EU AI Act conformity assessment Annex VI Annex VII". Add <code>BreadcrumbList</code>: homepage → Insights → this article.</p>
+<h3>Citations</h3>
+<ul>
+<li>Regulation (EU) 2024/1689 (EU AI Act): https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=OJ:L_202401689</li>
+<li>Art. 3(23) — substantial modification</li>
+<li>Art. 6 — classification of high-risk AI systems</li>
+<li>Art. 9 — risk management system</li>
+<li>Art. 10 — data and data governance</li>
+<li>Art. 13 — transparency and instructions for use</li>
+<li>Art. 14 — human oversight</li>
+<li>Art. 15 — accuracy, robustness, cybersecurity</li>
+<li>Art. 16 — provider obligations</li>
+<li>Art. 17 — quality management system</li>
+<li>Art. 28 et seq. — notified bodies</li>
+<li>Art. 43 — conformity assessment procedures</li>
+<li>Art. 47 — EU declaration of conformity</li>
+<li>Art. 48 — CE marking</li>
+<li>Art. 49 — registration in EU database</li>
+<li>Art. 72 — post-market monitoring</li>
+<li>Annex III — list of high-risk AI systems</li>
+<li>Annex IV — technical documentation contents</li>
+<li>Annex VI — internal control procedure</li>
+<li>Annex VII — QMS and technical documentation assessment by notified body</li>
+<li>ISO/IEC 42001:2023, AI management systems: https://www.iso.org/standard/81230.html</li>
+<li>ISO/IEC 23894:2023, AI risk management guidance: https://www.iso.org/standard/77304.html</li>
+<li>GDPR Art. 35, Regulation (EU) 2016/679: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016R0679</li>
+<li>BSI C5 cloud compliance criteria: https://www.bsi.bund.de/EN/Themen/Unternehmen-und-Organisationen/Informationen-und-Empfehlungen/Empfehlungen-nach-Angriffszielen/Cloud-Computing/Kriterienkatalog-C5/kriterienkatalog-c5_node.html</li>
+<li>BaFin MaRisk (AT 9): https://www.bafin.de/SharedDocs/Veroeffentlichungen/DE/Rundschreiben/2021/rs_2109_marisk_ba.html</li>
+<li>EU NANDO database (notified bodies): https://ec.europa.eu/growth/tools-databases/nando/</li>
+<li>EU AI Office: https://digital-strategy.ec.europa.eu/en/policies/ai-office</li>
+<li>CEN/CENELEC mandate M/612 (AI standardisation): https://www.cencenelec.eu/areas-of-work/cenelec-sectors/digital-society-cenelec/artificial-intelligence/</li>
+</ul>
+    </article>
+  </section>
+
+  <!-- ============ RELATED ============ -->
+  <section class="container">
+    <div class="insight-related">
+      <h3>Related insights</h3>
+      <ul>
+    <li><a href="article-9-rms-practitioner-guide.html">EU AI Act Article 9 — Risk Management System: practitioner guide</a></li>
+    <li><a href="annex-iii-scoping-checklist.html">Annex III high-risk AI categories: scoping checklist for DACH organizations</a></li>
+    <li><a href="article-26-deployer-obligations.html">Article 26 deployer obligations: what banks and insurers actually owe</a></li>
+  </ul>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__copy">&copy; 2026 EKM Global Consulting GmbH. Baden-Baden, Germany. Founded 2013.</div>
+      <ul class="footer__links" role="list">
+        <li><a href="/insights/">Insights</a></li>
+        <li><a href="/eu-ai-act.html">EU AI Act</a></li>
+        <li><a href="https://app.ekmgc.de" rel="noopener">Quick Scan</a></li>
+        <li><a href="mailto:elshan.musayev@ekmgc.de">Contact</a></li>
+      </ul>
+      <div class="footer__social">
+        <a href="https://www.linkedin.com/company/ekm-global-consulting-gmbh/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

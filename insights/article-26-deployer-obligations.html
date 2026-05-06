@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Article 26 deployer obligations: what banks and insurers actually owe — EKM Global Consulting</title>
+  <meta name="description" content="Article 26 obligations on deployers of high-risk AI under Regulation (EU) 2024/1689 — including the FRIA carve-out for credit scoring (Article 29a) and the procurement-contract implications.">
+  <link rel="canonical" href="https://ekmgc.de/insights/article-26-deployer-obligations.html">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Article 26 deployer obligations: what banks and insurers actually owe">
+  <meta property="og:description" content="Article 26 obligations on deployers of high-risk AI under Regulation (EU) 2024/1689 — including the FRIA carve-out for credit scoring (Article 29a) and the procurement-contract implications.">
+  <meta property="og:url" content="https://ekmgc.de/insights/article-26-deployer-obligations.html">
+  <meta property="og:image" content="https://app.ekmgc.de/assets/og-image.png">
+  <meta property="og:site_name" content="EKM Global Consulting">
+  <meta property="article:published_time" content="2026-05-06T00:00:00+00:00">
+  <meta property="article:author" content="Elshan Musayev">
+  <meta property="article:section" content="EU AI Compliance">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Article 26 deployer obligations: what banks and insurers actually owe">
+  <meta name="twitter:description" content="Article 26 obligations on deployers of high-risk AI under Regulation (EU) 2024/1689 — including the FRIA carve-out for credit scoring (Article 29a) and the procurement-contract implications.">
+  <meta name="twitter:image" content="https://app.ekmgc.de/assets/og-image.png">
+
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M16 2L4 9v14l12 7 12-7V9L16 2z' fill='none' stroke='%2300d4aa' stroke-width='2'/%3E%3Cpath d='M16 8l-6 3.5v7L16 22l6-3.5v-7L16 8z' fill='%2300d4aa' opacity='0.3'/%3E%3Ccircle cx='16' cy='15' r='3' fill='%2300d4aa'/%3E%3C/svg%3E">
+
+  <!-- Fonts -->
+  <link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@400,500,700,800&f[]=satoshi@300,400,500,700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/base.css">
+  <link rel="stylesheet" href="/style.css">
+
+  <style>
+    /* Insight article page-local styles */
+    .insight-hero {
+      padding: calc(var(--space-10, 80px) + 60px) 0 var(--space-7, 56px);
+      background: linear-gradient(180deg, var(--color-surface-offset, #1a2338) 0%, var(--color-bg, #0a0e17) 100%);
+      border-bottom: 1px solid var(--color-border, #253350);
+    }
+    .insight-crumb {
+      font-size: 13px;
+      color: var(--color-text-muted, #8899b0);
+      margin-bottom: var(--space-3, 16px);
+    }
+    .insight-crumb a {
+      color: var(--color-text-muted, #8899b0);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.15s;
+    }
+    .insight-crumb a:hover { border-bottom-color: var(--color-primary, #00d4aa); }
+    .insight-eyebrow {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--color-primary, #00d4aa);
+      margin-bottom: var(--space-3, 16px);
+    }
+    .insight-headline {
+      font-family: var(--font-display, 'Cabinet Grotesk', sans-serif);
+      font-size: clamp(32px, 5vw, 56px);
+      font-weight: 800;
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+      margin: 0 0 var(--space-4, 24px);
+      max-width: 900px;
+    }
+    .insight-headline .accent { color: var(--color-primary, #00d4aa); }
+    .insight-meta {
+      display: flex;
+      gap: var(--space-4, 24px);
+      flex-wrap: wrap;
+      font-size: 14px;
+      color: var(--color-text-muted, #8899b0);
+      margin-bottom: var(--space-3, 16px);
+    }
+    .insight-meta strong { color: var(--color-text, #e2e8f0); font-weight: 500; }
+    .insight-tldr {
+      max-width: 820px;
+      padding: var(--space-4, 24px) var(--space-5, 32px);
+      border-left: 3px solid var(--color-primary, #00d4aa);
+      background: var(--color-surface-offset, #1a2338);
+      border-radius: 0 var(--radius-md, 10px) var(--radius-md, 10px) 0;
+      font-size: 17px;
+      line-height: 1.6;
+      color: var(--color-text, #e2e8f0);
+      margin-top: var(--space-5, 32px);
+    }
+    .insight-body {
+      padding: var(--space-8, 64px) 0;
+      max-width: 820px;
+      margin: 0 auto;
+    }
+    .insight-body h2 {
+      font-family: var(--font-display, 'Cabinet Grotesk', sans-serif);
+      font-size: clamp(24px, 3vw, 32px);
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      line-height: 1.2;
+      margin: var(--space-7, 56px) 0 var(--space-3, 16px);
+      color: var(--color-text, #e2e8f0);
+    }
+    .insight-body h3 {
+      font-family: var(--font-display, 'Cabinet Grotesk', sans-serif);
+      font-size: 20px;
+      font-weight: 600;
+      margin: var(--space-5, 32px) 0 var(--space-2, 8px);
+      color: var(--color-text, #e2e8f0);
+    }
+    .insight-body p {
+      font-size: 17px;
+      line-height: 1.7;
+      color: var(--color-text, #e2e8f0);
+      margin: 0 0 var(--space-3, 16px);
+    }
+    .insight-body ul, .insight-body ol {
+      font-size: 17px;
+      line-height: 1.7;
+      color: var(--color-text, #e2e8f0);
+      padding-left: 1.4em;
+      margin: 0 0 var(--space-4, 24px);
+    }
+    .insight-body li { margin-bottom: var(--space-2, 8px); }
+    .insight-body li::marker { color: var(--color-primary, #00d4aa); }
+    .insight-body strong { color: var(--color-text, #e2e8f0); font-weight: 600; }
+    .insight-body em { font-style: italic; color: var(--color-text-muted, #8899b0); }
+    .insight-body a {
+      color: var(--color-primary, #00d4aa);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(0, 212, 170, 0.4);
+      transition: border-color 0.15s;
+    }
+    .insight-body a:hover { border-bottom-color: var(--color-primary, #00d4aa); }
+    .insight-body blockquote {
+      margin: var(--space-5, 32px) 0;
+      padding: var(--space-3, 16px) var(--space-4, 24px);
+      border-left: 3px solid var(--color-primary, #00d4aa);
+      background: var(--color-surface-offset, #1a2338);
+      border-radius: 0 var(--radius-sm, 6px) var(--radius-sm, 6px) 0;
+      color: var(--color-text-muted, #8899b0);
+      font-style: italic;
+    }
+    .insight-body blockquote p:first-child { margin-top: 0; }
+    .insight-body blockquote p:last-child { margin-bottom: 0; }
+    .insight-body table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: var(--space-5, 32px) 0;
+      font-size: 15px;
+    }
+    .insight-body th, .insight-body td {
+      padding: var(--space-2, 8px) var(--space-3, 16px);
+      border: 1px solid var(--color-border, #253350);
+      text-align: left;
+      vertical-align: top;
+    }
+    .insight-body th {
+      background: var(--color-surface-offset, #1a2338);
+      font-weight: 600;
+      color: var(--color-text, #e2e8f0);
+    }
+    .insight-body code {
+      background: var(--color-surface-offset, #1a2338);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 0.92em;
+      color: var(--color-primary, #00d4aa);
+    }
+    .insight-body hr {
+      border: none;
+      border-top: 1px solid var(--color-border, #253350);
+      margin: var(--space-7, 56px) 0;
+    }
+    .insight-related {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: var(--space-7, 56px) 0;
+      border-top: 1px solid var(--color-border, #253350);
+    }
+    .insight-related h3 {
+      font-family: var(--font-display, 'Cabinet Grotesk', sans-serif);
+      font-size: 22px;
+      font-weight: 700;
+      margin-bottom: var(--space-4, 24px);
+    }
+    .insight-related ul {
+      list-style: none;
+      padding: 0;
+    }
+    .insight-related li {
+      padding: var(--space-3, 16px) 0;
+      border-bottom: 1px solid var(--color-border, #253350);
+    }
+    .insight-related li:last-child { border-bottom: none; }
+    .insight-related a {
+      color: var(--color-text, #e2e8f0);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.15s;
+    }
+    .insight-related a:hover { color: var(--color-primary, #00d4aa); }
+  </style>
+
+  <!-- Schema.org JSON-LD: Article + BreadcrumbList -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://ekmgc.de/insights/article-26-deployer-obligations.html#article",
+      "headline": "Article 26 deployer obligations: what banks and insurers actually owe",
+      "description": "Article 26 obligations on deployers of high-risk AI under Regulation (EU) 2024/1689 — including the FRIA carve-out for credit scoring (Article 29a) and the procurement-contract implications.",
+      "url": "https://ekmgc.de/insights/article-26-deployer-obligations.html",
+      "mainEntityOfPage": "https://ekmgc.de/insights/article-26-deployer-obligations.html",
+      "datePublished": "2026-05-06",
+      "dateModified": "2026-05-06",
+      "inLanguage": "en-GB",
+      "isAccessibleForFree": true,
+      "keywords": "EU AI Act, Regulation (EU) 2024/1689, Annex III, Article 9, Article 26, conformity assessment, GPAI, AI compliance, RegTech, BSI C5, BaFin",
+      "articleSection": "EU AI Compliance",
+      "author": {
+        "@type": "Person",
+        "@id": "https://www.linkedin.com/in/elshan-musayev/#person",
+        "name": "Elshan Musayev",
+        "url": "https://www.linkedin.com/in/elshan-musayev/",
+        "jobTitle": "Founder & CEO",
+        "sameAs": [
+          "https://www.linkedin.com/in/elshan-musayev/",
+          "https://www.linkedin.com/in/elshanmusayev/",
+          "https://elshanmusayev.com"
+        ]
+      },
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://ekmgc.de/#organization",
+        "name": "EKM Global Consulting GmbH",
+        "url": "https://ekmgc.de",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://app.ekmgc.de/assets/logo_ekm_icon.png",
+          "width": 1024,
+          "height": 1024
+        },
+        "sameAs": [
+          "https://www.linkedin.com/company/ekm-global-consulting-gmbh/",
+          "https://www.linkedin.com/showcase/121553912/",
+          "https://www.linkedin.com/showcase/121603994/",
+          "https://www.crunchbase.com/organization/ekm-global-consulting"
+        ]
+      },
+      "about": {
+        "@type": "Legislation",
+        "name": "Regulation (EU) 2024/1689 (Artificial Intelligence Act)",
+        "legislationJurisdiction": "European Union",
+        "legislationDate": "2024-06-13"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://ekmgc.de/insights/article-26-deployer-obligations.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://ekmgc.de/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "EU AI Act",
+          "item": "https://ekmgc.de/eu-ai-act.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Insights",
+          "item": "https://ekmgc.de/insights/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Article 26 deployer obligations: what banks and insurers actually owe",
+          "item": "https://ekmgc.de/insights/article-26-deployer-obligations.html"
+        }
+      ]
+    }
+  ]
+}
+  </script>
+</head>
+
+<body>
+  <!-- ============ HEADER ============ -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="/" class="header__logo" aria-label="EKM Global Consulting">
+        <img src="/assets/logo-dark.jpg" alt="EKM Global Consulting — think smarter" class="header__logo-img" id="siteLogo">
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Main navigation">
+        <ul class="nav__list" role="list">
+          <li><a href="/#services" class="nav__link">Services</a></li>
+          <li><a href="/eu-ai-act.html" class="nav__link">EU AI Act</a></li>
+          <li><a href="/insights/" class="nav__link nav__link--active">Insights</a></li>
+          <li><a href="/#approach" class="nav__link">Approach</a></li>
+          <li><a href="/#contact" class="nav__link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header__controls">
+        <button class="toggle-btn" id="themeToggle" data-theme-toggle aria-label="Switch theme">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+        </button>
+        <button class="menu-toggle" id="menuToggle" aria-label="Menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ HERO ============ -->
+  <section class="insight-hero">
+    <div class="container">
+      <div class="insight-crumb">
+        <a href="/">Home</a> · <a href="/eu-ai-act.html">EU AI Act</a> · <a href="/insights/">Insights</a> · Article 26 deployer obligations: what banks and insurers actually owe
+      </div>
+      <div class="insight-eyebrow">Cluster · EU AI Act</div>
+      <h1 class="insight-headline">Article 26 — what <span class="accent">deployers</span> actually owe.</h1>
+      <div class="insight-meta">
+        <span><strong>By</strong> Elshan Musayev</span>
+        <span><strong>Published</strong> 2026-05-06</span>
+        <span><strong>10 min read</strong></span>
+      </div>
+      <div class="insight-tldr">
+        <strong>TL;DR.</strong> 
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ BODY ============ -->
+  <section class="container">
+    <article class="insight-body">
+<p><strong>Meta description:</strong> Article 26 EU AI Act imposes direct obligations on deployers — banks, insurers, asset managers — that vendor contracts cannot absorb. A DACH-focused practitioner breakdown.</p>
+<p><strong>Canonical URL:</strong> <code>https://ekmgc.de/insights/article-26-deployer-obligations.html</code>
+<strong>Pillar:</strong> <a href="/insights/article-9-rms-practitioner-guide.html">EU AI Act Article 9 — Risk Management System: practitioner guide</a>
+<strong>Schema.org recommendation:</strong> <code>Article</code>, <code>FAQPage</code>
+<strong>Published:</strong> 2026-05-06 | <strong>Author:</strong> EKM Global Consulting GmbH</p>
+<hr>
+<blockquote>
+<p><strong>TL;DR</strong> The widespread assumption that AI vendor contracts transfer regulatory burden from deployer to provider does not hold under Regulation (EU) 2024/1689. Article 26 imposes a distinct set of obligations on every organisation that operates a high-risk AI system under its own authority — regardless of who built it. Banks deploying credit-scoring AI, insurers using underwriting models, and HR teams running automated shortlisting tools each carry direct, non-delegable duties. A technically compliant vendor contract is a necessary condition; it is not a sufficient one, and it does not survive supervisory review on its own.</p>
+</blockquote>
+<hr>
+<h2>Table of Contents</h2>
+<ol>
+<li><a href="#provider-vs-deployer">Provider vs deployer — the Article 3 framing</a></li>
+<li><a href="#article-26-breakdown">Article 26 sub-obligations — a full breakdown</a></li>
+<li><a href="#misconception">The "we are only the deployer" misconception</a></li>
+<li><a href="#dach-overlay">DACH financial services overlay</a></li>
+<li><a href="#use-cases">Use-case examples</a></li>
+<li><a href="#procurement">Procurement contract implications</a></li>
+<li><a href="#commissioning">What deployers must commission</a></li>
+<li><a href="#faq">Frequently Asked Questions</a></li>
+</ol>
+<hr>
+<h2 id="provider-vs-deployer">1. Provider vs deployer — the Article 3 framing</h2>
+<p>Regulation (EU) 2024/1689 (the EU AI Act) draws a precise boundary between two roles. A <strong>provider</strong> (Art. 3(3)) is any natural or legal person that develops a high-risk AI system and places it on the market or puts it into service under their own name. A <strong>deployer</strong> (Art. 3(4)) is any natural or legal person that uses a high-risk AI system under their own authority for a professional purpose.</p>
+<p>The critical consequence: when a German Landesbank buys an automated credit-scoring engine from a technology vendor and operates it within its own loan origination process, the bank is the deployer and the vendor is the provider. Both carry obligations. The provider's obligations — technical documentation, CE marking, logging capability, instructions for use — do not dissolve the bank's obligations under Art. 26. They operate in parallel.</p>
+<p>This distinction matters because the <strong>Annex III</strong> list of high-risk AI use cases in financial services includes AI systems used for creditworthiness evaluation and credit scoring (Annex III, item 5b), as well as systems used for life and health insurance risk assessment and pricing. HR recruitment and worker management systems (Annex III, item 4) are also in scope, which affects any large regulated employer deploying automated shortlisting or performance-evaluation tooling.</p>
+<hr>
+<h2 id="article-26-breakdown">2. Article 26 sub-obligations — a full breakdown</h2>
+<h3>Art. 26(1): Operate per the provider's instructions for use</h3>
+<p>The deployer must use the high-risk AI system in accordance with the instructions for use that the provider is required to supply under Art. 13. This is not merely a contractual obligation — it is a direct regulatory requirement. If a bank's operations team runs a fraud-detection model in a configuration that the provider did not document or did not test, the bank bears the compliance failure.</p>
+<p>This sub-obligation ties directly to the <a href="/insights/article-9-rms-practitioner-guide.html">Article 9 Risk Management System</a>: the deployer's own RMS must incorporate the risk profile and operational boundaries the provider has defined, then identify residual risks that arise from the deployer's specific deployment context.</p>
+<h3>Art. 26(2): Assign Article 14 human oversight</h3>
+<p>Every deployer of a high-risk AI system must assign oversight to natural persons who are <strong>competent</strong> for the task and have been appropriately <strong>trained</strong>. Article 14 (human oversight) is one of the most operationally demanding provisions in the Act. It requires that the assigned personnel:</p>
+<ul>
+<li>understand the capabilities and limitations of the system;</li>
+<li>can interpret system outputs correctly;</li>
+<li>are able to disregard, override, or halt the system when necessary;</li>
+<li>are not subject to undue incentive structures that would discourage intervention.</li>
+</ul>
+<p>Competence and training cannot be outsourced to the provider. The deployer must specify the role, the qualifying criteria, and the override authority in its internal governance documentation.</p>
+<h3>Art. 26(3): Input data must be relevant and sufficiently representative</h3>
+<p>Where the deployer controls the data fed into the system, that data must be relevant and sufficiently representative for the intended purpose. For a credit institution, this means that input data pipelines — customer financial history, bureau scores, behavioural signals — must meet a representativeness standard. Feeding a model with structurally biased or temporally stale inputs creates deployer-level liability regardless of the model's intrinsic quality.</p>
+<h3>Art. 26(4): Monitor operation; suspend if risk identified</h3>
+<p>Deployers must monitor the operation of the high-risk AI system on an ongoing basis, in accordance with the instructions for use, and must <strong>suspend</strong> its use where they have reason to believe that operation may pose a risk to health, safety, or fundamental rights. This monitoring obligation implies a formal programme — not ad hoc review — with defined KPIs, escalation criteria, and decision authority for suspension.</p>
+<h3>Art. 26(5): Retain automatically generated logs — minimum 6 months</h3>
+<p>Where the deployer controls the log infrastructure, automatically generated logs must be retained for a minimum of <strong>six months</strong>, unless Union or national law specifies otherwise. For regulated financial institutions subject to record-keeping requirements under DORA (Reg. (EU) 2022/2554), MaRisk, or sector-specific supervision, the applicable retention period may be longer. The important point is that log retention is a deployer obligation, not merely a vendor feature.</p>
+<h3>Art. 26(6): Fundamental Rights Impact Assessment (FRIA)</h3>
+<p>Deployers that are either:
+- <strong>(a)</strong> public-sector bodies, or
+- <strong>(b)</strong> private operators providing services of general interest</p>
+<p>must conduct a <strong>Fundamental Rights Impact Assessment</strong> (FRIA) before putting a high-risk AI system into service (Art. 26(6), detailed in Art. 27). The FRIA must identify the affected persons, assess risks to fundamental rights, and document mitigation measures.</p>
+<p>Crucially, Art. 29a extends FRIA requirements explicitly to <strong>credit institutions</strong> conducting creditworthiness assessment or credit scoring, and to operators of <strong>life and health insurance</strong> risk-assessment and pricing models. These are private-sector entities that might otherwise believe the FRIA does not apply to them. It does.</p>
+<p>The FRIA is a pre-deployment document. Completing it after go-live is not compliant, and an incomplete FRIA is a gap that does not survive supervisory review.</p>
+<h3>Art. 26(7): Suspend and inform the provider when risk emerges</h3>
+<p>Where a deployer identifies, during operation, that continued use may pose a risk to health, safety, or fundamental rights, the deployer must <strong>both</strong> suspend the system <strong>and</strong> inform the provider. This is a dual obligation. Suspension alone — without provider notification — is not compliant. This provision creates a contractual need: the deployer must have a documented notification channel to the provider, with agreed response times.</p>
+<h3>Art. 26(8): Inform workers before deploying AI in the workplace</h3>
+<p>Before deploying a high-risk AI system that affects workers — including AI used for recruitment, performance evaluation, task allocation, or monitoring — deployers must <strong>inform workers' representatives</strong> and <strong>affected workers</strong>, in accordance with applicable national law. In Germany, this intersects with works council (Betriebsrat) co-determination rights under the Betriebsverfassungsgesetz. In Austria, similar requirements apply under the Arbeitsverfassungsgesetz. Deployers that skip this step face dual exposure: under the AI Act and under domestic labour law.</p>
+<h3>Art. 26(11): Cooperate with national competent authorities</h3>
+<p>Deployers must cooperate with national competent authorities and provide all information and access necessary for supervisory purposes. For German banks and insurers, the relevant authority is BaFin. For healthcare providers, it is the competent authority designated under national implementation. This is not a passive obligation — it requires that deployers maintain records in a form that can be produced on request.</p>
+<hr>
+<h2 id="misconception">3. The "we are only the deployer" misconception</h2>
+<p>A pattern recurs in procurement discussions: the assumption that a well-drafted vendor contract — specifying that the provider is responsible for CE marking, technical documentation, and conformity assessment — transfers the regulatory burden and insulates the deployer from supervisory exposure.</p>
+<p>This assumption is incorrect on three counts.</p>
+<p><strong>First</strong>, Art. 26 obligations apply to the deployer directly by operation of law. They are not displaced by contract. A national supervisory authority inspecting a bank's AI governance will assess whether the bank has complied with Art. 26 independently of whether the bank has a contract that says the vendor bears responsibility.</p>
+<p><strong>Second</strong>, many Art. 26 obligations cannot be physically performed by the provider. The provider cannot assign the bank's staff to human oversight roles (Art. 26(2)). The provider cannot control the representativeness of the bank's proprietary input data (Art. 26(3)). The provider cannot notify the bank's workers' representatives (Art. 26(8)). These obligations sit structurally with the deployer.</p>
+<p><strong>Third</strong>, the FRIA (Art. 26(6), Art. 27, Art. 29a) must be completed by the deployer. It requires knowledge of the deployer's specific operational context, the specific population affected, and the specific fundamental rights at stake. A vendor cannot produce this document on the deployer's behalf because the vendor does not have this knowledge.</p>
+<p>The contract remains important — as a means of obtaining the provider's instructions for use, securing log access, establishing change-notification procedures, and structuring the Art. 26(7) information channel. But it is a means, not a substitute.</p>
+<hr>
+<h2 id="dach-overlay">4. DACH financial services overlay</h2>
+<h3>BaFin MaRisk AT 9</h3>
+<p>The Mindestanforderungen an das Risikomanagement (MaRisk) AT 9 module governs third-party risk for German credit institutions. MaRisk AT 9 requires documented risk analysis prior to outsourcing, ongoing monitoring of material service providers, contractual rights of audit and information, and exit strategies. Where an AI vendor qualifies as a material outsourcing partner — which is the case for any credit-scoring or fraud-detection system integral to the institution's risk processes — MaRisk AT 9 and Art. 26 obligations run in parallel and must be addressed in the same governance framework.</p>
+<h3>DORA ICT third-party risk</h3>
+<p>For entities in scope of DORA (Reg. (EU) 2022/2554), the ICT third-party risk management requirements under Articles 28 to 39 DORA must be read alongside Art. 26 EU AI Act. DORA requires contractual provisions covering audit rights, service levels, incident notification, and business continuity. The Art. 26(7) suspension-and-notify obligation should be embedded in the DORA incident notification framework.</p>
+<h3>NIS2 supply-chain security</h3>
+<p>Directive (EU) 2022/2555 (NIS2) requires that entities implement measures to manage risks arising from the supply chain. Where an AI system is part of a digital service or network, NIS2 supply-chain security assessments and the EU AI Act deployer obligations are complementary due diligence requirements.</p>
+<h3>GDPR Art. 22 automated decision-making</h3>
+<p>Where a high-risk AI system produces decisions that affect individuals — credit refusals, insurance pricing — GDPR Art. 22 is engaged. The Art. 22 right not to be subject to solely automated decisions with significant effects creates an additional documentation and human-review layer that must be integrated with the Art. 14 human oversight specification. The BfDI and Landesdatenschutzbehörden have enforcement authority here.</p>
+<h3>Art. 29a: FRIA for credit and insurance</h3>
+<p>As noted in Section 2, Art. 29a explicitly extends the FRIA requirement to credit institutions and insurance operators. German banks and insurers conducting automated credit scoring or life/health pricing are in scope. The FRIA must be completed before go-live and registered with the national market surveillance authority.</p>
+<hr>
+<h2 id="use-cases">5. Use-case examples</h2>
+<h3>Credit decisioning AI at a German Sparkasse</h3>
+<p>A regional savings bank deploys a vendor model for automated consumer credit assessment. The Annex III, item 5b classification means this is a high-risk system. The Art. 26(6) / Art. 29a FRIA must be completed before deployment. Human oversight (Art. 26(2)) must be assigned to loan officers with documented competence criteria. Input data — local bureau data feeds — must meet the Art. 26(3) representativeness standard. Automatically generated decision logs must be retained under Art. 26(5). GDPR Art. 22 human review must be documented for every adverse decision.</p>
+<h3>HR shortlisting AI at a large Austrian insurer</h3>
+<p>An insurer deploys an AI shortlisting tool for high-volume recruitment. Annex III, item 4 classifies this as high-risk. Art. 26(8) requires prior notification to the Betriebsrat under the Arbeitsverfassungsgesetz before deployment. Art. 26(2) requires trained HR reviewers with documented authority to override shortlisting outputs. The insurer cannot rely on the vendor's model card as a substitute for its own FRIA where the insurer qualifies as a provider of services of general interest in that jurisdiction.</p>
+<h3>Fraud detection AI at a Swiss reinsurer</h3>
+<p>A reinsurance entity deploys a transaction-fraud detection model across its claims intake process. Art. 26(4) monitoring obligations require a formal operational monitoring programme — not quarterly reports. The suspension obligation (Art. 26(7)) must be embedded in operational incident procedures. Log retention (Art. 26(5)) must be coordinated with DORA ICT incident record-keeping requirements. The <a href="/insights/article-9-rms-practitioner-guide.html">Article 9 Risk Management System</a> must document how residual risks from the fraud model's false-positive rate are managed.</p>
+<h3>Document classification AI in insurance claims handling</h3>
+<p>An insurer deploys a document classification model to triage incoming claims. If the classification outputs trigger consequential decisions — priority queuing, fraud flag, coverage assessment — the system is likely in scope as a high-risk AI system affecting access to services. Art. 26(1) compliance requires adherence to the provider's operational instructions; any deviation must be documented and risk-assessed. Art. 26(3) requires that the training and input document corpus is representative of the actual claims population.</p>
+<hr>
+<h2 id="procurement">6. Procurement contract implications</h2>
+<p>The deployer's contract with the AI provider is the primary instrument for obtaining what Art. 26 requires. The following provisions are operationally necessary — not optional best practice.</p>
+<p><strong>Instructions for use</strong> (Art. 13 / Art. 26(1)): The contract must specify that the provider will deliver, maintain, and update instructions for use as a contractual deliverable, with version control and notification of material changes.</p>
+<p><strong>Log access and retention support</strong> (Art. 26(5)): Where logs are held on provider infrastructure, the contract must guarantee deployer access, export capability, and a retention period consistent with Art. 26(5) and applicable sector rules.</p>
+<p><strong>Substantial modification notice</strong>: The EU AI Act treats substantial modification as an event that may re-trigger conformity obligations. The deployer must receive advance notice of any planned substantial modification to the model, scoring logic, or data inputs, with sufficient lead time to reassess the FRIA and Art. 26(3) representativeness.</p>
+<p><strong>Art. 26(7) information channel</strong>: The contract must specify a documented escalation path by which the deployer notifies the provider of identified risks, with agreed response timelines. This is a regulatory obligation, not merely a service-level arrangement.</p>
+<p><strong>Authority cooperation</strong> (Art. 26(11)): The contract should require provider cooperation in the event of a supervisory inquiry, including access to technical documentation and audit logs.</p>
+<p>For the structure and documentation requirements that underpin these contractual provisions, see the <a href="/insights/article-9-rms-practitioner-guide.html">Article 9 Risk Management System practitioner guide</a>.</p>
+<hr>
+<h2 id="commissioning">7. What deployers must commission</h2>
+<p>Deployers in the DACH financial services and healthcare sectors typically need to commission the following before going live with a high-risk AI system.</p>
+<ol>
+<li>
+<p><strong>FRIA per use case</strong> — a structured assessment per Art. 27 and Art. 29a, covering affected populations, fundamental rights at stake, risk likelihood and severity, and mitigation measures. For credit and insurance use cases, this is mandatory regardless of whether the deployer is a public body.</p>
+</li>
+<li>
+<p><strong>Article 14 human oversight specification</strong> — a documented specification naming the oversight role(s), qualifying competence criteria, required training (including model-specific training), decision authority, and override procedures. This specification must be integrated with the deployer's operational procedures and staff training records.</p>
+</li>
+<li>
+<p><strong>Log retention configuration</strong> — a documented configuration specifying which logs are generated, where they are stored (provider vs deployer infrastructure), who holds the retention obligation, and the applicable minimum retention period.</p>
+</li>
+<li>
+<p><strong>Monitoring KPIs and suspension protocols</strong> — a formal monitoring programme with defined metrics (accuracy drift, bias indicators, false positive/negative rates), escalation thresholds, and a documented suspension protocol that specifies decision authority and the Art. 26(7) provider notification procedure.</p>
+</li>
+<li>
+<p><strong>Workforce notification documentation</strong> (Art. 26(8)) — for workplace-affecting AI, evidence that works council consultation or worker notification has occurred in accordance with national law, prior to deployment.</p>
+</li>
+<li>
+<p><strong>Operational Risk Management System integration</strong> — the deployer's Art. 9 RMS must incorporate all of the above. The <a href="/insights/article-9-rms-practitioner-guide.html">Article 9 RMS practitioner guide</a> sets out the structure for integrating deployer-specific risk identification, evaluation, and mitigation measures into a documented system.</p>
+</li>
+</ol>
+<hr>
+<h2 id="faq">8. Frequently Asked Questions</h2>
+<p><strong>Q: If our AI vendor holds a CE mark for the system, are we as deployer automatically compliant?</strong></p>
+<p>A CE mark issued by the provider demonstrates that the system met conformity requirements at the point of market placement. It does not transfer or discharge any of the deployer obligations under Art. 26. The deployer's FRIA, human oversight assignment, log retention, and monitoring programme remain required independently.</p>
+<p><strong>Q: Does Article 26 apply to us if we use the AI system only internally, not to make decisions about customers?</strong></p>
+<p>Scope under the EU AI Act is determined by the Annex III classification of the use case, not by whether outputs are customer-facing. An HR shortlisting tool used internally to screen job applicants is an Annex III, item 4 system. Internal use does not exclude Art. 26 obligations.</p>
+<p><strong>Q: How long must deployers retain automatically generated logs under Art. 26(5)?</strong></p>
+<p>The minimum retention period is six months from the date of generation, where the deployer controls the logging infrastructure. National law or sector-specific regulation — including DORA for financial entities and MaRisk for German banks — may require longer periods. The applicable period must be documented in the deployer's log retention policy.</p>
+<p><strong>Q: Can a deployer rely on the provider's instructions for use as its FRIA?</strong></p>
+<p>No. The FRIA is a deployer-specific document. It must assess the fundamental rights impacts of the specific deployment — the specific population affected, the specific operational context, and the specific mitigation measures available to the deployer. The provider's instructions for use inform the FRIA but cannot substitute for it.</p>
+<p><strong>Q: Does Art. 26(8) apply to all AI systems, or only high-risk ones?</strong></p>
+<p>Article 26(8) applies to deployers of high-risk AI systems that affect workers — for example, systems used for recruitment, performance evaluation, task allocation, or workplace monitoring. The obligation runs alongside, and is coordinated with, applicable national co-determination and worker-information requirements.</p>
+<p><strong>Q: What is the relationship between Art. 26 and GDPR Art. 22 for automated credit decisions?</strong></p>
+<p>They operate in parallel. GDPR Art. 22 grants data subjects the right not to be subject to solely automated decisions with significant effects, and requires the existence of human review on request. Art. 26(2) of the EU AI Act independently requires the deployer to assign trained human oversight to the system. Both requirements must be addressed in the governance design for any automated credit decision system.</p>
+<p><strong>Q: Who enforces Art. 26 obligations against deployers in Germany?</strong></p>
+<p>The EU AI Act requires Member States to designate national competent authorities. For financial services deployers in Germany, BaFin is the expected primary supervisory authority. BfDI and Landesdatenschutzbehörden retain concurrent jurisdiction over personal data processing. Enforcement timelines depend on the transitional provisions in Regulation (EU) 2024/1689, with obligations for high-risk AI systems in Annex III becoming applicable from August 2026.</p>
+<p><strong>Q: What does "suspend" mean in practice under Art. 26(4) and Art. 26(7)?</strong></p>
+<p>Suspension means halting the operational use of the system for the decision-making purpose in question — not merely pausing automated output delivery. The deployer must document the suspension decision, the reason, the date, and the alternative process in place. Art. 26(7) adds the requirement to notify the provider in writing. Both steps should be codified in the deployer's incident and business-continuity procedures before deployment.</p>
+<hr>
+<h2>Ready to assess your Art. 26 compliance posture?</h2>
+<p>EKM Global Consulting GmbH (Baden-Baden) works with banks, insurers, asset managers, and healthcare entities across the DACH region on structured EU AI Act deployer assessments, FRIA development, and Article 14 human oversight specifications.</p>
+<p><strong>Quick Scan</strong> — run a structured self-assessment at <a href="https://app.ekmgc.de">app.ekmgc.de</a> to identify which Art. 26 obligations apply to your current AI deployments.</p>
+<p><strong>Advisory</strong> — for a practitioner-led review of your deployer obligations across Annex III use cases, visit <a href="https://ekmgc.de/eu-ai-act.html">ekmgc.de/eu-ai-act.html</a>.</p>
+<hr>
+<h2>Citations and primary sources</h2>
+<ol>
+<li>Regulation (EU) 2024/1689 of the European Parliament and of the Council on Artificial Intelligence (EU AI Act) — EUR-Lex: <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=OJ:L_202401689">https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=OJ:L_202401689</a></li>
+<li>Art. 3 (definitions), Art. 13 (transparency), Art. 14 (human oversight), Art. 26 (deployer obligations), Art. 27 (FRIA), Art. 29a (FRIA for credit and insurance), Annex III (high-risk AI systems) — Regulation (EU) 2024/1689</li>
+<li>Regulation (EU) 2022/2554 on digital operational resilience for the financial sector (DORA) — EUR-Lex: <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554">https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554</a></li>
+<li>Directive (EU) 2022/2555 on measures for a high common level of cybersecurity across the Union (NIS2) — EUR-Lex: <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022L2555">https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022L2555</a></li>
+<li>Regulation (EU) 2016/679 (GDPR), Art. 22 — EUR-Lex: <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016R0679">https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016R0679</a></li>
+<li>BaFin Mindestanforderungen an das Risikomanagement (MaRisk) — Rundschreiben 05/2023 (BA): <a href="https://www.bafin.de/SharedDocs/Veroeffentlichungen/DE/Rundschreiben/2023/rs_2305_ba_MaRisk.html">https://www.bafin.de/SharedDocs/Veroeffentlichungen/DE/Rundschreiben/2023/rs_2305_ba_MaRisk.html</a></li>
+<li>EU AI Office — guidance and regulatory resources: <a href="https://digital-strategy.ec.europa.eu/en/policies/european-approach-artificial-intelligence">https://digital-strategy.ec.europa.eu/en/policies/european-approach-artificial-intelligence</a></li>
+</ol>
+    </article>
+  </section>
+
+  <!-- ============ RELATED ============ -->
+  <section class="container">
+    <div class="insight-related">
+      <h3>Related insights</h3>
+      <ul>
+    <li><a href="article-9-rms-practitioner-guide.html">EU AI Act Article 9 — Risk Management System: practitioner guide</a></li>
+    <li><a href="annex-iii-scoping-checklist.html">Annex III high-risk AI categories: scoping checklist for DACH organizations</a></li>
+    <li><a href="conformity-assessment-annex-vi-vii.html">EU AI Act conformity assessment: Annex VI internal vs Annex VII notified body</a></li>
+  </ul>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__copy">&copy; 2026 EKM Global Consulting GmbH. Baden-Baden, Germany. Founded 2013.</div>
+      <ul class="footer__links" role="list">
+        <li><a href="/insights/">Insights</a></li>
+        <li><a href="/eu-ai-act.html">EU AI Act</a></li>
+        <li><a href="https://app.ekmgc.de" rel="noopener">Quick Scan</a></li>
+        <li><a href="mailto:elshan.musayev@ekmgc.de">Contact</a></li>
+      </ul>
+      <div class="footer__social">
+        <a href="https://www.linkedin.com/company/ekm-global-consulting-gmbh/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

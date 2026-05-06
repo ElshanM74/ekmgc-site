@@ -1,0 +1,29 @@
+# EKM Global Consulting GmbH — ekmgc.de
+# Baden-Baden, Germany · Founded January 2013
+
+User-agent: *
+Allow: /
+
+Sitemap: https://ekmgc.de/sitemap.xml
+
+# Allow all major search and AI crawlers explicitly
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
