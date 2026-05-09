@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="de" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ISO/IEC 42001 vs. EU-KI-Verordnung Artikel 9 RMS: Deckt die Zertifizierung die Verordnung? — EKM Global Consulting</title>
+  <meta name="description" content="ISO/IEC 42001:2023 Zertifizierung liefert etwa 70 % eines Artikel-9-konformen Risikomanagementsystems, ist aber noch keine formal harmonisierte Norm nach der KI-Verordnung. Klausel-für-Klausel-Mapping und Lückenanalyse.">
+  <link rel="canonical" href="https://ekmgc.de/insights/iso-42001-vs-artikel-9.html">
+  <link rel="alternate" hreflang="en" href="https://ekmgc.de/insights/iso-42001-vs-article-9-rms.html">
+  <link rel="alternate" hreflang="de" href="https://ekmgc.de/insights/iso-42001-vs-artikel-9.html">
+  <link rel="alternate" hreflang="x-default" href="https://ekmgc.de/insights/iso-42001-vs-article-9-rms.html">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="ISO/IEC 42001 vs. EU-KI-Verordnung Artikel 9 RMS: Deckt die Zertifizierung die Verordnung?">
+  <meta property="og:description" content="ISO/IEC 42001:2023 Zertifizierung liefert etwa 70 % eines Artikel-9-konformen Risikomanagementsystems, ist aber noch keine formal harmonisierte Norm nach der KI-Verordnung. Klausel-für-Klausel-Mapping und Lückenanalyse.">
+  <meta property="og:url" content="https://ekmgc.de/insights/iso-42001-vs-artikel-9.html">
+  <meta property="og:image" content="https://app.ekmgc.de/assets/og-image.png">
+  <meta property="og:site_name" content="EKM Global Consulting">
+  <meta property="og:locale" content="de_DE">
+  <meta property="article:published_time" content="2026-05-06T00:00:00+00:00">
+  <meta property="article:author" content="Elshan Musayev">
+  <meta property="article:section" content="EU AI Compliance">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ISO/IEC 42001 vs. EU-KI-Verordnung Artikel 9 RMS: Deckt die Zertifizierung die Verordnung?">
+  <meta name="twitter:description" content="ISO/IEC 42001:2023 Zertifizierung liefert etwa 70 % eines Artikel-9-konformen Risikomanagementsystems, ist aber noch keine formal harmonisierte Norm nach der KI-Verordnung. Klausel-für-Klausel-Mapping und Lückenanalyse.">
+  <meta name="twitter:image" content="https://app.ekmgc.de/assets/og-image.png">
+
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M16 2L4 9v14l12 7 12-7V9L16 2z' fill='none' stroke='%2300d4aa' stroke-width='2'/%3E%3Cpath d='M16 8l-6 3.5v7L16 22l6-3.5v-7L16 8z' fill='%2300d4aa' opacity='0.3'/%3E%3Ccircle cx='16' cy='15' r='3' fill='%2300d4aa'/%3E%3C/svg%3E">
+
+  <!-- Fonts -->
+  <link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@400,500,700,800&f[]=satoshi@300,400,500,700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/base.css">
+  <link rel="stylesheet" href="/style.css">
+
+  <style>
+    /* Insight article page-local styles */
+    .insight-hero {
+      padding: calc(var(--space-10, 80px) + 60px) 0 var(--space-7, 56px);
+      background: linear-gradient(180deg, var(--color-surface-offset, #1a2338) 0%, var(--color-bg, #0a0e17) 100%);
+      border-bottom: 1px solid var(--color-border, #253350);
+    }
+    .insight-crumb {
+      font-size: 13px;
+      color: var(--color-text-muted, #8899b0);
+      margin-bottom: var(--space-3, 16px);
+    }
+    .insight-crumb a {
+      color: var(--color-text-muted, #8899b0);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.15s;
+    }
+    .insight-crumb a:hover { border-bottom-color: var(--color-primary, #00d4aa); }
+    .insight-eyebrow {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--color-primary, #00d4aa);
+      margin-bottom: var(--space-3, 16px);
+    }
+    .insight-headline {
+      font-family: var(--font-display, 'Cabinet Grotesk', sans-serif);
+      font-size: clamp(32px, 5vw, 56px);
+      font-weight: 800;
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+      margin: 0 0 var(--space-4, 24px);
+      max-width: 900px;
+    }
+    .insight-headline .accent { color: var(--color-primary, #00d4aa); }
+    .insight-meta {
+      display: flex;
+      gap: var(--space-4, 24px);
+      flex-wrap: wrap;
+      font-size: 14px;
+      color: var(--color-text-muted, #8899b0);
+      margin-bottom: var(--space-3, 16px);
+    }
+    .insight-meta strong { color: var(--color-text, #e2e8f0); font-weight: 500; }
+    .insight-tldr {
+      max-width: 820px;
+      padding: var(--space-4, 24px) var(--space-5, 32px);
+      border-left: 3px solid var(--color-primary, #00d4aa);
+      background: var(--color-surface-offset, #1a2338);
+      border-radius: 0 var(--radius-md, 10px) var(--radius-md, 10px) 0;
+      font-size: 17px;
+      line-height: 1.6;
+      color: var(--color-text, #e2e8f0);
+      margin-top: var(--space-5, 32px);
+    }
+    .insight-body {
+      padding: var(--space-8, 64px) 0;
+      max-width: 820px;
+      margin: 0 auto;
+    }
+    .insight-body h2 {
+      font-family: var(--font-display, 'Cabinet Grotesk', sans-serif);
+      font-size: clamp(24px, 3vw, 32px);
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      line-height: 1.2;
+      margin: var(--space-7, 56px) 0 var(--space-3, 16px);
+      color: var(--color-text, #e2e8f0);
+    }
+    .insight-body h3 {
+      font-family: var(--font-display, 'Cabinet Grotesk', sans-serif);
+      font-size: 20px;
+      font-weight: 600;
+      margin: var(--space-5, 32px) 0 var(--space-2, 8px);
+      color: var(--color-text, #e2e8f0);
+    }
+    .insight-body p {
+      font-size: 17px;
+      line-height: 1.7;
+      color: var(--color-text, #e2e8f0);
+      margin: 0 0 var(--space-3, 16px);
+    }
+    .insight-body ul, .insight-body ol {
+      font-size: 17px;
+      line-height: 1.7;
+      color: var(--color-text, #e2e8f0);
+      padding-left: 1.4em;
+      margin: 0 0 var(--space-4, 24px);
+    }
+    .insight-body li { margin-bottom: var(--space-2, 8px); }
+    .insight-body li::marker { color: var(--color-primary, #00d4aa); }
+    .insight-body strong { color: var(--color-text, #e2e8f0); font-weight: 600; }
+    .insight-body em { font-style: italic; color: var(--color-text-muted, #8899b0); }
+    .insight-body a {
+      color: var(--color-primary, #00d4aa);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(0, 212, 170, 0.4);
+      transition: border-color 0.15s;
+    }
+    .insight-body a:hover { border-bottom-color: var(--color-primary, #00d4aa); }
+    .insight-body blockquote {
+      margin: var(--space-5, 32px) 0;
+      padding: var(--space-3, 16px) var(--space-4, 24px);
+      border-left: 3px solid var(--color-primary, #00d4aa);
+      background: var(--color-surface-offset, #1a2338);
+      border-radius: 0 var(--radius-sm, 6px) var(--radius-sm, 6px) 0;
+      color: var(--color-text-muted, #8899b0);
+      font-style: italic;
+    }
+    .insight-body blockquote p:first-child { margin-top: 0; }
+    .insight-body blockquote p:last-child { margin-bottom: 0; }
+    .insight-body table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: var(--space-5, 32px) 0;
+      font-size: 15px;
+    }
+    .insight-body th, .insight-body td {
+      padding: var(--space-2, 8px) var(--space-3, 16px);
+      border: 1px solid var(--color-border, #253350);
+      text-align: left;
+      vertical-align: top;
+    }
+    .insight-body th {
+      background: var(--color-surface-offset, #1a2338);
+      font-weight: 600;
+      color: var(--color-text, #e2e8f0);
+    }
+    .insight-body code {
+      background: var(--color-surface-offset, #1a2338);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 0.92em;
+      color: var(--color-primary, #00d4aa);
+    }
+    .insight-body hr {
+      border: none;
+      border-top: 1px solid var(--color-border, #253350);
+      margin: var(--space-7, 56px) 0;
+    }
+    .insight-related {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: var(--space-7, 56px) 0;
+      border-top: 1px solid var(--color-border, #253350);
+    }
+    .insight-related h3 {
+      font-family: var(--font-display, 'Cabinet Grotesk', sans-serif);
+      font-size: 22px;
+      font-weight: 700;
+      margin-bottom: var(--space-4, 24px);
+    }
+    .insight-related ul {
+      list-style: none;
+      padding: 0;
+    }
+    .insight-related li {
+      padding: var(--space-3, 16px) 0;
+      border-bottom: 1px solid var(--color-border, #253350);
+    }
+    .insight-related li:last-child { border-bottom: none; }
+    .insight-related__desc {
+      display: block;
+      font-size: 14px;
+      color: var(--color-text-muted, #8899b0);
+      margin-top: 4px;
+      line-height: 1.5;
+    }
+    .insight-related__alt {
+      margin: var(--space-3, 16px) 0 var(--space-5, 32px);
+      font-size: 14px;
+    }
+    .insight-related__alt a {
+      color: var(--color-primary, #00d4aa);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .insight-related a {
+      color: var(--color-text, #e2e8f0);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.15s;
+    }
+    .insight-related a:hover { color: var(--color-primary, #00d4aa); }
+  </style>
+
+  <!-- Schema.org JSON-LD: Article + BreadcrumbList -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://ekmgc.de/insights/iso-42001-vs-artikel-9.html#article",
+      "headline": "ISO/IEC 42001 vs. EU-KI-Verordnung Artikel 9 RMS: Deckt die Zertifizierung die Verordnung?",
+      "description": "ISO/IEC 42001:2023 Zertifizierung liefert etwa 70 % eines Artikel-9-konformen Risikomanagementsystems, ist aber noch keine formal harmonisierte Norm nach der KI-Verordnung. Klausel-für-Klausel-Mapping und Lückenanalyse.",
+      "url": "https://ekmgc.de/insights/iso-42001-vs-artikel-9.html",
+      "mainEntityOfPage": "https://ekmgc.de/insights/iso-42001-vs-artikel-9.html",
+      "datePublished": "2026-05-06",
+      "dateModified": "2026-05-06",
+      "inLanguage": "de-DE",
+      "isAccessibleForFree": true,
+      "keywords": "EU AI Act, Regulation (EU) 2024/1689, Annex III, Article 9, Article 26, conformity assessment, GPAI, AI compliance, RegTech, BSI C5, BaFin",
+      "articleSection": "EU AI Compliance",
+      "author": {
+        "@type": "Person",
+        "@id": "https://www.linkedin.com/in/elshan-musayev/#person",
+        "name": "Elshan Musayev",
+        "url": "https://www.linkedin.com/in/elshan-musayev/",
+        "jobTitle": "Founder & CEO",
+        "sameAs": [
+          "https://www.linkedin.com/in/elshan-musayev/",
+          "https://www.linkedin.com/in/elshanmusayev/",
+          "https://elshanmusayev.com"
+        ]
+      },
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://ekmgc.de/#organization",
+        "name": "EKM Global Consulting GmbH",
+        "url": "https://ekmgc.de",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://app.ekmgc.de/assets/logo_ekm_icon.png",
+          "width": 1024,
+          "height": 1024
+        },
+        "sameAs": [
+          "https://www.linkedin.com/company/ekm-global-consulting-gmbh/",
+          "https://www.linkedin.com/showcase/121553912/",
+          "https://www.linkedin.com/showcase/121603994/",
+          "https://www.crunchbase.com/organization/ekm-global-consulting"
+        ]
+      },
+      "about": {
+        "@type": "Legislation",
+        "name": "Regulation (EU) 2024/1689 (Artificial Intelligence Act)",
+        "legislationJurisdiction": "European Union",
+        "legislationDate": "2024-06-13"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://ekmgc.de/insights/iso-42001-vs-artikel-9.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://ekmgc.de/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "EU AI Act",
+          "item": "https://ekmgc.de/eu-ai-act.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Insights",
+          "item": "https://ekmgc.de/insights/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "ISO/IEC 42001 vs. EU-KI-Verordnung Artikel 9 RMS: Deckt die Zertifizierung die Verordnung?",
+          "item": "https://ekmgc.de/insights/iso-42001-vs-artikel-9.html"
+        }
+      ]
+    }
+  ]
+}
+  </script>
+</head>
+
+<body>
+  <!-- ============ HEADER ============ -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="/" class="header__logo" aria-label="EKM Global Consulting">
+        <img src="/assets/logo-dark.jpg" alt="EKM Global Consulting — think smarter" class="header__logo-img" id="siteLogo">
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Main navigation">
+        <ul class="nav__list" role="list">
+          <li><a href="/#services" class="nav__link">Services</a></li>
+          <li><a href="/eu-ai-act.html" class="nav__link">EU AI Act</a></li>
+          <li><a href="/insights/" class="nav__link nav__link--active">Insights</a></li>
+          <li><a href="/#approach" class="nav__link">Approach</a></li>
+          <li><a href="/#contact" class="nav__link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header__controls">
+        <button class="toggle-btn" id="themeToggle" data-theme-toggle aria-label="Switch theme">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+        </button>
+        <button class="menu-toggle" id="menuToggle" aria-label="Menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ HERO ============ -->
+  <section class="insight-hero">
+    <div class="container">
+      <div class="insight-crumb">
+        <a href="/">Home</a> · <a href="/eu-ai-act.html">EU AI Act</a> · <a href="/insights/">Insights</a> · ISO/IEC 42001 vs. EU-KI-Verordnung Artikel 9 RMS: Deckt die Zertifizierung die Verordnung?
+      </div>
+      <div class="insight-eyebrow">Comparison · Auf Deutsch · EU-KI-Verordnung</div>
+      <h1 class="insight-headline"><span class="accent">ISO 42001</span> vs. Artikel 9 RMS.</h1>
+      <div class="insight-meta">
+        <span><strong>Von</strong> Elshan Musayev</span>
+        <span><strong>Veröffentlicht</strong> 2026-05-06</span>
+        <span><strong>11 Min. Lesezeit</strong></span>
+      </div>
+      <div class="insight-tldr">
+        <strong>Kurzfassung.</strong> ISO/IEC 42001:2023 Zertifizierung liefert etwa 70 % eines Artikel-9-konformen Risikomanagementsystems, ist aber noch keine formal harmonisierte Norm nach der KI-Verordnung. Klausel-für-Klausel-Mapping und Lückenanalyse.
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ BODY ============ -->
+  <section class="container">
+    <article class="insight-body">
+<p><strong>Veröffentlicht von EKM Global Consulting GmbH · Baden-Baden · Aktualisiert Mai 2026</strong></p>
+<hr>
+<blockquote>
+<p><strong>Meta-Beschreibung:</strong> Die ISO/IEC 42001:2023-Zertifizierung deckt etwa 70 % eines nach Artikel 9 konformen Risikomanagementsystems ab, ist jedoch keine formal harmonisierte Norm im Sinne des EU-KI-Gesetzes. Dieser Artikel bildet alle relevanten Klauseln ab und benennt die spezifischen Lücken, die ein Anbieter eines Hochrisiko-KI-Systems vor der Nutzung als Compliance-Grundlage schließen muss.</p>
+</blockquote>
+<hr>
+<h2 id="kurzuebersicht">Kurzübersicht</h2>
+<table>
+<thead>
+<tr>
+<th>Frage</th>
+<th>Antwort</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ist ISO 42001 mit Artikel 9 des KI-Gesetzes inhaltlich kompatibel?</td>
+<td>Substanziell ja — der iterative KI-Risikomanagementzyklus, die Dokumentationsdisziplin und die Lebenszyklus-Orientierung spiegeln die Anforderungen von Artikel 9 eng wider.</td>
+</tr>
+<tr>
+<td>Ist die ISO-42001-Zertifizierung ein Nachweis der Konformität mit Artikel 9?</td>
+<td>Nein. Stand Mai 2026 handelt es sich nicht um eine formal harmonisierte Norm gemäß Artikel 40 des KI-Gesetzes, und es wurde kein Durchführungsrechtsakt erlassen, der eine Konformitätsvermutung gewährt.</td>
+</tr>
+<tr>
+<td>Wie viel Prozent der Anforderungen aus Artikel 9 werden abgedeckt?</td>
+<td>Ungefähr 70 %. Die Lücken betreffen vor allem die KI-gesetz-spezifischen Pflichten gegenüber vulnerablen Personen und Kindern, die technische Dokumentation nach Anhang IV sowie Auslöser für die Konformitätsbewertung.</td>
+</tr>
+<tr>
+<td>Kann die Norm als operative Grundlage dienen?</td>
+<td>Ja — und sie stellt die effizienteste verfügbare Ausgangsbasis dar, wenn Ihre Organisation bereits zertifiziert ist oder ein KI-Managementsystem von Grund auf aufbaut.</td>
+</tr>
+<tr>
+<td>Welche Rolle spielt ISO/IEC 23894:2023?</td>
+<td>Sie bietet eine engere textliche Übereinstimmung mit dem KI-Risikomanagement-Vokabular aus Artikel 9, hat jedoch denselben Harmonisierungsstatus: noch nicht formal nach Artikel 40 anerkannt.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2>Inhaltsverzeichnis</h2>
+<ol>
+<li><a href="#was-iso-42001-ist">Was ISO/IEC 42001:2023 ist</a></li>
+<li><a href="#was-artikel-9-verlangt">Was Artikel 9 des EU-KI-Gesetzes verlangt</a></li>
+<li><a href="#mapping-tabelle">Klausel-für-Klausel-Mapping-Tabelle</a></li>
+<li><a href="#wo-sie-uebereinstimmen">Wo ISO 42001 und Artikel 9 übereinstimmen</a></li>
+<li><a href="#wo-sie-divergieren">Wo ISO 42001 hinter Artikel 9 zurückbleibt</a></li>
+<li><a href="#wo-23894-passt">Welche Rolle ISO/IEC 23894:2023 spielt</a></li>
+<li><a href="#handlungsempfehlungen">Handlungsempfehlungen für Compliance-Verantwortliche</a></li>
+<li><a href="#dach-hinweise">DACH-spezifische Hinweise</a></li>
+<li><a href="#cta">Nächste Schritte mit EKM Global Consulting GmbH</a></li>
+</ol>
+<hr>
+<h2 id="was-iso-42001-ist">1. Was ISO/IEC 42001:2023 ist</h2>
+<p>ISO/IEC 42001:2023, <em>Information technology — Artificial intelligence — Management system</em>, ist die erste international anerkannte Managementsystem-Norm, die speziell für Organisationen konzipiert wurde, die KI-Systeme entwickeln, bereitstellen oder einsetzen. Sie wurde im Dezember 2023 von ISO/IEC JTC 1/SC 42 veröffentlicht und folgt der Annex-SL-Hochstruktur (High Level Structure, HLS), die auch ISO/IEC 27001:2022, ISO 9001:2015 und alle modernen Managementsystem-Normen teilen. Diese strukturelle Übereinstimmung ermöglicht Organisationen, die bereits über eine ISO-27001- oder ISO-9001-Zertifizierung verfügen, eine Integration von ISO 42001 in ihr bestehendes Managementsystem mit deutlich reduziertem Doppelaufwand.</p>
+<p>Die Norm basiert auf dem Plan-Do-Check-Act-Zyklus (PDCA) und umfasst:</p>
+<ul>
+<li>Organisationskontext und Anwendungsbereichsfestlegung (Abschnitt 4)</li>
+<li>Führung, Richtlinie und Rollenzuweisung (Abschnitt 5)</li>
+<li>Planung, Risiko- und Chancenmanagement sowie KI-spezifische Folgenabschätzung (Abschnitt 6)</li>
+<li>Unterstützungsanforderungen einschließlich Kompetenz, Bewusstsein und Dokumentation (Abschnitt 7)</li>
+<li>Operative Planung und Steuerung, einschließlich Folgenabschätzung für KI-Systeme (Abschnitt 8)</li>
+<li>Leistungsbewertung, internes Audit und Managementbewertung (Abschnitt 9)</li>
+<li>Kontinuierliche Verbesserung und Nichtkonformitätsmanagement (Abschnitt 10)</li>
+<li>Anhang A (normativ) mit 38 Maßnahmen über 9 Maßnahmenziele zu Richtlinien, interner Organisation, Ressourcen für KI-Systeme, Folgenabschätzung, KI-Systemlebenszyklus, verantwortungsvoller KI, Drittparteien-Beziehungen und Daten für KI</li>
+</ul>
+<p>Die Zertifizierung wird von akkreditierten Konformitätsbewertungsstellen nach einer Auditierung gegen die Normanforderungen erteilt. Sie ist freiwillig. Es besteht keine Branchenpflicht oder gesetzliche Verpflichtung zur ISO-42001-Zertifizierung — auch nicht nach dem EU-KI-Gesetz.</p>
+<hr>
+<h2 id="was-artikel-9-verlangt">2. Was Artikel 9 des EU-KI-Gesetzes verlangt</h2>
+<p>Artikel 9 der Verordnung (EU) 2024/1689 (KI-Gesetz) schreibt Anbietern von Hochrisiko-KI-Systemen (gemäß Klassifikation in Anhang III und Artikel 6) ein verbindliches Risikomanagementsystem vor. Eine detaillierte Behandlung der operativen Anforderungen bietet der <a href="/insights/article-9-risikomanagementsystem-leitfaden.html">Praxisleitfaden zum Risikomanagementsystem nach Artikel 9</a>.</p>
+<p>Zusammengefasst verlangt Artikel 9 einen dokumentierten, iterativen KI-Risikomanagementprozess über den gesamten Lebenszyklus eines Hochrisiko-KI-Systems hinweg. Die vier operativen Pflichten lauten:</p>
+<ul>
+<li><strong>Artikel 9(2):</strong> Identifizierung und Analyse bekannter und vernünftigerweise vorhersehbarer Risiken für Gesundheit, Sicherheit oder Grundrechte; Schätzung und Bewertung von Risiken, die sich aus dem bestimmungsgemäßen Zweck oder vernünftigerweise vorhersehbarer Fehlanwendung ergeben können.</li>
+<li><strong>Artikel 9(4):</strong> Ergreifung geeigneter KI-Risikomanagement-Maßnahmen unter gebührender Berücksichtigung des Stands der Technik.</li>
+<li><strong>Artikel 9(5) und (6):</strong> Beseitigung oder Reduzierung von Risiken durch Design und Entwicklung; Umsetzung angemessener Minderungs- und Kontrollmaßnahmen; Bereitstellung von Informationen gemäß Artikel 13; Schulungsmaßnahmen, wenn Restrisiken akzeptiert werden.</li>
+<li><strong>Artikel 9(7), (8) und (9):</strong> Tests zur Verifizierung der Risikomanagementsystem-Maßnahmen; spezifische Pflichten bezüglich Risiken für Personen vulnerabler Gruppen einschließlich Kindern; Pflichten zur Überprüfung und Aktualisierung des Risikomanagementsystems.</li>
+</ul>
+<p>Das Risikomanagementsystem muss dokumentiert werden (Artikel 17), seine Ergebnisse müssen in die technische Dokumentation nach Anhang IV einfließen, und seine Angemessenheit wird im Rahmen der Konformitätsbewertung nach Artikel 43 bewertet. Wesentliche Änderungen an einem Hochrisiko-KI-System lösen eine Überprüfung des Risikomanagementsystems nach Artikel 43(4) aus.</p>
+<hr>
+<h2 id="mapping-tabelle">3. Klausel-für-Klausel-Mapping-Tabelle</h2>
+<p>Die nachstehende Tabelle ordnet ISO-42001-Abschnitte und Anhang-A-Maßnahmen den spezifischen Teilabsätzen von Artikel 9 zu. Die Bewertungen der Abdeckung spiegeln die sachliche Überschneidung der Prozessanforderungen wider; sie implizieren nicht, dass eine ISO-42001-Zertifizierung rechtlich als Konformitätsnachweis für die zugeordnete Artikel-9-Pflicht gilt.</p>
+<table>
+<thead>
+<tr>
+<th>ISO/IEC 42001:2023 Referenz</th>
+<th>Artikel-9-Teilabsatz</th>
+<th>Abdeckung</th>
+<th>Anmerkungen</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Abschnitt 6.1 — Risiko- und Chancenbewertung</td>
+<td>Art. 9(2)(a)–(b): Risikoidentifikation und -analyse</td>
+<td>Substanziell</td>
+<td>ISO 42001 verlangt die Risikoidentifikation über die Folgenabschätzung des KI-Systems; das Vokabular weicht von Art. 9s Gesundheits-/Sicherheits-/Grundrechtsrahmen ab</td>
+</tr>
+<tr>
+<td>Abschnitt 6.2 — Folgenabschätzung für KI-Systeme</td>
+<td>Art. 9(2)(c)–(d): Risikoschätzung und -bewertung</td>
+<td>Substanziell</td>
+<td>Die Folgenabschätzung muss in Art.-9-Begriffe umformuliert werden; ISO 42001 schreibt keine Grundrechts-Folgenabschätzung standardmäßig vor</td>
+</tr>
+<tr>
+<td>Abschnitt 8.4 — Betrieb und Monitoring von KI-Systemen</td>
+<td>Art. 9(4): KI-Risikomanagement-Maßnahmen</td>
+<td>Moderat</td>
+<td>ISO 42001 deckt operative Kontrollen ab; Art. 9(4) verlangt zusätzlich explizit die Berücksichtigung des Stands der Technik</td>
+</tr>
+<tr>
+<td>Anhang A, A.6 — Lebenszyklus von KI-Systemen</td>
+<td>Art. 9(5): lebenszyklusbezogene Risikobehandlung</td>
+<td>Substanziell</td>
+<td>Beide erfordern iterative Behandlung über Entwicklung, Betrieb und Außerbetriebnahme</td>
+</tr>
+<tr>
+<td>Anhang A, A.2.2 — Interne Verantwortlichkeiten für KI</td>
+<td>Art. 9(5): designbasierte Risikominderung</td>
+<td>Moderat</td>
+<td>ISO 42001 weist Verantwortlichkeiten zu; Art. 9(5) gibt die Beseitigung auf Designebene vor anderen Maßnahmen vor</td>
+</tr>
+<tr>
+<td>Anhang A, A.8 — Daten für KI-Systeme</td>
+<td>Art. 9(6): Daten-Governance und Trainingsdaten-Kontrollen</td>
+<td>Substanziell</td>
+<td>Starke Übereinstimmung; ISO-42001-Anhang A.8 deckt Datenqualität, Herkunft und Bias ab</td>
+</tr>
+<tr>
+<td>Abschnitt 9.1 — Leistungsbewertung</td>
+<td>Art. 9(7): Testpflichten</td>
+<td>Substanziell</td>
+<td>ISO 42001 schreibt Leistungsmonitoring vor; Art. 9(7) ergänzt Vormarkttestanforderungen spezifisch für Hochrisiko-KI</td>
+</tr>
+<tr>
+<td>Abschnitt 9.3 — Managementbewertung</td>
+<td>Art. 9(9): Systemaktualisierung und -überprüfung</td>
+<td>Substanziell</td>
+<td>Der Managementbewertungsrhythmus entspricht der periodischen Aktualisierungspflicht aus Art. 9(9)</td>
+</tr>
+<tr>
+<td>Anhang A, A.9 — Drittparteien- und Lieferantenbeziehungen</td>
+<td>Art. 9(4) i. V. m. Art. 25: Lieferkettenrisiko</td>
+<td>Moderat</td>
+<td>ISO 42001 adressiert Lieferantenpflichten; Art. 9 i. V. m. Art. 25 schreibt die spezifische Verantwortungsteilung zwischen Anbieter und Betreiber vor</td>
+</tr>
+<tr>
+<td>Abschnitt 7.5 — Dokumentierte Informationen</td>
+<td>Art. 9 i. V. m. Art. 11/17: Dokumentationsanforderungen</td>
+<td>Substanziell</td>
+<td>ISO 42001 verlangt dokumentierte Informationen; diese müssen erweitert werden, um die Anforderungen der technischen Dokumentation nach Anhang IV zu erfüllen</td>
+</tr>
+<tr>
+<td>Anhang A, A.4 — Folgenabschätzungsprozess für KI-Systeme</td>
+<td>Art. 9(2): KI-Risikobewertungsprozess</td>
+<td>Moderat</td>
+<td>Prozedurale Übereinstimmung ist stark; Art. 9 verlangt zusätzlich eine Grundrechtsperspektive, die in ISO 42001 standardmäßig nicht enthalten ist</td>
+</tr>
+</tbody>
+</table>
+<p>Eine vollständige Behandlung der Teilabsatz-Anforderungen von Artikel 9 finden Sie im <a href="/insights/article-9-risikomanagementsystem-leitfaden.html">Praxisleitfaden zum Risikomanagementsystem nach Artikel 9</a>.</p>
+<hr>
+<h2 id="wo-sie-uebereinstimmen">4. Wo ISO 42001 und Artikel 9 übereinstimmen</h2>
+<p><strong>KI-Risikomanagementprozess und iterativer Zyklus.</strong> Sowohl ISO 42001 als auch Artikel 9 verlangen einen iterativen, dokumentierten KI-Risikomanagementprozess, der an den gesamten Lebenszyklus des KI-Systems geknüpft ist. Die PDCA-Struktur von ISO 42001 entspricht natürlicherweise der Anforderung aus Artikel 9, dass das Risikomanagementsystem mit der Weiterentwicklung des KI-Systems aktualisiert werden muss.</p>
+<p><strong>Lebenszyklus-Orientierung.</strong> Anhang A, A.6 von ISO 42001 adressiert den Lebenszyklus von KI-Systemen von der Konzeption bis zur Außerbetriebnahme — denselben Umfang, den die <a href="/insights/article-9-risikomanagementsystem-leitfaden.html">Lebenszyklusverpflichtung aus Artikel 9</a> einfordert. Organisationen, die A.6-Maßnahmen implementiert haben, haben den Lebenszyklus-Rahmen adressiert, den Artikel 9 verlangt.</p>
+<p><strong>Überschneidung bei der Daten-Governance.</strong> ISO-42001-Anhang A.8 — der Datenqualität, Kennzeichnung und Bias abdeckt — korrespondiert direkt mit den datenbezogenen Risikokontrollen, die Artikel 9(6) für Hochrisiko-KI-Systeme erwartet, insbesondere in Bezug auf Trainings-, Validierungs- und Testdatensätze.</p>
+<p><strong>Dokumentationsdisziplin.</strong> Abschnitt 7.5 von ISO 42001 verlangt dokumentierte Informationen für alle Managementsystem-Prozesse. Diese Disziplin ist eine Voraussetzung für die Erstellung der technischen Dokumentation nach Anhang IV, die Artikel 11 und Artikel 17 verlangen — auch wenn ISO 42001 die Inhaltsstruktur von Anhang IV nicht vorgibt.</p>
+<p><strong>Managementbewertung als periodische Aktualisierung.</strong> Die Managementbewertungspflicht aus Abschnitt 9.3 schafft den Governance-Rhythmus, den Artikel 9(9) für die periodische Überprüfung und Aktualisierung des Risikomanagementsystems nach der Inbetriebnahme erwartet.</p>
+<hr>
+<h2 id="wo-sie-divergieren">5. Wo ISO 42001 hinter Artikel 9 zurückbleibt</h2>
+<p><strong>Artikel 9(8): spezifische Behandlung vulnerabler Personen.</strong> Artikel 9(8) verlangt von Anbietern, Risiken für Personen, die aufgrund ihres Alters, einer Behinderung oder ihrer sozioökonomischen Lage zu vulnerablen Gruppen gehören, besondere Aufmerksamkeit zu widmen. ISO 42001 enthält keine gleichwertige spezifische Pflicht. Organisationen, die sich ausschließlich auf ISO 42001 stützen, müssen eine ergänzende Maßnahme einführen, die diese bevölkerungsspezifische Risikodimension explizit adressiert.</p>
+<p><strong>Artikel 9(9): spezifische Behandlung von Kindern.</strong> Artikel 9(9) nennt Kinder gesondert als besonders zu schützende Gruppe, die eine eigene Risikobeurteilung erfordert. Diese Anforderung fehlt im Maßnahmenset von ISO 42001 und muss explizit ergänzt werden.</p>
+<p><strong>Integration in die technische Dokumentation nach Anhang IV.</strong> Die Ergebnisse des KI-Risikomanagements nach Artikel 9 müssen in der technischen Dokumentation nach Anhang IV abgebildet sein (gemäß Artikel 9 und 11 in Verbindung). Die Anforderungen an dokumentierte Informationen in ISO 42001 sind nicht auf die Struktur von Anhang IV ausgerichtet. Eine dokumentierte Zuordnungsübung ist erforderlich, um die Ergebnisse des KI-Risikomanagements in das Anhang-IV-Dossier einzupflegen.</p>
+<p><strong>Konformitätsbewertung nach Artikel 43 und Artikel 43(4).</strong> Die Angemessenheit eines Risikomanagementsystems nach Artikel 9 wird im Rahmen der Konformitätsbewertung nach Artikel 43 beurteilt. Eine ISO-42001-Zertifizierung stellt keine Konformitätsbewertung dar, ersetzt diese nicht und trägt auch keine Verfahrensanerkennung dazu bei. Organisationen müssen sicherstellen, dass ihre KI-Risikomanagement-Dokumentation der notifizierten Stelle oder dem Selbstbewertungsverfahren in der vom KI-Gesetz geforderten Form zugänglich ist. Eine detaillierte Behandlung der Konformitätsbewertung bietet der <a href="/insights/konformitaetsbewertung-anhang-vi-vii.html">Leitfaden zur Konformitätsbewertung und zu den Anhängen VI und VII</a>.</p>
+<p><strong>Auslöser für wesentliche Änderungen.</strong> Artikel 43(4) schreibt vor, dass eine wesentliche Änderung an einem Hochrisiko-KI-System eine neue oder überarbeitete Konformitätsbewertung auslöst, was wiederum ein aktualisiertes Risikomanagementsystem erfordert. ISO 42001 enthält keine Maßnahme, die explizit an die Auslöser für wesentliche Änderungen im Sinne des KI-Gesetzes geknüpft ist. Dies muss durch ein ergänzendes Verfahren adressiert werden.</p>
+<p><strong>Grundrechts-Rahmung der Folgenabschätzung.</strong> Artikel 9(2) stellt klar, dass die Risikoanalyse Risiken für Gesundheit, Sicherheit und Grundrechte adressieren muss. Die Folgenabschätzung von ISO 42001 (Anhang A.4) ist nicht um den Grundrechtsbegriff herum konzipiert. Organisationen müssen sicherstellen, dass ihre Risikoidentifikations- und -bewertungsprozesse Grundrechtserwägungen explizit einbeziehen, wie die <a href="/insights/article-9-risikomanagementsystem-leitfaden.html">operativen Pflichten aus Artikel 9</a> es verlangen.</p>
+<hr>
+<h2 id="wo-23894-passt">6. Welche Rolle ISO/IEC 23894:2023 spielt</h2>
+<p>ISO/IEC 23894:2023, <em>Information technology — Artificial intelligence — Guidance on risk management</em>, ist eine Begleitnorm zu ISO 42001 und bietet wesentlich granularere Anleitungen zu KI-Risikomanagementprozessen für KI-Systeme. Ihr KI-Risikomanagement-Vokabular — einschließlich Risikoquellen, Risikobehandlung, Restrisiko und Risikokommunikation — entspricht der Sprache von Artikel 9 erheblich direkter als der KI-Managementsystem-Rahmen von ISO 42001.</p>
+<p>Organisationen, die ISO 23894 als operative Methodik zur Untermauerung ihres ISO-42001-KI-Risikomanagementprozesses implementieren, werden feststellen, dass die textliche Übereinstimmung mit Artikel 9 deutlich enger ist. ISO 23894 ist jedoch eine Leitnorm und unterstützt keine Drittpartei-Zertifizierung.</p>
+<p>Es ist entscheidend festzustellen: Stand Mai 2026 wurde weder ISO/IEC 42001:2023 noch ISO/IEC 23894:2023 formal nach dem EU-KI-Gesetz gemäß Artikel 40 harmonisiert. Die Europäische Kommission hat Beiträge von Normungsorganisationen und Industrieakteuren erhalten, die die Anerkennung oder Vorschreibung dieser Normen in Durchführungsrechtsakten befürworten, doch ein solcher Rechtsakt wurde bislang nicht erlassen. Solange keine Harmonisierungsentscheidung im Amtsblatt der Europäischen Union veröffentlicht wird, gewährt keine der Normen eine Konformitätsvermutung bezüglich Artikel 9 oder einer anderen Anforderung des KI-Gesetzes. Compliance-Verantwortliche sollten die Normungsarbeit von CEN/CENELEC, insbesondere in JTC 21, auf Entwicklungen zur Harmonisierung hin beobachten.</p>
+<hr>
+<h2 id="handlungsempfehlungen">7. Handlungsempfehlungen für Compliance-Verantwortliche</h2>
+<p><strong>Wenn Ihre Organisation bereits über eine ISO-42001-Zertifizierung verfügt:</strong></p>
+<p>Sie haben etwa 70 % eines nach Artikel 9 konformen Risikomanagementsystems in operationeller Form. Die verbleibende Arbeit ist kein Neuaufbau — es handelt sich um eine gezielte Lückenschließung. Die folgenden Schritte werden empfohlen:</p>
+<ol>
+<li>Ordnen Sie Ihr bestehendes ISO-42001-Risikoregister und die Ergebnisse der Folgenabschätzung der Teilabsatzstruktur von Artikel 9 zu, wobei die Tabelle in Abschnitt 3 als Ausgangspunkt dient. Dokumentieren Sie die Zuordnung explizit in Ihrem Managementsystem.</li>
+<li>Ergänzen Sie ein Verfahren, das die vulnerablen Personen nach Artikel 9(8) und Kinder nach Artikel 9(9) adressiert. Dies kann als eigener Abschnitt in Ihrer bestehenden Vorlage für die KI-System-Folgenabschätzung implementiert werden.</li>
+<li>Führen Sie eine Grundrechtsperspektive in Ihre KI-Risikoidentifizierungsmethodik ein. Für Hochrisiko-KI-Systeme, die unter Anhang III fallen, sollte eine Grundrechts-Folgenabschätzung entsprechend Artikel 9(2) als Teil des Planungsprozesses nach Abschnitt 6 durchgeführt werden.</li>
+<li>Erstellen Sie eine Rückverfolgbarkeitsmatrix, die Ihre KI-Risikomanagement-Dokumentation mit der Struktur der technischen Dokumentation nach Anhang IV verbindet. Dies ist eine Dokumentationsdisziplinübung und keine inhaltliche Compliance-Lücke.</li>
+<li>Ergänzen Sie ein dokumentiertes Verfahren zur Beurteilung wesentlicher Änderungen, das ausgelöst wird, wenn eine Änderung am KI-System die Definition einer wesentlichen Änderung im Sinne des KI-Gesetzes erfüllen könnte.</li>
+<li>Stellen Sie sicher, dass Ihre Managementsystem-Dokumentation in dem Format zugänglich und lesbar ist, das die <a href="/insights/konformitaetsbewertung-anhang-vi-vii.html">Konformitätsbewertung nach Artikel 43 und den Anhängen VI/VII</a> erfordert.</li>
+</ol>
+<p><strong>Wenn Ihre Organisation noch keine ISO-42001-Zertifizierung besitzt:</strong></p>
+<p>Eine direkte Implementierung der Konformität mit Artikel 9 — unter Verwendung von ISO 23894:2023 als KI-Risikomanagement-Methodik und der Managementsystemstruktur von ISO 42001 als Governance-Rahmen — ist ein praktikabler und effizienter Weg. Die gleichzeitige Verfolgung einer ISO-42001-Zertifizierung demonstriert Managementsystem-Reife und signalisiert organisatorisches Engagement für KI-Governance, was für Unternehmenseinkauf und öffentliche Ausschreibungen im DACH-Raum zunehmend relevant ist.</p>
+<hr>
+<h2 id="dach-hinweise">8. DACH-spezifische Hinweise</h2>
+<p><strong>DAkkS-akkreditierte Zertifizierungsstellen.</strong> In Deutschland werden ISO-42001-Zertifizierungsaudits von Stellen durchgeführt, die von der Deutschen Akkreditierungsstelle (DAkkS) akkreditiert sind. Stand 2026 haben mehrere DAkkS-akkreditierte Managementsystem-Zertifizierungsstellen ihren Anwendungsbereich auf ISO 42001 ausgeweitet. Organisationen mit Sitz in Deutschland, Österreich oder der Schweiz sollten sicherstellen, dass ihre potenzielle Zertifizierungsstelle eine DAkkS-Akkreditierung besitzt (oder die gleichwertige nationale Stelle in Österreich und der Schweiz: BMK/Akkreditierung Austria bzw. SAS) und nachweisliche Kompetenz im KI-System-Auditing — nicht nur im Managementsystem-Auditing — mitbringt.</p>
+<p><strong>BSI C5 und KI-Risikokontrollen.</strong> Der Cloud Computing Compliance Criteria Catalogue (C5) des Bundesamtes für Sicherheit in der Informationstechnik (BSI) adressiert Cloud-Infrastruktur-Sicherheitskontrollen, die häufig für auf Cloud-Infrastruktur betriebene KI-Systeme relevant sind. BSI C5 ist kein KI-spezifischer Rahmen, aber seine Kontrollen für Verfügbarkeit, Integrität und Zugriffsverwaltung ergänzen die operativen Sicherheitskontrollen, die ein Risikomanagementsystem nach Artikel 9 für KI-Systeme in Cloud-Deployments adressieren sollte. Organisationen, die bereits BSI-C5-konform sind, werden feststellen, dass ein Teil ihrer Infrastruktur-Sicherheitsnachweise in ihrer ISO-42001-Maßnahmendokumentation wiederverwendbar ist.</p>
+<p><strong>BSI-Leitlinien zu KI-Managementsystemen.</strong> Das BSI hat technische Leitlinien und Positionspapiere zur KI-Sicherheit und zum KI-Management veröffentlicht, darunter Material, das auf ISO/IEC-JTC-1/SC-42-Normen verweist. Compliance-Verantwortliche in Deutschland sollten BSI-KI-Sicherheitspublikationen auf Leitlinien hin verfolgen, die die KI-Risikomanagementanforderungen des KI-Gesetzes auf nationaler Implementierungsebene ergänzen oder kontextualisieren können.</p>
+<p><strong>BaFin-Kontext für den Finanzsektor.</strong> Für Finanzunternehmen im Aufsichtsbereich der BaFin überlagern sich die KI-Risikomanagementpflichten aus dem KI-Gesetz mit bestehenden Erwartungen zum Modellrisikomanagement. Ein ISO-42001-basiertes Managementsystem, das explizit auf die Pflichten aus Artikel 9 abgebildet ist, liefert einen vertretbaren Prüfpfad für regulatorische Prüfungen, die KI-Governance zunehmend neben dem klassischen Modellrisiko adressieren.</p>
+<hr>
+<h2 id="cta">9. Nächste Schritte mit EKM Global Consulting GmbH</h2>
+<p>EKM Global Consulting GmbH berät Unternehmen aus regulierten Branchen und Technologieorganisationen im DACH-Raum zu EU-KI-Gesetz-Konformität, einschließlich der Konzeption von Risikomanagementsystemen nach Artikel 9, ISO-42001-Gap-Analysen und der Strukturierung der technischen Dokumentation nach Anhang IV.</p>
+<p>Wenn Sie Ihre aktuelle ISO-42001-Position gegenüber Artikel 9 evaluieren, bietet der <a href="https://app.ekmgc.de">EU AI Act Quick Scan</a> unter app.ekmgc.de eine kostenlose erste Scoping-Beurteilung.</p>
+<p>Für Organisationen, die eine strukturierte Gap-Analyse und eine Implementierungs-Roadmap benötigen, sind Beratungsleistungen unter <a href="https://ekmgc.de/eu-ai-act.html">ekmgc.de/eu-ai-act.html</a> beschrieben.</p>
+<hr>
+<h2>Häufig gestellte Fragen</h2>
+<p><strong>Verschafft uns eine ISO-42001-Zertifizierung eine Konformitätsvermutung gegenüber dem EU-KI-Gesetz?</strong></p>
+<p>Nein. Eine Konformitätsvermutung nach Artikel 40 des KI-Gesetzes entsteht ausschließlich aus harmonisierten Normen, die im Amtsblatt der Europäischen Union aufgeführt sind. Stand Mai 2026 wurde ISO/IEC 42001:2023 nicht unter dem KI-Gesetz harmonisiert, und es wurde kein Durchführungsrechtsakt erlassen, der ihr diesen Status verleiht. Die Zertifizierung demonstriert Managementsystem-Reife und bietet eine solide operative Ausgangsbasis, ersetzt jedoch keine Konformitätsbewertung nach dem KI-Gesetz.</p>
+<p><strong>Müssen wir nach Implementierung von ISO 42001 weiterhin eine Konformitätsbewertung nach Artikel 43 durchführen?</strong></p>
+<p>Ja. Für Hochrisiko-KI-Systeme, die Artikel 43 unterliegen, ist die Konformitätsbewertung unabhängig von gehaltenen Managementsystem-Zertifizierungen verpflichtend. Eine ISO-42001-Zertifizierung kann die Beweisgrundlage für die Konformitätsbewertung stärken — insbesondere hinsichtlich des KI-Risikomanagementprozesses — ersetzt jedoch das Konformitätsbewertungsverfahren nicht. Details zum Verfahren finden Sie im <a href="/insights/konformitaetsbewertung-anhang-vi-vii.html">Leitfaden zur Konformitätsbewertung und zu den Anhängen VI und VII</a>.</p>
+<p><strong>Ist ISO/IEC 23894:2023 für die Konformität mit Artikel 9 relevanter als ISO 42001?</strong></p>
+<p>ISO 23894 bietet eine engere textliche Übereinstimmung mit dem KI-Risikomanagement-Vokabular von Artikel 9 und ist besonders nützlich als methodische Ebene unter einem ISO-42001-Managementsystem. Sie ist jedoch ein Leitdokument und unterstützt keine Drittpartei-Zertifizierung. Für Organisationen, die sowohl methodische Übereinstimmung als auch zertifizierbare Governance-Reife anstreben, ist die Verwendung von ISO 23894 als operative Methodik innerhalb eines ISO-42001-Rahmens die empfohlene Kombination.</p>
+<p><strong>Wir sind Betreiber, kein Anbieter. Gilt Artikel 9 für uns?</strong></p>
+<p>Die Pflichten aus Artikel 9 gelten primär für Anbieter von Hochrisiko-KI-Systemen. Betreiber haben eigene Pflichten nach Artikel 26 und sind verpflichtet, Hochrisiko-KI-Systeme gemäß den Gebrauchsanweisungen einzusetzen und angemessene technische und organisatorische Maßnahmen zu implementieren. Betreiber, die ein Hochrisiko-KI-System wesentlich modifizieren, können jedoch Anbieterpflichten einschließlich der Pflichten aus Artikel 9 übernehmen. Der <a href="/insights/article-9-risikomanagementsystem-leitfaden.html">Praxisleitfaden zum Risikomanagementsystem nach Artikel 9</a> behandelt den Anbieter- und Betreiberanwendungsbereich ausführlich.</p>
+<p><strong>Wie lange dauert eine Gap-Bridging-Übung typischerweise für eine Organisation mit vorhandener ISO-42001-Implementierung?</strong></p>
+<p>Dies hängt von der Reife des bestehenden Managementsystems, der Anzahl und Komplexität der im Geltungsbereich befindlichen Hochrisiko-KI-Systeme und davon ab, ob die Organisation bereits über eine Grundrechts-Folgenabschätzungsmethodik verfügt. Für ein einzelnes Hochrisiko-KI-System mit einer gut dokumentierten ISO-42001-Implementierung kann eine strukturierte Gap-Analyse und Dokumentationsbereinigung typischerweise innerhalb von sechs bis zehn Wochen abgeschlossen werden. Organisationen mit mehreren Anhang-III-Systemen oder komplexen Lieferketten sollten mit einem längeren Engagement rechnen.</p>
+<hr>
+<p><em>EKM Global Consulting GmbH — Baden-Baden, Deutschland. Gegründet Januar 2013. EU-KI-Gesetz-Beratung, TPRM und KI-Governance für regulierte Organisationen im DACH-Raum.</em></p>
+<p><em>Gründer: <a href="https://www.linkedin.com/in/elshan-musayev/">Elshan Musayev</a></em></p>
+<hr>
+<h3>Schema.org-Markup-Empfehlung</h3>
+<p>Diese Seite sollte ein <code>SchemaArticle</code> (<code>@type: "Article"</code>) mit den folgenden zusätzlichen Eigenschaften aufweisen:</p>
+<pre><code class="language-json">{
+  &quot;@context&quot;: &quot;https://schema.org&quot;,
+  &quot;@type&quot;: &quot;Article&quot;,
+  &quot;headline&quot;: &quot;ISO/IEC 42001:2023 vs. EU-KI-Gesetz Artikel 9 RMS — Deckt die Zertifizierung die Verordnung ab?&quot;,
+  &quot;description&quot;: &quot;Die ISO/IEC-42001-Zertifizierung ist keine formal harmonisierte Norm gemäß dem EU-KI-Gesetz und stellt allein keinen Nachweis der Konformität mit Artikel 9 dar. Dieser Artikel bildet relevante Klauseln ab und benennt spezifische Lücken.&quot;,
+  &quot;inLanguage&quot;: &quot;de&quot;,
+  &quot;author&quot;: {
+    &quot;@type&quot;: &quot;Organization&quot;,
+    &quot;name&quot;: &quot;EKM Global Consulting GmbH&quot;,
+    &quot;url&quot;: &quot;https://ekmgc.de&quot;
+  },
+  &quot;publisher&quot;: {
+    &quot;@type&quot;: &quot;Organization&quot;,
+    &quot;name&quot;: &quot;EKM Global Consulting GmbH&quot;,
+    &quot;url&quot;: &quot;https://ekmgc.de&quot;
+  },
+  &quot;dateModified&quot;: &quot;2026-05-09&quot;,
+  &quot;about&quot;: [
+    { &quot;@type&quot;: &quot;Thing&quot;, &quot;name&quot;: &quot;ISO/IEC 42001:2023&quot; },
+    { &quot;@type&quot;: &quot;Thing&quot;, &quot;name&quot;: &quot;EU-KI-Gesetz Artikel 9&quot; },
+    { &quot;@type&quot;: &quot;Thing&quot;, &quot;name&quot;: &quot;KI-Managementsystem&quot; },
+    { &quot;@type&quot;: &quot;Thing&quot;, &quot;name&quot;: &quot;Risikomanagementsystem&quot; }
+  ],
+  &quot;mentions&quot;: [
+    { &quot;@type&quot;: &quot;Legislation&quot;, &quot;name&quot;: &quot;Verordnung (EU) 2024/1689&quot;, &quot;alternateName&quot;: &quot;EU-KI-Gesetz&quot; },
+    { &quot;@type&quot;: &quot;Standard&quot;, &quot;name&quot;: &quot;ISO/IEC 42001:2023&quot; },
+    { &quot;@type&quot;: &quot;Standard&quot;, &quot;name&quot;: &quot;ISO/IEC 23894:2023&quot; }
+  ]
+}
+</code></pre>
+    </article>
+  </section>
+
+  <!-- ============ RELATED ============ -->
+  <section class="container">
+    <div class="insight-related">
+      <h3>Verwandte Beiträge</h3>
+      <p class="insight-related__alt"><a href="/insights/iso-42001-vs-article-9-rms.html">Read in English →</a></p>
+      <ul>
+    <li><a href="article-9-risikomanagementsystem-leitfaden.html"><strong>EU-KI-Verordnung Artikel 9 — Risikomanagementsystem: Praxisleitfaden</strong></a><span class="insight-related__desc">Praxisleitfaden zu Artikel 9 der Verordnung (EU) 2024/1689: der vierstufige iterative Zyklus, Dokumentationspflichten, Lebenszyklus-Charakter und DACH-spezifisc…</span></li>
+    <li><a href="anhang-iii-scoping-checkliste.html"><strong>Hochrisiko-KI nach Anhang III: Scoping-Checkliste für DACH-Organisationen</strong></a><span class="insight-related__desc">Die acht Hochrisiko-KI-Kategorien nach Anhang III erläutert, plus eine 14-Fragen-Scoping-Checkliste zur Bestimmung, ob Ihre Organisation unter Verordnung (EU) 2…</span></li>
+    <li><a href="konformitaetsbewertung-anhang-vi-vii.html"><strong>Konformitätsbewertung nach EU-KI-Verordnung: Anhang VI vs. Anhang VII</strong></a><span class="insight-related__desc">Entscheidungskriterien für die Konformitätsbewertung nach Verordnung (EU) 2024/1689: wann Anhang VI interne Kontrolle anwendbar ist, wann Anhang VII durch Benan…</span></li>
+    <li><a href="artikel-26-pflichten-betreiber.html"><strong>Artikel 26 Pflichten der Betreiber: was Banken und Versicherer wirklich schulden</strong></a><span class="insight-related__desc">Pflichten der Betreiber von Hochrisiko-KI nach Verordnung (EU) 2024/1689 — einschließlich der FRIA-Sonderregelung für Kreditscoring (Artikel 29a) und der vertra…</span></li>
+    <li><a href="eu-ki-verordnung-vs-dsgvo.html"><strong>EU-KI-Verordnung vs. DSGVO: Wann gilt was, wo überschneiden sich die Regime?</strong></a><span class="insight-related__desc">Wann die EU-KI-Verordnung und die DSGVO gelten, wo sie sich überschneiden, und wie Sie Artikel 35 DSGVO-DSFA mit Artikel 9 KI-Act-RMS koordinieren ohne zwei par…</span></li>
+  </ul>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__copy">&copy; 2026 EKM Global Consulting GmbH. Baden-Baden, Germany. Founded 2013.</div>
+      <ul class="footer__links" role="list">
+        <li><a href="/insights/">Insights</a></li>
+        <li><a href="/eu-ai-act.html">EU AI Act</a></li>
+        <li><a href="https://app.ekmgc.de" rel="noopener">Quick Scan</a></li>
+        <li><a href="mailto:elshan.musayev@ekmgc.de">Contact</a></li>
+      </ul>
+      <div class="footer__social">
+        <a href="https://www.linkedin.com/company/ekm-global-consulting-gmbh/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

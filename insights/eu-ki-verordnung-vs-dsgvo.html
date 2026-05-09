@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="de" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EU-KI-Verordnung vs. DSGVO: Wann gilt was, wo überschneiden sich die Regime? — EKM Global Consulting</title>
+  <meta name="description" content="Wann die EU-KI-Verordnung und die DSGVO gelten, wo sie sich überschneiden, und wie Sie Artikel 35 DSGVO-DSFA mit Artikel 9 KI-Act-RMS koordinieren ohne zwei parallele isolierte Programme zu führen. Für DACH-Compliance-Officers und Datenschutzbeauftragte.">
+  <link rel="canonical" href="https://ekmgc.de/insights/eu-ki-verordnung-vs-dsgvo.html">
+  <link rel="alternate" hreflang="en" href="https://ekmgc.de/insights/eu-ai-act-vs-gdpr-scoping.html">
+  <link rel="alternate" hreflang="de" href="https://ekmgc.de/insights/eu-ki-verordnung-vs-dsgvo.html">
+  <link rel="alternate" hreflang="x-default" href="https://ekmgc.de/insights/eu-ai-act-vs-gdpr-scoping.html">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="EU-KI-Verordnung vs. DSGVO: Wann gilt was, wo überschneiden sich die Regime?">
+  <meta property="og:description" content="Wann die EU-KI-Verordnung und die DSGVO gelten, wo sie sich überschneiden, und wie Sie Artikel 35 DSGVO-DSFA mit Artikel 9 KI-Act-RMS koordinieren ohne zwei parallele isolierte Programme zu führen. Für DACH-Compliance-Officers und Datenschutzbeauftragte.">
+  <meta property="og:url" content="https://ekmgc.de/insights/eu-ki-verordnung-vs-dsgvo.html">
+  <meta property="og:image" content="https://app.ekmgc.de/assets/og-image.png">
+  <meta property="og:site_name" content="EKM Global Consulting">
+  <meta property="og:locale" content="de_DE">
+  <meta property="article:published_time" content="2026-05-06T00:00:00+00:00">
+  <meta property="article:author" content="Elshan Musayev">
+  <meta property="article:section" content="EU AI Compliance">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="EU-KI-Verordnung vs. DSGVO: Wann gilt was, wo überschneiden sich die Regime?">
+  <meta name="twitter:description" content="Wann die EU-KI-Verordnung und die DSGVO gelten, wo sie sich überschneiden, und wie Sie Artikel 35 DSGVO-DSFA mit Artikel 9 KI-Act-RMS koordinieren ohne zwei parallele isolierte Programme zu führen. Für DACH-Compliance-Officers und Datenschutzbeauftragte.">
+  <meta name="twitter:image" content="https://app.ekmgc.de/assets/og-image.png">
+
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M16 2L4 9v14l12 7 12-7V9L16 2z' fill='none' stroke='%2300d4aa' stroke-width='2'/%3E%3Cpath d='M16 8l-6 3.5v7L16 22l6-3.5v-7L16 8z' fill='%2300d4aa' opacity='0.3'/%3E%3Ccircle cx='16' cy='15' r='3' fill='%2300d4aa'/%3E%3C/svg%3E">
+
+  <!-- Fonts -->
+  <link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@400,500,700,800&f[]=satoshi@300,400,500,700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/base.css">
+  <link rel="stylesheet" href="/style.css">
+
+  <style>
+    /* Insight article page-local styles */
+    .insight-hero {
+      padding: calc(var(--space-10, 80px) + 60px) 0 var(--space-7, 56px);
+      background: linear-gradient(180deg, var(--color-surface-offset, #1a2338) 0%, var(--color-bg, #0a0e17) 100%);
+      border-bottom: 1px solid var(--color-border, #253350);
+    }
+    .insight-crumb {
+      font-size: 13px;
+      color: var(--color-text-muted, #8899b0);
+      margin-bottom: var(--space-3, 16px);
+    }
+    .insight-crumb a {
+      color: var(--color-text-muted, #8899b0);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.15s;
+    }
+    .insight-crumb a:hover { border-bottom-color: var(--color-primary, #00d4aa); }
+    .insight-eyebrow {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--color-primary, #00d4aa);
+      margin-bottom: var(--space-3, 16px);
+    }
+    .insight-headline {
+      font-family: var(--font-display, 'Cabinet Grotesk', sans-serif);
+      font-size: clamp(32px, 5vw, 56px);
+      font-weight: 800;
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+      margin: 0 0 var(--space-4, 24px);
+      max-width: 900px;
+    }
+    .insight-headline .accent { color: var(--color-primary, #00d4aa); }
+    .insight-meta {
+      display: flex;
+      gap: var(--space-4, 24px);
+      flex-wrap: wrap;
+      font-size: 14px;
+      color: var(--color-text-muted, #8899b0);
+      margin-bottom: var(--space-3, 16px);
+    }
+    .insight-meta strong { color: var(--color-text, #e2e8f0); font-weight: 500; }
+    .insight-tldr {
+      max-width: 820px;
+      padding: var(--space-4, 24px) var(--space-5, 32px);
+      border-left: 3px solid var(--color-primary, #00d4aa);
+      background: var(--color-surface-offset, #1a2338);
+      border-radius: 0 var(--radius-md, 10px) var(--radius-md, 10px) 0;
+      font-size: 17px;
+      line-height: 1.6;
+      color: var(--color-text, #e2e8f0);
+      margin-top: var(--space-5, 32px);
+    }
+    .insight-body {
+      padding: var(--space-8, 64px) 0;
+      max-width: 820px;
+      margin: 0 auto;
+    }
+    .insight-body h2 {
+      font-family: var(--font-display, 'Cabinet Grotesk', sans-serif);
+      font-size: clamp(24px, 3vw, 32px);
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      line-height: 1.2;
+      margin: var(--space-7, 56px) 0 var(--space-3, 16px);
+      color: var(--color-text, #e2e8f0);
+    }
+    .insight-body h3 {
+      font-family: var(--font-display, 'Cabinet Grotesk', sans-serif);
+      font-size: 20px;
+      font-weight: 600;
+      margin: var(--space-5, 32px) 0 var(--space-2, 8px);
+      color: var(--color-text, #e2e8f0);
+    }
+    .insight-body p {
+      font-size: 17px;
+      line-height: 1.7;
+      color: var(--color-text, #e2e8f0);
+      margin: 0 0 var(--space-3, 16px);
+    }
+    .insight-body ul, .insight-body ol {
+      font-size: 17px;
+      line-height: 1.7;
+      color: var(--color-text, #e2e8f0);
+      padding-left: 1.4em;
+      margin: 0 0 var(--space-4, 24px);
+    }
+    .insight-body li { margin-bottom: var(--space-2, 8px); }
+    .insight-body li::marker { color: var(--color-primary, #00d4aa); }
+    .insight-body strong { color: var(--color-text, #e2e8f0); font-weight: 600; }
+    .insight-body em { font-style: italic; color: var(--color-text-muted, #8899b0); }
+    .insight-body a {
+      color: var(--color-primary, #00d4aa);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(0, 212, 170, 0.4);
+      transition: border-color 0.15s;
+    }
+    .insight-body a:hover { border-bottom-color: var(--color-primary, #00d4aa); }
+    .insight-body blockquote {
+      margin: var(--space-5, 32px) 0;
+      padding: var(--space-3, 16px) var(--space-4, 24px);
+      border-left: 3px solid var(--color-primary, #00d4aa);
+      background: var(--color-surface-offset, #1a2338);
+      border-radius: 0 var(--radius-sm, 6px) var(--radius-sm, 6px) 0;
+      color: var(--color-text-muted, #8899b0);
+      font-style: italic;
+    }
+    .insight-body blockquote p:first-child { margin-top: 0; }
+    .insight-body blockquote p:last-child { margin-bottom: 0; }
+    .insight-body table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: var(--space-5, 32px) 0;
+      font-size: 15px;
+    }
+    .insight-body th, .insight-body td {
+      padding: var(--space-2, 8px) var(--space-3, 16px);
+      border: 1px solid var(--color-border, #253350);
+      text-align: left;
+      vertical-align: top;
+    }
+    .insight-body th {
+      background: var(--color-surface-offset, #1a2338);
+      font-weight: 600;
+      color: var(--color-text, #e2e8f0);
+    }
+    .insight-body code {
+      background: var(--color-surface-offset, #1a2338);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 0.92em;
+      color: var(--color-primary, #00d4aa);
+    }
+    .insight-body hr {
+      border: none;
+      border-top: 1px solid var(--color-border, #253350);
+      margin: var(--space-7, 56px) 0;
+    }
+    .insight-related {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: var(--space-7, 56px) 0;
+      border-top: 1px solid var(--color-border, #253350);
+    }
+    .insight-related h3 {
+      font-family: var(--font-display, 'Cabinet Grotesk', sans-serif);
+      font-size: 22px;
+      font-weight: 700;
+      margin-bottom: var(--space-4, 24px);
+    }
+    .insight-related ul {
+      list-style: none;
+      padding: 0;
+    }
+    .insight-related li {
+      padding: var(--space-3, 16px) 0;
+      border-bottom: 1px solid var(--color-border, #253350);
+    }
+    .insight-related li:last-child { border-bottom: none; }
+    .insight-related__desc {
+      display: block;
+      font-size: 14px;
+      color: var(--color-text-muted, #8899b0);
+      margin-top: 4px;
+      line-height: 1.5;
+    }
+    .insight-related__alt {
+      margin: var(--space-3, 16px) 0 var(--space-5, 32px);
+      font-size: 14px;
+    }
+    .insight-related__alt a {
+      color: var(--color-primary, #00d4aa);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .insight-related a {
+      color: var(--color-text, #e2e8f0);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.15s;
+    }
+    .insight-related a:hover { color: var(--color-primary, #00d4aa); }
+  </style>
+
+  <!-- Schema.org JSON-LD: Article + BreadcrumbList -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://ekmgc.de/insights/eu-ki-verordnung-vs-dsgvo.html#article",
+      "headline": "EU-KI-Verordnung vs. DSGVO: Wann gilt was, wo überschneiden sich die Regime?",
+      "description": "Wann die EU-KI-Verordnung und die DSGVO gelten, wo sie sich überschneiden, und wie Sie Artikel 35 DSGVO-DSFA mit Artikel 9 KI-Act-RMS koordinieren ohne zwei parallele isolierte Programme zu führen. Für DACH-Compliance-Officers und Datenschutzbeauftragte.",
+      "url": "https://ekmgc.de/insights/eu-ki-verordnung-vs-dsgvo.html",
+      "mainEntityOfPage": "https://ekmgc.de/insights/eu-ki-verordnung-vs-dsgvo.html",
+      "datePublished": "2026-05-06",
+      "dateModified": "2026-05-06",
+      "inLanguage": "de-DE",
+      "isAccessibleForFree": true,
+      "keywords": "EU AI Act, Regulation (EU) 2024/1689, Annex III, Article 9, Article 26, conformity assessment, GPAI, AI compliance, RegTech, BSI C5, BaFin",
+      "articleSection": "EU AI Compliance",
+      "author": {
+        "@type": "Person",
+        "@id": "https://www.linkedin.com/in/elshan-musayev/#person",
+        "name": "Elshan Musayev",
+        "url": "https://www.linkedin.com/in/elshan-musayev/",
+        "jobTitle": "Founder & CEO",
+        "sameAs": [
+          "https://www.linkedin.com/in/elshan-musayev/",
+          "https://www.linkedin.com/in/elshanmusayev/",
+          "https://elshanmusayev.com"
+        ]
+      },
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://ekmgc.de/#organization",
+        "name": "EKM Global Consulting GmbH",
+        "url": "https://ekmgc.de",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://app.ekmgc.de/assets/logo_ekm_icon.png",
+          "width": 1024,
+          "height": 1024
+        },
+        "sameAs": [
+          "https://www.linkedin.com/company/ekm-global-consulting-gmbh/",
+          "https://www.linkedin.com/showcase/121553912/",
+          "https://www.linkedin.com/showcase/121603994/",
+          "https://www.crunchbase.com/organization/ekm-global-consulting"
+        ]
+      },
+      "about": {
+        "@type": "Legislation",
+        "name": "Regulation (EU) 2024/1689 (Artificial Intelligence Act)",
+        "legislationJurisdiction": "European Union",
+        "legislationDate": "2024-06-13"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://ekmgc.de/insights/eu-ki-verordnung-vs-dsgvo.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://ekmgc.de/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "EU AI Act",
+          "item": "https://ekmgc.de/eu-ai-act.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Insights",
+          "item": "https://ekmgc.de/insights/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "EU-KI-Verordnung vs. DSGVO: Wann gilt was, wo überschneiden sich die Regime?",
+          "item": "https://ekmgc.de/insights/eu-ki-verordnung-vs-dsgvo.html"
+        }
+      ]
+    }
+  ]
+}
+  </script>
+</head>
+
+<body>
+  <!-- ============ HEADER ============ -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="/" class="header__logo" aria-label="EKM Global Consulting">
+        <img src="/assets/logo-dark.jpg" alt="EKM Global Consulting — think smarter" class="header__logo-img" id="siteLogo">
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Main navigation">
+        <ul class="nav__list" role="list">
+          <li><a href="/#services" class="nav__link">Services</a></li>
+          <li><a href="/eu-ai-act.html" class="nav__link">EU AI Act</a></li>
+          <li><a href="/insights/" class="nav__link nav__link--active">Insights</a></li>
+          <li><a href="/#approach" class="nav__link">Approach</a></li>
+          <li><a href="/#contact" class="nav__link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header__controls">
+        <button class="toggle-btn" id="themeToggle" data-theme-toggle aria-label="Switch theme">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+        </button>
+        <button class="menu-toggle" id="menuToggle" aria-label="Menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ HERO ============ -->
+  <section class="insight-hero">
+    <div class="container">
+      <div class="insight-crumb">
+        <a href="/">Home</a> · <a href="/eu-ai-act.html">EU AI Act</a> · <a href="/insights/">Insights</a> · EU-KI-Verordnung vs. DSGVO: Wann gilt was, wo überschneiden sich die Regime?
+      </div>
+      <div class="insight-eyebrow">Comparison · Auf Deutsch · EU-KI-Verordnung</div>
+      <h1 class="insight-headline">EU-KI-Verordnung vs. <span class="accent">DSGVO</span>: beide Regime im Scope.</h1>
+      <div class="insight-meta">
+        <span><strong>Von</strong> Elshan Musayev</span>
+        <span><strong>Veröffentlicht</strong> 2026-05-06</span>
+        <span><strong>11 Min. Lesezeit</strong></span>
+      </div>
+      <div class="insight-tldr">
+        <strong>Kurzfassung.</strong> Wann die EU-KI-Verordnung und die DSGVO gelten, wo sie sich überschneiden, und wie Sie Artikel 35 DSGVO-DSFA mit Artikel 9 KI-Act-RMS koordinieren ohne zwei parallele isolierte Programme zu führen. Für DACH-Compliance-Officers und Datenschutzbeauftragte.
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ BODY ============ -->
+  <section class="container">
+    <article class="insight-body">
+<p><strong>Meta-Beschreibung:</strong> Compliance-Verantwortliche und Datenschutzbeauftragte in DACH-regulierten Organisationen fragen: Ersetzt eine Datenschutz-Folgenabschätzung (DSFA) nach der DSGVO das Risikomanagementsystem nach der EU-KI-Verordnung? Dieser Leitfaden klärt, wo sich beide Rechtsrahmen überschneiden, wo sie auseinanderfallen und wie Sie den Geltungsbereich beider Instrumente in einem koordinierten Workflow abbilden.</p>
+<hr>
+<blockquote>
+<p><strong>Kurzübersicht</strong></p>
+<p>Die DSGVO (Verordnung (EU) 2016/679) schützt personenbezogene Daten. Die EU-KI-Verordnung (Verordnung (EU) 2024/1689) schützt Gesundheit, Sicherheit und Grundrechte vor KI-bedingten Risiken – unabhängig davon, ob personenbezogene Daten verarbeitet werden. Hochrisiko-KI-Systeme, die zugleich personenbezogene Daten verarbeiten, fallen gleichzeitig unter beide Rechtsrahmen. Artikel 35 DSGVO (Datenschutz-Folgenabschätzung, DSFA) und Artikel 9 EU-KI-Verordnung (Risikomanagementsystem, RMS) regeln überschneidende, aber rechtlich eigenständige Verpflichtungen. Sie sind zu koordinieren – weder in einem einzigen Dokument zusammenzuführen noch als zwei voneinander getrennte Übungen zu verdoppeln. Automatisierte Entscheidungen im Einzelfall mit erheblichen Auswirkungen auf Personen aktivieren Artikel 22 DSGVO sowie – bei einschlägiger Anhang-III-Klassifizierung – die Grundrechte-Folgenabschätzung des Betreibers nach Artikel 26 Absatz 6 EU-KI-Verordnung. Wer einen der beiden Rechtsrahmen isoliert betreibt, schafft Prüfungslücken.</p>
+</blockquote>
+<hr>
+<h2>Inhalt</h2>
+<ol>
+<li><a href="#regelungsgegenstand">Regelungsgegenstand beider Verordnungen</a></li>
+<li><a href="#ueberschneidungsbereiche">Überschneidungsbereiche</a></li>
+<li><a href="#divergenzbereiche">Divergenzbereiche</a></li>
+<li><a href="#gegenuberstellung">Gegenüberstellung</a></li>
+<li><a href="#praxisleitfaden">Praxisleitfaden zur Abgrenzung</a></li>
+<li><a href="#haeufige-fehler">Häufige Fehler</a></li>
+<li><a href="#dach-besonderheiten">DACH-spezifische Besonderheiten</a></li>
+<li><a href="#naechste-schritte">Nächste Schritte</a></li>
+</ol>
+<hr>
+<h2 id="regelungsgegenstand">Regelungsgegenstand beider Verordnungen</h2>
+<h3>DSGVO – Verordnung (EU) 2016/679</h3>
+<p>Die DSGVO gilt seit dem 25. Mai 2018. Sie bezweckt den Schutz natürlicher Personen bei der Verarbeitung personenbezogener Daten sowie den freien Datenverkehr. Zu den grundlegenden Pflichten gehören:</p>
+<ul>
+<li><strong>Rechtsgrundlage</strong> für jeden Verarbeitungsvorgang (Artikel 6; besondere Kategorien nach Artikel 9 DSGVO)</li>
+<li><strong>Rechte der betroffenen Person</strong>: Auskunft, Berichtigung, Löschung, Datenübertragbarkeit, Widerspruch und Rechte im Zusammenhang mit automatisierten Entscheidungen im Einzelfall (Artikel 15–22 DSGVO)</li>
+<li><strong>Rechenschaftspflicht</strong> durch Verzeichnis von Verarbeitungstätigkeiten, Datenschutz durch Technikgestaltung und Datenschutz-Folgenabschätzungen (Artikel 35 DSGVO)</li>
+<li><strong>Auftragsverarbeiterketten</strong>: verbindliche Auftragsverarbeitungsverträge nach Artikel 28 DSGVO</li>
+<li><strong>Sicherheit</strong>: angemessene technische und organisatorische Maßnahmen nach Artikel 32 DSGVO</li>
+</ul>
+<p>Der Anwendungsbereich der DSGVO bestimmt sich nach dem Vorliegen personenbezogener Daten. Ein System, das niemals Daten verarbeitet, die einer identifizierten oder identifizierbaren natürlichen Person zugeordnet werden können, liegt vollständig außerhalb ihres Regelungsbereichs.</p>
+<h3>EU-KI-Verordnung – Verordnung (EU) 2024/1689</h3>
+<p>Die EU-KI-Verordnung ist am 1. August 2024 in Kraft getreten. Die Hochrisikopflichten nach Anhang III gelten ab dem <strong>2. August 2026</strong>. Regelungsgegenstand ist der Schutz von Gesundheit, Sicherheit und Grundrechten vor Risiken durch KI-Systeme – unabhängig davon, ob diese Systeme personenbezogene Daten verarbeiten. Die Klassifizierung richtet sich nach dem Risikoniveau des jeweiligen Systems.</p>
+<p>Für Hochrisiko-KI-Systeme gelten insbesondere folgende Pflichten:</p>
+<ul>
+<li><strong>Risikomanagementsystem</strong> über den gesamten KI-Lebenszyklus (Artikel 9 EU-KI-Verordnung)</li>
+<li><strong>Datenverwaltung</strong> für Trainings-, Validierungs- und Testdaten (Artikel 10 EU-KI-Verordnung)</li>
+<li><strong>Technische Dokumentation und Aufzeichnungspflichten</strong> (Artikel 11–12 EU-KI-Verordnung)</li>
+<li><strong>Transparenz und menschliche Aufsicht</strong> (Artikel 13–14 EU-KI-Verordnung)</li>
+<li><strong>Genauigkeit, Robustheit und Cybersicherheit</strong> (Artikel 15 EU-KI-Verordnung)</li>
+<li><strong>Betreiberpflichten</strong>, einschließlich Grundrechte-Folgenabschätzung, soweit erforderlich (Artikel 26 EU-KI-Verordnung)</li>
+</ul>
+<p>Der Anwendungsbereich der EU-KI-Verordnung bestimmt sich nach dem Vorliegen eines KI-Systems im Sinne von Artikel 3 Absatz 1 und dessen Risikoeinstufung. Ein menschlicher Analyst, der Kreditentscheidungen manuell ohne KI-Inferenzschicht trifft, unterliegt auch dann nicht der EU-KI-Verordnung, wenn seine Entscheidungen dieselbe Wirkung entfalten wie KI-gestützte.</p>
+<hr>
+<h2 id="ueberschneidungsbereiche">Überschneidungsbereiche</h2>
+<p>Der dichteste Bereich doppelter Regulierung sind <strong>Hochrisiko-KI-Systeme, die personenbezogene Daten verarbeiten</strong> – eine Kategorie, die die Mehrzahl der KI-Anwendungen in regulierten Unternehmenssektoren abdeckt.</p>
+<h3>Artikel 22 DSGVO und Anhang III Nummer 5 EU-KI-Verordnung</h3>
+<p>Artikel 22 DSGVO gewährt der betroffenen Person das Recht, nicht einer ausschließlich auf automatisierter Verarbeitung beruhenden Entscheidung unterworfen zu werden, die ihr gegenüber rechtliche Wirkung entfaltet oder sie in ähnlicher Weise erheblich beeinträchtigt. Anhang III Nummer 5 EU-KI-Verordnung stuft KI-Systeme, die für den Zugang zu wesentlichen Leistungen und Diensten eingesetzt werden – einschließlich Kreditwürdigkeitsprüfung und Versicherungsrisikobeurteilung –, als Hochrisikosysteme ein. Jedes System, das in Anhang III Nummer 5 fällt und eine Entscheidung mit rechtlicher oder vergleichbar erheblicher Wirkung auf eine natürliche Person erzeugt, aktiviert sowohl Artikel 22 DSGVO als auch das vollständige Hochrisiko-Regime nach Anhang III. Keine der beiden Vorschriften verdrängt die andere.</p>
+<h3>Artikel 35 DSGVO (DSFA), Artikel 27 EU-KI-Verordnung (Grundrechte-Folgenabschätzung) und Artikel 9 EU-KI-Verordnung (Risikomanagementsystem)</h3>
+<p>Artikel 35 DSGVO verlangt vor einer risikoreichen Verarbeitung eine Datenschutz-Folgenabschätzung. Artikel 26 Absatz 6 EU-KI-Verordnung verpflichtet Betreiber bestimmter Anhang-III-Systeme, vor der Inbetriebnahme eine Grundrechte-Folgenabschätzung (GRFA) durchzuführen. Artikel 9 EU-KI-Verordnung verpflichtet Anbieter dazu, ein kontinuierliches Risikomanagementsystem einzurichten und aufrechtzuerhalten.</p>
+<p>Diese drei Instrumente decken überschneidende Sachverhalte ab – dasselbe KI-System, dieselben Daten, teilweise dieselben betroffenen Personen –, verfolgen jedoch rechtlich eigenständige Zwecke und liegen in der Verantwortung unterschiedlicher Akteure (Verantwortlicher vs. Anbieter vs. Betreiber). Den strukturierten Ansatz zur Integration dieser Folgenabschätzungen ohne redundante Dokumentation beschreibt der <a href="/insights/article-9-risikomanagementsystem-leitfaden.html">Praxisleitfaden zum Artikel 9 Risikomanagementsystem</a>.</p>
+<h3>Artikel 28 DSGVO und Betreiberpflichten nach Artikel 26 EU-KI-Verordnung</h3>
+<p>Artikel 28 DSGVO regelt die Beziehung zwischen Verantwortlichem und Auftragsverarbeiter durch einen Auftragsverarbeitungsvertrag. Artikel 26 EU-KI-Verordnung weist Pflichten spezifisch dem Betreiber zu – derjenigen natürlichen oder juristischen Person, die ein Hochrisiko-KI-System in eigener Verantwortung einsetzt. Beide Beziehungen sind nicht identisch. Ein Anbieter kann gleichzeitig DSGVO-Auftragsverarbeiter und Anbieter im Sinne der EU-KI-Verordnung sein; ein Betreiber kann zugleich Verantwortlicher nach der DSGVO sein und eigene Betreiberpflichten nach der EU-KI-Verordnung tragen. Der Auftragsverarbeitungsvertrag nach Artikel 28 DSGVO überträgt keine Compliance-Pflichten des Betreibers nach der EU-KI-Verordnung auf den Anbieter. Beide Instrumente müssen im Lieferanten-Governance-Rahmen gesondert adressiert werden. Eine Analyse auf Klauselebene bietet der Leitfaden zu <a href="/insights/artikel-26-pflichten-betreiber.html">Artikel 26 Betreiberpflichten</a>.</p>
+<hr>
+<h2 id="divergenzbereiche">Divergenzbereiche</h2>
+<p>Das Verständnis der Bereiche, in denen sich die Rechtsrahmen <strong>nicht</strong> überschneiden, verhindert sowohl eine Überdehnung des Geltungsbereichs – die Ressourcen vergeudet – als auch eine Unterdehnung – die regulatorische Lücken schafft.</p>
+<p><strong>Nur EU-KI-Verordnung (keine DSGVO-Relevanz):</strong> Industrieroboter auf Fertigungsflächen ohne jedwede Verarbeitung personenbezogener Daten, Infrastrukturüberwachungssysteme, die ausschließlich Sensordaten verarbeiten, und KI-gestützte Qualitätskontrollsysteme, die weder personenbezogene Daten erzeugen noch verarbeiten, unterliegen der KI-Klassifizierung nach der EU-KI-Verordnung und – sofern Anhang III einschlägig ist – den vollständigen Hochrisikopflichten, ohne dass DSGVO-Pflichten entstehen.</p>
+<p><strong>Nur DSGVO (keine Relevanz der EU-KI-Verordnung):</strong> Manuelle Fallbearbeitung durch menschliche Sachbearbeiter, traditionelle regelbasierte Entscheidungssysteme ohne maschinelles Lernverfahren sowie Datenspeicherungs- und Archivierungsworkflows ohne KI-Komponente unterliegen der DSGVO, ohne dass Pflichten aus der EU-KI-Verordnung entstehen. Ein Compliance-Verantwortlicher, der Kreditanträge anhand einer strukturierten Checkliste prüft – wie auch immer detailliert –, liegt außerhalb des Anwendungsbereichs der EU-KI-Verordnung.</p>
+<p>Diese Divergenz ist für die Abgrenzung wesentlich: Eine Organisation kann gleichzeitig Systeme betreiben, die nur ein DSGVO-Compliance-Programm erfordern, Systeme, die nur ein EU-KI-Verordnungs-Compliance-Programm erfordern, und Systeme, die ein koordiniertes Programm unter beiden Rechtsrahmen erfordern.</p>
+<hr>
+<h2 id="gegenuberstellung">Gegenüberstellung</h2>
+<table>
+<thead>
+<tr>
+<th>Dimension</th>
+<th>DSGVO (Verordnung (EU) 2016/679)</th>
+<th>EU-KI-Verordnung (Verordnung (EU) 2024/1689)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Anwendungsauslöser</strong></td>
+<td>Verarbeitung personenbezogener Daten durch Verantwortlichen oder Auftragsverarbeiter</td>
+<td>Inverkehrbringen, Inbetriebnahme oder Einsatz eines KI-Systems im Sinne von Artikel 3 Absatz 1</td>
+</tr>
+<tr>
+<td><strong>Risikoeinstufung</strong></td>
+<td>Verarbeitungsvorgänge klassifiziert nach Risiko für betroffene Personen (Schwellenwerteliste nach Artikel 35)</td>
+<td>KI-Systeme klassifiziert nach Risikostufe: verboten, Hochrisiko (Anhang III), begrenztes Risiko, minimales Risiko</td>
+</tr>
+<tr>
+<td><strong>Erforderliche Dokumentation</strong></td>
+<td>Verzeichnis von Verarbeitungstätigkeiten (Artikel 30); DSFA, soweit erforderlich (Artikel 35)</td>
+<td>Technische Dokumentation (Artikel 11); Protokollierung (Artikel 12); Aufzeichnungen des Risikomanagementsystems nach Artikel 9</td>
+</tr>
+<tr>
+<td><strong>Vordeployment-Folgenabschätzung</strong></td>
+<td>DSFA vor risikoreicher Verarbeitung; vorherige Konsultation der Aufsichtsbehörde bei verbleibendem hohem Restrisiko</td>
+<td>Risikomanagementsystem nach Artikel 9 (Anbieter); Grundrechte-Folgenabschätzung nach Artikel 26 Absatz 6 (Betreiber bestimmter Anhang-III-Systeme)</td>
+</tr>
+<tr>
+<td><strong>Rechtsgrundlage</strong></td>
+<td>Explizite Rechtsgrundlage nach Artikel 6 erforderlich; besondere Kategorien nach Artikel 9 DSGVO</td>
+<td>Kein vergleichbares Rechtsgrundlagenerfordernis; Compliance gemessen an Anhang-III-Kriterien und Artikel 9 Risikomanagementsystem</td>
+</tr>
+<tr>
+<td><strong>Rechte betroffener Personen</strong></td>
+<td>Artikel 15–22 DSGVO: Auskunft, Berichtigung, Löschung, Datenübertragbarkeit, Widerspruch, menschliche Überprüfung automatisierter Entscheidungen</td>
+<td>Recht auf Erläuterung individueller Entscheidungen (Artikel 86); Transparenz durch Gebrauchsanweisungen (Artikel 13)</td>
+</tr>
+<tr>
+<td><strong>Transparenzpflichten</strong></td>
+<td>Datenschutzhinweis; Auskunft über Logik automatisierter Entscheidungen auf Anfrage (Artikel 22 Absatz 3 DSGVO)</td>
+<td>Transparenz gegenüber natürlichen Personen (Artikel 13); Maßnahmen zur menschlichen Aufsicht (Artikel 14)</td>
+</tr>
+<tr>
+<td><strong>Sanktionen</strong></td>
+<td>Bis zu EUR 20&nbsp;Mio. oder 4&nbsp;% des weltweiten Jahresumsatzes, je nachdem, welcher Betrag höher ist</td>
+<td>Bis zu EUR 35&nbsp;Mio. oder 7&nbsp;% des Umsatzes (verbotene KI); EUR 15&nbsp;Mio. oder 3&nbsp;% des Umsatzes (sonstige Verstöße)</td>
+</tr>
+<tr>
+<td><strong>Aufsichtsbehörde (DACH)</strong></td>
+<td>BfDI (Bundesebene), Landesdatenschutzbehörden; im Finanzsektor sektorale Aufsicht durch BaFin</td>
+<td>Nationale Marktüberwachungsbehörden; Deutschland benennt Behörden nach Artikel 70–71 EU-KI-Verordnung</td>
+</tr>
+<tr>
+<td><strong>Geltungsbeginn</strong></td>
+<td>25. Mai 2018</td>
+<td>Hochrisikopflichten: 2. August 2026; verbotene KI-Systeme: 2. Februar 2025</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="praxisleitfaden">Praxisleitfaden zur Abgrenzung</h2>
+<p>Die nachfolgende Abfolge ermöglicht es, für ein konkretes System zu bestimmen, welche Pflichten ausgelöst werden, und die Folgenabschätzungen zu koordinieren.</p>
+<p><strong>Schritt 1 – Verarbeitet das System personenbezogene Daten?</strong>
+Falls ja, ist die DSGVO anwendbar. Bestimmen Sie den Verantwortlichen, legen Sie die Rechtsgrundlage nach Artikel 6 DSGVO fest, prüfen Sie, ob besondere Kategorien personenbezogener Daten nach Artikel 9 DSGVO betroffen sind, und beurteilen Sie die DSFA-Pflicht nach Artikel 35 DSGVO. Falls nein, ist die DSGVO nicht anwendbar; fahren Sie mit Schritt 2 zur Abgrenzung der EU-KI-Verordnung fort.</p>
+<p><strong>Schritt 2 – Handelt es sich um ein KI-System im Sinne von Artikel 3 Absatz 1 EU-KI-Verordnung?</strong>
+Artikel 3 Absatz 1 EU-KI-Verordnung definiert ein KI-System als maschinenbasiertes System, das mit einem variierenden Grad an Autonomie betrieben wird und das – für ein gegebenes Set von Zielen – aus Eingaben ableitet, wie Ausgaben wie Vorhersagen, Inhalte, Empfehlungen oder Entscheidungen erzeugt werden können, die reale oder virtuelle Umgebungen beeinflussen. Regelbasierte Entscheidungssysteme ohne Inferenzverfahren erfüllen diese Definition nicht. Liegt kein KI-System vor, ist die EU-KI-Verordnung nicht anwendbar.</p>
+<p><strong>Schritt 3 – Fällt das System unter die Hochrisikokategorien des Anhangs III?</strong>
+Anhang III benennt acht Bereiche, darunter biometrische Identifizierung, kritische Infrastruktur, Bildung, Beschäftigung, wesentliche private und öffentliche Dienste, Strafverfolgung, Migration und Grenzkontrolle sowie Rechtspflege. Fällt das System in eine der genannten Kategorien und sind die Voraussetzungen von Artikel 6 EU-KI-Verordnung erfüllt, gelten die vollständigen Hochrisikopflichten. Andernfalls prüfen Sie, ob begrenzte Transparenzpflichten nach Artikel 50 EU-KI-Verordnung eingreifen.</p>
+<p><strong>Schritt 4 – Koordination von DSFA nach Artikel 35 DSGVO und Risikomanagementsystem nach Artikel 9 EU-KI-Verordnung.</strong>
+Sind sowohl DSGVO- als auch EU-KI-Verordnungs-Hochrisikopflichten einschlägig, decken DSFA und Risikomanagementsystem überschneidende Sachverhalte ab. Organisieren Sie die Dokumentation so, dass jedes Instrument für die jeweilige Aufsichtsbehörde eigenständig lesbar ist, dabei jedoch auf einer gemeinsamen Tatsachengrundlage aufbaut: Systembeschreibung, Datenflüsse, Risikoidentifikation und Minderungsmaßnahmen. Der <a href="/insights/article-9-risikomanagementsystem-leitfaden.html">Praxisleitfaden zum Artikel 9 Risikomanagementsystem</a> enthält eine Mapping-Tabelle gemeinsamer Eingabefelder.</p>
+<p><strong>Schritt 5 – Anwendung von Artikel 22 DSGVO und Grundrechte-Folgenabschätzung nach Artikel 26 Absatz 6 EU-KI-Verordnung bei automatisierten Entscheidungen mit erheblichen Auswirkungen.</strong>
+Trifft das System Entscheidungen mit rechtlicher oder vergleichbar erheblicher Wirkung auf natürliche Personen ohne sinnvollen menschlichen Eingriff, ist Artikel 22 DSGVO anwendbar, und der Betreiber muss Schutzmaßnahmen einschließlich des Rechts auf menschliche Überprüfung bereitstellen. Ist das System zugleich nach Anhang III eingestuft, verlangt Artikel 26 Absatz 6 EU-KI-Verordnung eine Grundrechte-Folgenabschätzung vor der Inbetriebnahme. Die Verfahrensanforderungen beider Instrumente erläutert der Leitfaden zu <a href="/insights/artikel-26-pflichten-betreiber.html">Artikel 26 Betreiberpflichten</a>. GRFA und Schutzmaßnahmen nach Artikel 22 DSGVO können in einer einzigen strukturierten Beurteilung dokumentiert werden, sofern die Anforderungen beider Rechtsrahmen explizit erfüllt werden.</p>
+<hr>
+<h2 id="haeufige-fehler">Häufige Fehler</h2>
+<p><strong>Zwei voneinander getrennte Compliance-Programme.</strong> Organisationen richten häufig ein DSGVO-Programm unter Leitung des Datenschutzbeauftragten und ein EU-KI-Verordnungs-Programm in einem separaten Workstream ohne formalisierte Übergabe ein. Das führt zu widersprüchlichen Systembeschreibungen, doppelten Risikoregistern und inkonsistenten Minderungsmaßnahmen – alles Faktoren, die unter beiden Rechtsrahmen Prüfungsrisiken erzeugen. Eine einzige funktionsübergreifende Governance-Struktur mit klar definierter Verantwortung ist belastbarer.</p>
+<p><strong>Die DSFA als Ersatz für das Risikomanagementsystem der EU-KI-Verordnung behandeln.</strong> Die DSFA nach Artikel 35 DSGVO ist eine Stichtagsbeurteilung vor risikoreicher Verarbeitung. Das Risikomanagementsystem nach Artikel 9 EU-KI-Verordnung ist ein kontinuierlicher, lebenszyklus-begleitender Prozess, der bei jeder wesentlichen Änderung des KI-Systems zu überprüfen ist. Es handelt sich um strukturell verschiedene Instrumente. Eine zum Zeitpunkt des Onboardings erstellte DSFA genügt den iterativen Anforderungen des Artikel 9 EU-KI-Verordnung nicht.</p>
+<p><strong>Annahme, dass der DSGVO-Auftragsverarbeitungsvertrag die Compliance nach der EU-KI-Verordnung abdeckt.</strong> Auftragsverarbeitungsverträge nach Artikel 28 DSGVO weisen Auftragsverarbeiterpflichten im Hinblick auf personenbezogene Daten zu. Sie übertragen weder Anbieterpflichten nach der EU-KI-Verordnung auf den Anbieter noch erfüllen sie die eigenen Betreiberpflichten nach Artikel 26 EU-KI-Verordnung. Jede Organisation, die ein Hochrisiko-KI-System einsetzt, trägt Betreiberpflichten nach Artikel 26 EU-KI-Verordnung unabhängig von der vertraglichen Gestaltung mit dem Anbieter. Lieferanten-Governance-Rahmen müssen beide Instrumente gesondert adressieren.</p>
+<p><strong>Transparenzpflichten der EU-KI-Verordnung mit DSGVO-Datenschutzhinweisen gleichsetzen.</strong> Artikel 13 EU-KI-Verordnung verpflichtet Anbieter, ihre Systeme so transparent zu gestalten, dass Betreiber ihren eigenen Pflichten nachkommen können. Artikel 13–14 DSGVO verpflichten Verantwortliche, betroffenen Personen Informationen über die Verarbeitung bereitzustellen. Diese Pflichten verfolgen unterschiedliche Zwecke, richten sich an unterschiedliche Adressaten und werden von unterschiedlichen Aufsichtsbehörden durchgesetzt.</p>
+<hr>
+<h2 id="dach-besonderheiten">DACH-spezifische Besonderheiten</h2>
+<p>Deutschsprachige Organisationen agieren unter zusätzlichen regulatorischen Erwartungen, die beide Rechtsrahmen überlagern.</p>
+<p><strong>BfDI-Orientierungen zu KI und personenbezogenen Daten.</strong> Der Bundesbeauftragte für den Datenschutz und die Informationsfreiheit hat Orientierungshilfen zur Schnittmenge von KI-Anwendungen und Rechten betroffener Personen veröffentlicht, mit besonderem Fokus auf die Transparenzanforderungen des Artikel 22 Absatz 3 DSGVO und die Wechselwirkung mit automatisierter Profilerstellung. Compliance-Verantwortliche sollten BfDI-Veröffentlichungen verfolgen, da die nationale Aufsichtsstruktur der EU-KI-Verordnung noch abschließend festgelegt wird.</p>
+<p><strong>Landesdatenschutzbehörden.</strong> Wird die Verarbeitung durch Behörden der Länder oder durch Privatorganisationen vorgenommen, die der Landesaufsicht unterliegen, kann die zuständige Landesbehörde – beispielsweise das Bayerische Landesamt für Datenschutzaufsicht (BayLfDA) für Bayern oder die Berliner Beauftragte für Datenschutz und Informationsfreiheit – eigene Orientierungen zu KI-Anwendungen erlassen. Die Programmgestaltung muss die jeweils zuständige Landesdatenschutzbehörde berücksichtigen.</p>
+<p><strong>BaFin MaRisk AT 9.</strong> Regulierte Finanzinstitute, die den Mindestanforderungen an das Risikomanagement (MaRisk) unterliegen, tragen eine zusätzliche Compliance-Schicht nach AT 9, der Auslagerungsanforderungen und die Beurteilung von Drittanbieterrisiken regelt. AT 9 gilt für KI-Systeme, die von externen Anbietern bezogen werden, und begründet Pflichten, die strukturell analog zu – rechtlich jedoch unabhängig von – DSGVO-Auftragsverarbeiterpflichten und EU-KI-Verordnungs-Betreiberpflichten sind. Ein koordinierter Governance-Rahmen muss alle drei Anforderungssets gegen denselben Anbieter und dasselbe System abbilden.</p>
+<p><strong>BSI C5 und technische Kontrollen.</strong> Der Cloud Computing Compliance Criteria Catalogue (C5) des Bundesamts für Sicherheit in der Informationstechnik (BSI) legt Basis-Sicherheitsanforderungen für Cloud-Dienste fest, auf denen viele KI-Einsätze aufsetzen. Wird ein KI-System über einen nach C5 zertifizierten Cloud-Dienst bereitgestellt, kann die technische Kontrolldokumentation als Eingabe sowohl für das Risikomanagementsystem nach Artikel 9 EU-KI-Verordnung als auch für die Sicherheitsbeurteilung nach Artikel 32 DSGVO genutzt werden – was Doppelarbeit reduziert, ohne die Instrumente zu vermengen.</p>
+<hr>
+<h2 id="naechste-schritte">Nächste Schritte</h2>
+<p>Organisationen, die diese Abgrenzungsarbeit erstmals angehen, profitieren von einer initialen Klassifizierung der in Scope befindlichen KI-Systeme, bevor sie sich auf ein Programmdesign festlegen. Der <strong><a href="https://app.ekmgc.de">EU AI Act Quick Scan</a></strong> bietet einen strukturierten Einstiegspunkt zur Einstufung eines Systems nach Risikostufe sowie zur Identifikation der jeweils einschlägigen DSGVO- und EU-KI-Verordnungs-Pflichten.</p>
+<p>Für Organisationen, die die initiale Klassifizierung abgeschlossen haben und koordinierte DSFA- und RMS-Dokumentation erarbeiten oder die Grundrechte-Folgenabschätzung nach Artikel 26 EU-KI-Verordnung adressieren müssen, bietet EKM Global Consulting GmbH strukturierte Beratungsmandate an. Weitere Informationen zum Beratungsumfang finden Sie unter <strong><a href="https://ekmgc.de/eu-ai-act.html">ekmgc.de/eu-ai-act.html</a></strong>.</p>
+<hr>
+<p><em>EKM Global Consulting GmbH, Baden-Baden. Beratung zu EU-KI-Verordnungs-Compliance, DSGVO-Programmintegration und Drittanbieter-Risikomanagement für regulierte Organisationen im DACH-Raum. Gegründet Januar 2013. Geschäftsführer: <a href="https://www.linkedin.com/in/elshan-musayev/">Elshan Musayev</a>.</em></p>
+    </article>
+  </section>
+
+  <!-- ============ RELATED ============ -->
+  <section class="container">
+    <div class="insight-related">
+      <h3>Verwandte Beiträge</h3>
+      <p class="insight-related__alt"><a href="/insights/eu-ai-act-vs-gdpr-scoping.html">Read in English →</a></p>
+      <ul>
+    <li><a href="article-9-risikomanagementsystem-leitfaden.html"><strong>EU-KI-Verordnung Artikel 9 — Risikomanagementsystem: Praxisleitfaden</strong></a><span class="insight-related__desc">Praxisleitfaden zu Artikel 9 der Verordnung (EU) 2024/1689: der vierstufige iterative Zyklus, Dokumentationspflichten, Lebenszyklus-Charakter und DACH-spezifisc…</span></li>
+    <li><a href="anhang-iii-scoping-checkliste.html"><strong>Hochrisiko-KI nach Anhang III: Scoping-Checkliste für DACH-Organisationen</strong></a><span class="insight-related__desc">Die acht Hochrisiko-KI-Kategorien nach Anhang III erläutert, plus eine 14-Fragen-Scoping-Checkliste zur Bestimmung, ob Ihre Organisation unter Verordnung (EU) 2…</span></li>
+    <li><a href="konformitaetsbewertung-anhang-vi-vii.html"><strong>Konformitätsbewertung nach EU-KI-Verordnung: Anhang VI vs. Anhang VII</strong></a><span class="insight-related__desc">Entscheidungskriterien für die Konformitätsbewertung nach Verordnung (EU) 2024/1689: wann Anhang VI interne Kontrolle anwendbar ist, wann Anhang VII durch Benan…</span></li>
+    <li><a href="artikel-26-pflichten-betreiber.html"><strong>Artikel 26 Pflichten der Betreiber: was Banken und Versicherer wirklich schulden</strong></a><span class="insight-related__desc">Pflichten der Betreiber von Hochrisiko-KI nach Verordnung (EU) 2024/1689 — einschließlich der FRIA-Sonderregelung für Kreditscoring (Artikel 29a) und der vertra…</span></li>
+    <li><a href="iso-42001-vs-artikel-9.html"><strong>ISO/IEC 42001 vs. EU-KI-Verordnung Artikel 9 RMS: Deckt die Zertifizierung die Verordnung?</strong></a><span class="insight-related__desc">ISO/IEC 42001:2023 Zertifizierung liefert etwa 70 % eines Artikel-9-konformen Risikomanagementsystems, ist aber noch keine formal harmonisierte Norm nach der KI…</span></li>
+  </ul>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__copy">&copy; 2026 EKM Global Consulting GmbH. Baden-Baden, Germany. Founded 2013.</div>
+      <ul class="footer__links" role="list">
+        <li><a href="/insights/">Insights</a></li>
+        <li><a href="/eu-ai-act.html">EU AI Act</a></li>
+        <li><a href="https://app.ekmgc.de" rel="noopener">Quick Scan</a></li>
+        <li><a href="mailto:elshan.musayev@ekmgc.de">Contact</a></li>
+      </ul>
+      <div class="footer__social">
+        <a href="https://www.linkedin.com/company/ekm-global-consulting-gmbh/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
