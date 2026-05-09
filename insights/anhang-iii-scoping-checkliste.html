@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="de" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hochrisiko-KI nach Anhang III: Scoping-Checkliste für DACH-Organisationen — EKM Global Consulting</title>
+  <meta name="description" content="Die acht Hochrisiko-KI-Kategorien nach Anhang III erläutert, plus eine 14-Fragen-Scoping-Checkliste zur Bestimmung, ob Ihre Organisation unter Verordnung (EU) 2024/1689 in den Anwendungsbereich fällt.">
+  <link rel="canonical" href="https://ekmgc.de/insights/anhang-iii-scoping-checkliste.html">
+  <link rel="alternate" hreflang="en" href="https://ekmgc.de/insights/annex-iii-scoping-checklist.html">
+  <link rel="alternate" hreflang="de" href="https://ekmgc.de/insights/anhang-iii-scoping-checkliste.html">
+  <link rel="alternate" hreflang="x-default" href="https://ekmgc.de/insights/annex-iii-scoping-checklist.html">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Hochrisiko-KI nach Anhang III: Scoping-Checkliste für DACH-Organisationen">
+  <meta property="og:description" content="Die acht Hochrisiko-KI-Kategorien nach Anhang III erläutert, plus eine 14-Fragen-Scoping-Checkliste zur Bestimmung, ob Ihre Organisation unter Verordnung (EU) 2024/1689 in den Anwendungsbereich fällt.">
+  <meta property="og:url" content="https://ekmgc.de/insights/anhang-iii-scoping-checkliste.html">
+  <meta property="og:image" content="https://app.ekmgc.de/assets/og-image.png">
+  <meta property="og:site_name" content="EKM Global Consulting">
+  <meta property="og:locale" content="de_DE">
+  <meta property="article:published_time" content="2026-05-06T00:00:00+00:00">
+  <meta property="article:author" content="Elshan Musayev">
+  <meta property="article:section" content="EU AI Compliance">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Hochrisiko-KI nach Anhang III: Scoping-Checkliste für DACH-Organisationen">
+  <meta name="twitter:description" content="Die acht Hochrisiko-KI-Kategorien nach Anhang III erläutert, plus eine 14-Fragen-Scoping-Checkliste zur Bestimmung, ob Ihre Organisation unter Verordnung (EU) 2024/1689 in den Anwendungsbereich fällt.">
+  <meta name="twitter:image" content="https://app.ekmgc.de/assets/og-image.png">
+
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M16 2L4 9v14l12 7 12-7V9L16 2z' fill='none' stroke='%2300d4aa' stroke-width='2'/%3E%3Cpath d='M16 8l-6 3.5v7L16 22l6-3.5v-7L16 8z' fill='%2300d4aa' opacity='0.3'/%3E%3Ccircle cx='16' cy='15' r='3' fill='%2300d4aa'/%3E%3C/svg%3E">
+
+  <!-- Fonts -->
+  <link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@400,500,700,800&f[]=satoshi@300,400,500,700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/base.css">
+  <link rel="stylesheet" href="/style.css">
+
+  <style>
+    /* Insight article page-local styles */
+    .insight-hero {
+      padding: calc(var(--space-10, 80px) + 60px) 0 var(--space-7, 56px);
+      background: linear-gradient(180deg, var(--color-surface-offset, #1a2338) 0%, var(--color-bg, #0a0e17) 100%);
+      border-bottom: 1px solid var(--color-border, #253350);
+    }
+    .insight-crumb {
+      font-size: 13px;
+      color: var(--color-text-muted, #8899b0);
+      margin-bottom: var(--space-3, 16px);
+    }
+    .insight-crumb a {
+      color: var(--color-text-muted, #8899b0);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.15s;
+    }
+    .insight-crumb a:hover { border-bottom-color: var(--color-primary, #00d4aa); }
+    .insight-eyebrow {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--color-primary, #00d4aa);
+      margin-bottom: var(--space-3, 16px);
+    }
+    .insight-headline {
+      font-family: var(--font-display, 'Cabinet Grotesk', sans-serif);
+      font-size: clamp(32px, 5vw, 56px);
+      font-weight: 800;
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+      margin: 0 0 var(--space-4, 24px);
+      max-width: 900px;
+    }
+    .insight-headline .accent { color: var(--color-primary, #00d4aa); }
+    .insight-meta {
+      display: flex;
+      gap: var(--space-4, 24px);
+      flex-wrap: wrap;
+      font-size: 14px;
+      color: var(--color-text-muted, #8899b0);
+      margin-bottom: var(--space-3, 16px);
+    }
+    .insight-meta strong { color: var(--color-text, #e2e8f0); font-weight: 500; }
+    .insight-tldr {
+      max-width: 820px;
+      padding: var(--space-4, 24px) var(--space-5, 32px);
+      border-left: 3px solid var(--color-primary, #00d4aa);
+      background: var(--color-surface-offset, #1a2338);
+      border-radius: 0 var(--radius-md, 10px) var(--radius-md, 10px) 0;
+      font-size: 17px;
+      line-height: 1.6;
+      color: var(--color-text, #e2e8f0);
+      margin-top: var(--space-5, 32px);
+    }
+    .insight-body {
+      padding: var(--space-8, 64px) 0;
+      max-width: 820px;
+      margin: 0 auto;
+    }
+    .insight-body h2 {
+      font-family: var(--font-display, 'Cabinet Grotesk', sans-serif);
+      font-size: clamp(24px, 3vw, 32px);
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      line-height: 1.2;
+      margin: var(--space-7, 56px) 0 var(--space-3, 16px);
+      color: var(--color-text, #e2e8f0);
+    }
+    .insight-body h3 {
+      font-family: var(--font-display, 'Cabinet Grotesk', sans-serif);
+      font-size: 20px;
+      font-weight: 600;
+      margin: var(--space-5, 32px) 0 var(--space-2, 8px);
+      color: var(--color-text, #e2e8f0);
+    }
+    .insight-body p {
+      font-size: 17px;
+      line-height: 1.7;
+      color: var(--color-text, #e2e8f0);
+      margin: 0 0 var(--space-3, 16px);
+    }
+    .insight-body ul, .insight-body ol {
+      font-size: 17px;
+      line-height: 1.7;
+      color: var(--color-text, #e2e8f0);
+      padding-left: 1.4em;
+      margin: 0 0 var(--space-4, 24px);
+    }
+    .insight-body li { margin-bottom: var(--space-2, 8px); }
+    .insight-body li::marker { color: var(--color-primary, #00d4aa); }
+    .insight-body strong { color: var(--color-text, #e2e8f0); font-weight: 600; }
+    .insight-body em { font-style: italic; color: var(--color-text-muted, #8899b0); }
+    .insight-body a {
+      color: var(--color-primary, #00d4aa);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(0, 212, 170, 0.4);
+      transition: border-color 0.15s;
+    }
+    .insight-body a:hover { border-bottom-color: var(--color-primary, #00d4aa); }
+    .insight-body blockquote {
+      margin: var(--space-5, 32px) 0;
+      padding: var(--space-3, 16px) var(--space-4, 24px);
+      border-left: 3px solid var(--color-primary, #00d4aa);
+      background: var(--color-surface-offset, #1a2338);
+      border-radius: 0 var(--radius-sm, 6px) var(--radius-sm, 6px) 0;
+      color: var(--color-text-muted, #8899b0);
+      font-style: italic;
+    }
+    .insight-body blockquote p:first-child { margin-top: 0; }
+    .insight-body blockquote p:last-child { margin-bottom: 0; }
+    .insight-body table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: var(--space-5, 32px) 0;
+      font-size: 15px;
+    }
+    .insight-body th, .insight-body td {
+      padding: var(--space-2, 8px) var(--space-3, 16px);
+      border: 1px solid var(--color-border, #253350);
+      text-align: left;
+      vertical-align: top;
+    }
+    .insight-body th {
+      background: var(--color-surface-offset, #1a2338);
+      font-weight: 600;
+      color: var(--color-text, #e2e8f0);
+    }
+    .insight-body code {
+      background: var(--color-surface-offset, #1a2338);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 0.92em;
+      color: var(--color-primary, #00d4aa);
+    }
+    .insight-body hr {
+      border: none;
+      border-top: 1px solid var(--color-border, #253350);
+      margin: var(--space-7, 56px) 0;
+    }
+    .insight-related {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: var(--space-7, 56px) 0;
+      border-top: 1px solid var(--color-border, #253350);
+    }
+    .insight-related h3 {
+      font-family: var(--font-display, 'Cabinet Grotesk', sans-serif);
+      font-size: 22px;
+      font-weight: 700;
+      margin-bottom: var(--space-4, 24px);
+    }
+    .insight-related ul {
+      list-style: none;
+      padding: 0;
+    }
+    .insight-related li {
+      padding: var(--space-3, 16px) 0;
+      border-bottom: 1px solid var(--color-border, #253350);
+    }
+    .insight-related li:last-child { border-bottom: none; }
+    .insight-related__desc {
+      display: block;
+      font-size: 14px;
+      color: var(--color-text-muted, #8899b0);
+      margin-top: 4px;
+      line-height: 1.5;
+    }
+    .insight-related__alt {
+      margin: var(--space-3, 16px) 0 var(--space-5, 32px);
+      font-size: 14px;
+    }
+    .insight-related__alt a {
+      color: var(--color-primary, #00d4aa);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .insight-related a {
+      color: var(--color-text, #e2e8f0);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.15s;
+    }
+    .insight-related a:hover { color: var(--color-primary, #00d4aa); }
+  </style>
+
+  <!-- Schema.org JSON-LD: Article + BreadcrumbList -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://ekmgc.de/insights/anhang-iii-scoping-checkliste.html#article",
+      "headline": "Hochrisiko-KI nach Anhang III: Scoping-Checkliste für DACH-Organisationen",
+      "description": "Die acht Hochrisiko-KI-Kategorien nach Anhang III erläutert, plus eine 14-Fragen-Scoping-Checkliste zur Bestimmung, ob Ihre Organisation unter Verordnung (EU) 2024/1689 in den Anwendungsbereich fällt.",
+      "url": "https://ekmgc.de/insights/anhang-iii-scoping-checkliste.html",
+      "mainEntityOfPage": "https://ekmgc.de/insights/anhang-iii-scoping-checkliste.html",
+      "datePublished": "2026-05-06",
+      "dateModified": "2026-05-06",
+      "inLanguage": "de-DE",
+      "isAccessibleForFree": true,
+      "keywords": "EU AI Act, Regulation (EU) 2024/1689, Annex III, Article 9, Article 26, conformity assessment, GPAI, AI compliance, RegTech, BSI C5, BaFin",
+      "articleSection": "EU AI Compliance",
+      "author": {
+        "@type": "Person",
+        "@id": "https://www.linkedin.com/in/elshan-musayev/#person",
+        "name": "Elshan Musayev",
+        "url": "https://www.linkedin.com/in/elshan-musayev/",
+        "jobTitle": "Founder & CEO",
+        "sameAs": [
+          "https://www.linkedin.com/in/elshan-musayev/",
+          "https://www.linkedin.com/in/elshanmusayev/",
+          "https://elshanmusayev.com"
+        ]
+      },
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://ekmgc.de/#organization",
+        "name": "EKM Global Consulting GmbH",
+        "url": "https://ekmgc.de",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://app.ekmgc.de/assets/logo_ekm_icon.png",
+          "width": 1024,
+          "height": 1024
+        },
+        "sameAs": [
+          "https://www.linkedin.com/company/ekm-global-consulting-gmbh/",
+          "https://www.linkedin.com/showcase/121553912/",
+          "https://www.linkedin.com/showcase/121603994/",
+          "https://www.crunchbase.com/organization/ekm-global-consulting"
+        ]
+      },
+      "about": {
+        "@type": "Legislation",
+        "name": "Regulation (EU) 2024/1689 (Artificial Intelligence Act)",
+        "legislationJurisdiction": "European Union",
+        "legislationDate": "2024-06-13"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://ekmgc.de/insights/anhang-iii-scoping-checkliste.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://ekmgc.de/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "EU AI Act",
+          "item": "https://ekmgc.de/eu-ai-act.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Insights",
+          "item": "https://ekmgc.de/insights/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Hochrisiko-KI nach Anhang III: Scoping-Checkliste für DACH-Organisationen",
+          "item": "https://ekmgc.de/insights/anhang-iii-scoping-checkliste.html"
+        }
+      ]
+    }
+  ]
+}
+  </script>
+</head>
+
+<body>
+  <!-- ============ HEADER ============ -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="/" class="header__logo" aria-label="EKM Global Consulting">
+        <img src="/assets/logo-dark.jpg" alt="EKM Global Consulting — think smarter" class="header__logo-img" id="siteLogo">
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Main navigation">
+        <ul class="nav__list" role="list">
+          <li><a href="/#services" class="nav__link">Services</a></li>
+          <li><a href="/eu-ai-act.html" class="nav__link">EU AI Act</a></li>
+          <li><a href="/insights/" class="nav__link nav__link--active">Insights</a></li>
+          <li><a href="/#approach" class="nav__link">Approach</a></li>
+          <li><a href="/#contact" class="nav__link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header__controls">
+        <button class="toggle-btn" id="themeToggle" data-theme-toggle aria-label="Switch theme">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+        </button>
+        <button class="menu-toggle" id="menuToggle" aria-label="Menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ HERO ============ -->
+  <section class="insight-hero">
+    <div class="container">
+      <div class="insight-crumb">
+        <a href="/">Home</a> · <a href="/eu-ai-act.html">EU AI Act</a> · <a href="/insights/">Insights</a> · Hochrisiko-KI nach Anhang III: Scoping-Checkliste für DACH-Organisationen
+      </div>
+      <div class="insight-eyebrow">Cluster · Auf Deutsch · EU-KI-Verordnung</div>
+      <h1 class="insight-headline">Anhang III Scoping-<span class="accent">Checkliste</span> für DACH-Organisationen.</h1>
+      <div class="insight-meta">
+        <span><strong>Von</strong> Elshan Musayev</span>
+        <span><strong>Veröffentlicht</strong> 2026-05-06</span>
+        <span><strong>9 Min. Lesezeit</strong></span>
+      </div>
+      <div class="insight-tldr">
+        <strong>Kurzfassung.</strong> Die acht Hochrisiko-KI-Kategorien nach Anhang III erläutert, plus eine 14-Fragen-Scoping-Checkliste zur Bestimmung, ob Ihre Organisation unter Verordnung (EU) 2024/1689 in den Anwendungsbereich fällt.
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ BODY ============ -->
+  <section class="container">
+    <article class="insight-body">
+<p><strong>Meta-Beschreibung:</strong> Ermitteln Sie, ob Ihr KI-System unter Anhang III der EU-KI-Verordnung fällt. Eine strukturierte Scoping-Checkliste für DACH-Compliance-Beauftragte, Datenschutzbeauftragte und Rechtsabteilungen — alle acht Hochrisiko-Kategorien im Überblick.</p>
+<p><strong>Kanonische URL:</strong> <code>https://ekmgc.de/insights/annex-iii-scoping-checklist.html</code>
+<strong>Pillarseite:</strong> <a href="/insights/article-9-risikomanagementsystem-leitfaden.html">Artikel 9 — Risikomanagementsystem Praxisleitfaden</a>
+<strong>Herausgegeben von:</strong> EKM Global Consulting GmbH (Baden-Baden, gegründet im Januar 2013)
+<strong>Verordnung:</strong> Verordnung (EU) 2024/1689, in Kraft seit 1. August 2024; Pflichten aus Anhang III gelten ab <strong>2. August 2026</strong></p>
+<hr>
+<blockquote>
+<p><strong>Kurzfassung.</strong> Anhang III der EU-KI-Verordnung definiert acht Hochrisiko-Kategorien, die ein vollständiges Compliance-Regime auslösen — Artikel 9 Risikomanagementsystem, Artikel 10 Daten-Governance, Artikel 14 Menschliche Aufsicht und weitere. Dieser Beitrag erläutert, was jede Kategorie umfasst, wo DACH-Organisationen am häufigsten verborgene Exponierungen tragen, und enthält eine 14-Fragen-Scoping-Checkliste, mit der Sie feststellen können, ob ein System qualifiziert — bevor Ihre Pflichten ab August 2026 durchsetzbar werden.</p>
+</blockquote>
+<hr>
+<h2>Inhaltsverzeichnis</h2>
+<ol>
+<li><a href="#was-anhang-iii-bewirkt">Was Anhang III bewirkt</a></li>
+<li><a href="#die-acht-hochrisiko-kategorien-im-detail">Die acht Hochrisiko-Kategorien im Detail</a></li>
+<li><a href="#die-scoping-checkliste">Die Scoping-Checkliste</a></li>
+<li><a href="#anbieter-vs-betreiber-warum-die-unterscheidung-entscheidend-ist">Anbieter vs. Betreiber: Warum die Unterscheidung entscheidend ist</a></li>
+<li><a href="#handlungsschritte-nach-identifikation-eines-anhang-iii-systems">Handlungsschritte nach Identifikation eines Anhang-III-Systems</a></li>
+<li><a href="#dach-spezifischer-regulierungsrahmen">DACH-spezifischer Regulierungsrahmen</a></li>
+<li><a href="#abschluss-starten-sie-mit-dem-quick-scan">Abschluss: Starten Sie mit dem Quick Scan</a></li>
+<li><a href="#faq">FAQ</a></li>
+<li><a href="#quellen">Quellen</a></li>
+</ol>
+<hr>
+<h2>Was Anhang III bewirkt <a id="was-anhang-iii-bewirkt"></a></h2>
+<p>Artikel 6 Abs. 2 der Verordnung (EU) 2024/1689 stellt klar, dass ein in Anhang III aufgeführtes KI-System automatisch als Hochrisiko-KI eingestuft wird — unabhängig vom konkreten Risikoprofil eines einzelnen Einsatzszenarios. Es handelt sich um einen listenbasierten Klassifizierungsmechanismus, keinen folgenbasierten. Das System muss keinen Schaden verursacht haben. Die entscheidende Frage lautet: Fällt es unter eine der aufgeführten Kategorien?</p>
+<p>Anhang III listet derzeit acht Hochrisikobereiche. Artikel 7 gewährt der Europäischen Kommission die Befugnis, die Liste durch delegierten Rechtsakt zu erweitern oder einzuschränken. Der Geltungsbereich kann sich demnach während Ihres Compliance-Programms ohne formelles Gesetzgebungsverfahren verschieben.</p>
+<p>Die acht Kategorien in der Reihenfolge ihres Erscheinens in Anhang III:</p>
+<ol>
+<li><strong>Biometrie</strong> — Fernidentifizierung natürlicher Personen in Echtzeit oder nachträglich sowie Kategorisierung anhand geschützter Merkmale.</li>
+<li><strong>Kritische Infrastruktur</strong> — KI, die im Management und Betrieb von Straßenverkehr, Wasser, Gas, Wärme, Elektrizität und digitaler Infrastruktur eingesetzt wird.</li>
+<li><strong>Allgemeine und berufliche Bildung</strong> — Systeme, die über Zugang, Progression oder Bewertung in Bildungs- und Berufsbildungseinrichtungen entscheiden.</li>
+<li><strong>Beschäftigung, Personalmanagement und Zugang zur Selbstständigkeit</strong> — Rekrutierung, Auswahl, Leistungsüberwachung, Beförderung, Vertragsbeendigung und Aufgabenzuweisung, die Beschäftigte betreffen.</li>
+<li><strong>Wesentliche private und öffentliche Dienste</strong> — Kreditwürdigkeitsprüfung, Versicherungsrisikopreisbildung, Anspruchsberechtigung auf öffentliche Leistungen, Einsatzleitstellen für Notfalldienste.</li>
+<li><strong>Strafverfolgung</strong> — Risikobewertung von Personen, polygrafahnliche Verfahren, Deepfake-Erkennung durch Polizeibehörden, Kriminalanalytik zur Rückfallprognose.</li>
+<li><strong>Migration, Asyl und Grenzkontrollen</strong> — Risikoprofilierung von Drittstaatsangehörigen, Dokumentenechtheitsprüfung, Grenzüberwachung.</li>
+<li><strong>Rechtspflege und demokratische Prozesse</strong> — KI zur Unterstützung von Gerichten bei der Sachverhaltsermittlung, Risikobeurteilung von Schöffen sowie KI zur Beeinflussung von Wahlen oder Volksabstimmungen.</li>
+</ol>
+<hr>
+<h2>Die acht Hochrisiko-Kategorien im Detail <a id="die-acht-hochrisiko-kategorien-im-detail"></a></h2>
+<h3>1. Biometrie</h3>
+<p>Auslöser ist die automatisierte Verarbeitung biometrischer Daten zur Fernidentifizierung oder Kategorisierung einer natürlichen Person. Die biometrische Echtzeit-Fernidentifizierung an öffentlich zugänglichen Orten ist nach Artikel 5 verboten (mit engen Ausnahmen für Strafverfolgungsbehörden). Nachträgliche Systeme sowie Systeme, die Personen nach Emotionen, Geschlecht, ethnischer Herkunft oder politischer Überzeugung kategorisieren, fallen als Hochrisiko-KI unter Anhang III.</p>
+<p><strong>DACH-Exponierung.</strong> Zeiterfassungssysteme am Arbeitsplatz, die die Identität per Gesichtsbild verifizieren; Sprachauthentifizierung in Contact Centern; Anwesenheitsüberwachung in Gesundheitseinrichtungen. Vergleicht ein System das Live-Bild oder die Stimme einer Person mit einer Datenbank — zu welchem Zweck auch immer — sind die Scoping-Fragen einzuleiten.</p>
+<p><strong>Grenzbereich.</strong> Liveness-Erkennung, die ausschließlich zur Betrugsprävention in einem KYC-Prozess eingesetzt wird, ohne dass ein persistenter Identifikator angelegt wird, kann unter engen Auslegungen außerhalb von Anhang III fallen. Eine rechtliche Bewertung ist einzuholen; ein Selbstausschluss ohne Prüfung ist nicht vertretbar.</p>
+<hr>
+<h3>2. Kritische Infrastruktur</h3>
+<p>Auslöser ist der Einsatz zur Steuerung oder zum Betrieb von Straßenverkehr, Wasser, Gas, Wärme, Elektrizität oder digitaler Infrastruktur auf eine Weise, die die Sicherheit von Personen beeinträchtigen kann.</p>
+<p><strong>DACH-Exponierung.</strong> KI zur Netzstabilisierung bei deutschen Energieversorgern im Rahmen des EnWG; Predictive-Maintenance-KI für Fernwärme in Österreich; adaptive Verkehrssteuerungssysteme bei Schweizer Kantonsstraßenbehörden. Kann das System beeinflussen, ob eine physische Ressource sicher zu den Endnutzern gelangt, ist Anhang III einschlägig.</p>
+<p><strong>Grenzbereich.</strong> Back-Office-Planungstools, die Wartungsfenster optimieren, aber keine Unterbrechung der Versorgung bewirken können, liegen weniger eindeutig im Geltungsbereich. Die entscheidende Frage ist, ob ein fehlerhafter Output vernünftigerweise zu einer Unterbrechung wesentlicher Dienste führen könnte.</p>
+<hr>
+<h3>3. Allgemeine und berufliche Bildung</h3>
+<p>Auslöser ist die automatisierte Entscheidung über Zugang, Progression oder Bewertung in einer Bildungs- oder Berufsbildungseinrichtung.</p>
+<p><strong>DACH-Exponierung.</strong> Proctoring-Software an Fachhochschulen und Universitäten für Fernprüfungen; KI-Systeme zur Bewertung von Abitur- oder Matura-Aufsätzen im Großmaßstab; Systeme zur Reihung von Bewerbungen auf Ausbildungsplätze. Berufsbildungsplattformen, die Lernende automatisch Lernpfaden zuweisen oder Kompetenzniveaus zertifizieren, fallen ebenfalls in den Geltungsbereich.</p>
+<p><strong>Grenzbereich.</strong> Empfehlungsmaschinen, die ergänzende Lektüre oder Übungsaufgaben vorschlagen, ohne den Zugang zu beschränken oder Noten zu beeinflussen, liegen in der Regel außerhalb des Geltungsbereichs.</p>
+<hr>
+<h3>4. Beschäftigung, Personalmanagement und Selbstständigkeit</h3>
+<p>Auslöser ist die Automatisierung von Prozessen, die Rekrutierung, Auswahl, Beförderung, Leistungsbewertung, Aufgabenzuweisung oder Vertragsbeendigung von Beschäftigten oder Bewerbern auf Selbstständigkeit betreffen.</p>
+<p><strong>DACH-Exponierung.</strong> Dies ist eine der Kategorien mit der höchsten Exponierung für DACH-Organisationen. Systeme zur Sichtung von Bewerbungsunterlagen, Videointerviewanalysen zur Stimmungserkennung, algorithmisches Leistungsscoring in Call Centern, Gig-Economy-Dispositionsplattformen, die Lieferdienste bewerten und deaktivieren — all diese Systeme fallen klar unter Anhang III. Auch ein System, das lediglich eine Rangliste für die menschliche Prüfung erstellt, fällt in den Geltungsbereich, wenn Menschen dessen Output routinemäßig übernehmen, ohne eine eigenständige Neubewertung vorzunehmen.</p>
+<p><strong>Grenzbereich.</strong> Schichtplanungstools, die Einsätze ausschließlich auf Basis der im System hinterlegten Mitarbeiterpräferenzen verteilen, ohne Merkmale der Beschäftigten zu inferieren, liegen in der Regel außerhalb des Geltungsbereichs.</p>
+<hr>
+<h3>5. Wesentliche private und öffentliche Dienste</h3>
+<p>Auslöser ist ein KI-System, das die Anspruchsberechtigung auf Kredite, Versicherungen, öffentliche Leistungen, Notfalleinsätze oder sonstige als wesentlich eingestufte Dienste bestimmt oder beschränkt.</p>
+<p><strong>DACH-Exponierung.</strong> Kreditscoring-Modelle bei deutschen Sparkassen und Genossenschaftsbanken; Versicherungs-Underwriting-Systeme zur Preisbildung bei Gesundheits- oder Haftpflichtrisiken; automatisierte Leistungsanspruchsprüfer in deutschen Jobcentern oder beim österreichischen AMS; Notruf-Triage-Systeme. Diese Kategorie berührt in erheblichem Maße die BaFin-MaRisk sowie die EBA-Leitlinien zu ML-Modellen für Kreditinstitute.</p>
+<p><strong>Grenzbereich.</strong> Marketing-Personalisierung, die beeinflusst, welches Produkt angezeigt wird — jedoch weder Zugang noch Preisgestaltung bestimmt —, liegt weniger eindeutig im Geltungsbereich.</p>
+<hr>
+<h3>6. Strafverfolgung</h3>
+<p>Auslöser ist der Einsatz von KI durch Polizei- oder Sicherheitsbehörden zur Risikobewertung von Personen, Kriminalanalytik, polygraphnaher Affektbeurteilung oder Deepfake-Erkennung in Strafverfahren.</p>
+<p><strong>DACH-Exponierung.</strong> Predictive-Policing-Systeme, die in mehreren Bundesländern erprobt wurden; Bedrohungsbeurteilungsinstrumente bei der Bundespolizei; Lügendetektionssoftware in Asylanhörungen. Diese Kategorie betrifft in erster Linie Organisationen des öffentlichen Sektors mit Vollzugsauftrag, jedoch werden private Sicherheitsunternehmen, die solchen Behörden KI-Dienste erbringen, nach Artikel 6 zu Anbietern eines Hochrisiko-Systems.</p>
+<hr>
+<h3>7. Migration, Asyl und Grenzkontrollen</h3>
+<p>Auslöser ist der Einsatz von KI zur Bewertung des Risikos irregulären Aufenthalts, zur Authentifizierung von Reisedokumenten oder zur Grenzüberwachung.</p>
+<p><strong>DACH-Exponierung.</strong> Systeme des BAMF (Bundesamt für Migration und Flüchtlinge) oder kantonaler Migrationsbehörden; Dokumentenprüfungs-KI an Flughafen-Grenzanlagen. Private Organisationen, die solchen Behörden KI zur Dokumentenverifizierung bereitstellen, sind unabhängig von ihrer eigenen Branchenzugehörigkeit Anbieter eines Hochrisiko-Systems.</p>
+<hr>
+<h3>8. Rechtspflege und demokratische Prozesse</h3>
+<p>Auslöser ist KI, die Gerichten, Schiedsinstanzen oder Wahlbehörden zuarbeitet, oder KI, die zur Beeinflussung des Wahlverhaltens eingesetzt wird.</p>
+<p><strong>DACH-Exponierung.</strong> KI-gestützte Recherchetools für Gerichte oder Notare; Kampagnen-Targeting-Systeme politischer Parteien. Für kommerzielle Einrichtungen liegt die Hauptexponierung als Anbieter solcher Tools, nicht als Betreiber.</p>
+<hr>
+<h2>Die Scoping-Checkliste <a id="die-scoping-checkliste"></a></h2>
+<p>Die folgenden 14 Fragen bilden ein sequenzielles Entscheidungsverfahren. Beantworten Sie jede Frage der Reihe nach. Wird eine Frage bejaht, dokumentieren Sie Ihre Begründung und die unterstützenden Belege. Eine einzige Bejahung der Fragen 1 bis 5 genügt, um eine vollständige Anhang-III-Klassifizierungsprüfung einzuleiten.</p>
+<table>
+<thead>
+<tr>
+<th>Nr.</th>
+<th>Frage</th>
+<th>Entscheidungskriterium</th>
+<th>Empfohlener Nachweis / Artefakt</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Verarbeitet das System biometrische Daten, um eine natürliche Person zu identifizieren oder zu kategorisieren?</td>
+<td>Ja → Klassifizierungsprüfung einleiten; Nein → weiter</td>
+<td>Datenflussdiagramm; Verzeichnis nach Art. 30 DSGVO</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Steuert, regelt oder überwacht das System einen Bestandteil des Straßenverkehrs, der Wasser-, Gas-, Wärme-, Strom- oder digitalen Infrastruktur auf eine Weise, die die Versorgungskontinuität oder physische Sicherheit beeinflussen kann?</td>
+<td>Ja → weiter; Nein → weiter</td>
+<td>Systemarchitekturdokument; Nutzungsumfang-Vertrag</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Entscheidet das System über den Zugang zu, die Progression in oder die Bewertung innerhalb eines Bildungs- oder Berufsbildungsprogramms oder beeinflusst es diese wesentlich?</td>
+<td>Ja → weiter; Nein → weiter</td>
+<td>Funktionsspezifikation; Richtlinie zur Output-Verwendung</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Sichtet, reiht, bewertet oder trifft das System Maßnahmen, die Beschäftigte oder Bewerber auf Beschäftigung oder Selbstständigkeit betreffen?</td>
+<td>Ja → weiter; Nein → weiter</td>
+<td>HR-Prozessplan; Anbieter-Dokumentation</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Entscheidet das System über die Anspruchsberechtigung auf Kredite, Versicherungen, öffentliche Leistungen oder Notfallversorgung oder beeinflusst es diese wesentlich?</td>
+<td>Ja → weiter; Nein → weiter</td>
+<td>Kreditpolitik-Dokumentation; aktuarielle Modellbeschreibung</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Unterstützt das System Strafverfolgungsbehörden, Sicherheitsbehörden oder Grenzkontrollbehörden bei der Risikobewertung oder Echtheitsprüfung?</td>
+<td>Ja → weiter; Nein → weiter</td>
+<td>Vertrag mit Behörde; Anwendungsfall-Beschreibung</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Beeinflusst das System das Wahlverhalten oder assistiert es bei Gerichts- oder Schiedsverfahren?</td>
+<td>Ja → weiter; Nein → weiter</td>
+<td>Kundenvertrag; Beschreibung des Einsatzkontexts</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Wird der Output des Systems als Eingabe für eine menschliche Entscheidung verwendet, die eine natürliche Person erheblich betrifft?</td>
+<td>Ja → erhöhte Hochrisiko-Wahrscheinlichkeit; Nein → geringere Wahrscheinlichkeit</td>
+<td>Entscheidungsprozess-Flussdiagramm; Eskalationsrichtlinie</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Kann der Output des Systems einer bestimmten natürlichen Person individuell zugeordnet werden?</td>
+<td>Ja → erhöhtes Risiko; Nein → geringer, aber weiter prüfen</td>
+<td>Output-Schema; Logging-Spezifikation</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Erfolgt vor einer Folgeentscheidung eine substanzielle menschliche Prüfung der einzelnen Outputs?</td>
+<td>Nein → Risiko erhöht; Ja → Belastbarkeit der Prüfung dokumentieren</td>
+<td>SOPfür die menschliche Prüfung; Override-Protokolle</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Ist das System ein Standardprodukt (beschafft) oder individuell entwickelt (intern oder nach Spezifikation)?</td>
+<td>Standardprodukt → wahrscheinlich Betreiber-Rolle; Individuell → wahrscheinlich Anbieter-Rolle</td>
+<td>Beschaffungsvertrag; Entwicklungsauftrag</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Stellt der Lieferant eine EU-Konformitätserklärung bereit oder weist er eine CE-Kennzeichnung für dieses System aus?</td>
+<td>Nein → Ihr Unternehmen muss ggf. als Betreiber oder Ko-Anbieter eine Konformitätsbewertung durchführen</td>
+<td>Compliance-Erklärung des Lieferanten; Vertragsklausel</td>
+</tr>
+<tr>
+<td>13</td>
+<td>Ist das System bereits nach Artikel 71 in der öffentlichen Datenbank der EU-KI-Verordnung registriert?</td>
+<td>Nein (nach August 2026) → Pflichtlücke; Ja → Richtigkeit verifizieren</td>
+<td>Datenbankabfrage; Registrierungsnachweis</td>
+</tr>
+<tr>
+<td>14</td>
+<td>Wurde für dieses System eine Datenschutz-Folgenabschätzung nach Art. 35 DSGVO durchgeführt, und berücksichtigt diese die KI-spezifischen Risiken?</td>
+<td>Nein → unmittelbarer Handlungsbedarf; Ja → Quervergleich mit geplantem KI-Act-Risikomanagementsystem</td>
+<td>DPIA-Dokumentation</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2>Anbieter vs. Betreiber: Warum die Unterscheidung entscheidend ist <a id="anbieter-vs-betreiber-warum-die-unterscheidung-entscheidend-ist"></a></h2>
+<p>Artikel 3 Abs. 3 der Verordnung (EU) 2024/1689 definiert einen <strong>Anbieter</strong> als jede natürliche oder juristische Person, die ein KI-System entwickelt und auf dem Markt bereitstellt oder in Betrieb nimmt. Artikel 3 Abs. 4 definiert einen <strong>Betreiber</strong> als jede Organisation, die ein KI-System in eigener Verantwortung einsetzt.</p>
+<p>Bei Anhang-III-Systemen bestimmt diese Unterscheidung, welche Pflichten aus Artikel 9 und den damit verbundenen Vorschriften wen treffen.</p>
+<p>Ein Kreditinstitut, das ein Kreditscoring-Modell von einem Lieferanten erwirbt, ist <strong>Betreiber</strong> nach Artikel 26. Es muss eine Konformitätsbewertung der Dokumentation des Anbieters durchführen, sicherstellen, dass eine menschliche Aufsicht implementiert ist, und Einsatzprotokolle vorhalten. Es muss kein Risikomanagementsystem von Grund auf neu aufbauen — muss jedoch verifizieren, dass das System des Anbieters die Anforderungen der Artikel 9, 10 und Anhang IV erfüllt, und trägt Restpflichten, wenn die Dokumentation des Anbieters unzureichend ist.</p>
+<p>Dasselbe Kreditinstitut ist, sofern es ein nach seiner eigenen Spezifikation entwickeltes Modell in Auftrag gibt, aller Wahrscheinlichkeit nach <strong>Anbieter</strong> nach Artikel 3 Abs. 3 — auch wenn der Code von einem Dritten geschrieben wird. Entscheidend ist die Kontrolle über die funktionale Spezifikation. Dies ist in DACH-Beschaffungskontexten eine verbreitete Quelle für Fehlklassifizierungen, wenn die Entwicklung ausgelagert, die Anforderungen jedoch intern verfasst werden.</p>
+<p>Ein einziges System kann Ihre Organisation <strong>für einige Einsatzszenarien in die Anbieter-Rolle und für andere in die Betreiber-Rolle</strong> versetzen — beispielsweise wenn ein Krankenhaus eine interne Triage-KI für den eigenen klinischen Betrieb erstellt (Betreiber), dieses Tool jedoch an eine andere Klinik lizenziert (damit Anbieter). Beide Rollen sind gesondert zu erfassen.</p>
+<hr>
+<h2>Handlungsschritte nach Identifikation eines Anhang-III-Systems <a id="handlungsschritte-nach-identifikation-eines-anhang-iii-systems"></a></h2>
+<p>Die Identifikation ist kein Endpunkt, sondern der Ausgangspunkt. Für jedes bestätigte Anhang-III-System aktivieren sich die nachfolgenden Pflichten, mit dem Compliance-Stichtag <strong>2. August 2026</strong> für bereits auf dem Markt befindliche Systeme.</p>
+<p><strong>Artikel 9 — Risikomanagementsystem.</strong> Ein dokumentierter, iterativer Prozess zur Identifizierung, Schätzung, Bewertung und Minderung von Risiken über den gesamten Lebenszyklus des Systems. Dieser Prozess ist Gegenstand des Praxisleitfadens: <a href="/insights/article-9-risikomanagementsystem-leitfaden.html">Artikel 9 — Risikomanagementsystem Praxisleitfaden</a>.</p>
+<p><strong>Artikel 10 — Daten und Daten-Governance.</strong> Trainings-, Validierungs- und Testdaten müssen Anforderungen an Relevanz, Repräsentativität und Fehlerfreiheit erfüllen. Die Datenhaltung und -nutzung muss dokumentiert werden. Für DACH-Organisationen, die bereits unter den Beschränkungen des Art. 22 DSGVO operieren, lagern sich die Anforderungen des Artikels 10 auf bestehende Datmäßigkeitspflichten auf.</p>
+<p><strong>Artikel 14 — Menschliche Aufsicht.</strong> Das System muss so konzipiert und mit Verfahren betrieben werden, die sicherstellen, dass natürliche Personen den Output des Systems verstehen, überwachen und erforderlichenfalls anhalten oder außer Kraft setzen können. Die Delegation der Aufsicht an einen KI-gestützten Prüfer genügt dieser Anforderung nicht.</p>
+<p><strong>Artikel 17 — Qualitätsmanagementsystem.</strong> Anbieter müssen ein Qualitätsmanagementsystem einführen, das Verantwortlichkeiten, Ressourcenzuweisung, Post-Market-Monitoring und Incident-Handling umfasst. Betreiber sollten dessen Existenz im Rahmen der vertraglichen Sorgfaltspflicht verifizieren.</p>
+<p><strong>Anhang IV — Technische Dokumentation.</strong> Ein strukturiertes Dossier, das Zweck, Fähigkeiten, Einschränkungen, Trainingsdaten, Leistungsmetriken und Risikomanagementmaßnahmen des Systems beschreibt. Es muss vor der Markteinführung vorliegen und aktuell gehalten werden.</p>
+<p><strong>Registrierung (Artikel 71).</strong> Anbieter von Hochrisiko-Systemen müssen das System vor der Markteinführung in der EU-Datenbank registrieren.</p>
+<p><strong>Sanktionen.</strong> Verstöße gegen Pflichten aus Anhang III können nach Artikel 99 mit einem Höchstbetrag von EUR 15 Mio. oder 3 % des weltweiten Jahresumsatzes (je nachdem, welcher Betrag höher ist) geahndet werden.</p>
+<hr>
+<h2>DACH-spezifischer Regulierungsrahmen <a id="dach-spezifischer-regulierungsrahmen"></a></h2>
+<p>DACH-Organisationen agieren nicht in einem Einzel-Regulierungsumfeld. Drei nationale oder europäische Rahmenwerke begründen zusätzliche Pflichten, die mit der Klassifizierung nach Anhang III interagieren.</p>
+<p><strong>BaFin MaRisk AT 9 (deutsche Banken und Versicherer).</strong> MaRisk AT 9 regelt das Auslagerungs-Risikomanagement und verpflichtet Kreditinstitute, Risiken aus Drittbeziehungen — einschließlich Technologiedienstleister — zu bewerten und zu überwachen. Ein von einem Lieferanten bezogenes Anhang-III-KI-System ist nach AT 9 zugleich eine ausgelagerte Funktion, sofern es für regulierte Tätigkeiten wesentlich ist. Die nach AT 9 erforderliche Risikobeurteilung und das Risikomanagementsystem nach Artikel 9 können aufeinander abgestimmt werden, sind jedoch nicht identisch — AT 9 fokussiert auf operative und vertragliche Aspekte; Artikel 9 auf die systemeigenen Risiken der KI. Beide Anforderungen sind gesondert zu erfüllen.</p>
+<p><strong>BfDI-Orientierungshilfe zu HR-KI.</strong> Der Bundesbeauftragte für den Datenschutz und die Informationsfreiheit (BfDI) hat eine Orientierungshilfe veröffentlicht, wonach KI-Systeme im Beschäftigungskontext — insbesondere solche, die Scores oder Rankings erstellen, die Beschäftigte betreffen — eine Datenschutz-Folgenabschätzung nach Art. 35 DSGVO erfordern und die Beschränkungen des Art. 22 DSGVO zu automatisierten Entscheidungen wahrscheinlich auslösen. Diese Orientierungshilfe ist vor Inkrafttreten der EU-KI-Verordnung ergangen, steht jedoch im Einklang mit der Klassifizierung nach Anhang-III-Kategorie 4. Compliance-Beauftragte in DACH-Organisationen sollten ein vom BfDI adressiertes HR-System als vermutlich Anhang-III-relevant behandeln und entsprechend scopen.</p>
+<p><strong>BSI C5 für KI in der öffentlichen Cloud.</strong> Der BSI Cloud Computing Compliance Criteria Catalogue (C5) gilt für Cloud-Dienste, die von deutschen Bundes- und Landesbehörden genutzt werden. Wird ein Anhang-III-KI-System auf einem Cloud-Dienst betrieben, muss die Behörde als Betreiber bestätigen, dass die Cloud-Infrastruktur C5-attestiert ist. Die Anforderungen an die menschliche Aufsicht nach Artikel 14 und die C5-Steuerungsziele zu Verfügbarkeit und Incident-Response sollten gemeinsam geprüft werden.</p>
+<p><strong>Österreich und Schweiz.</strong> Österreichische Organisationen unterliegen zusätzlich dem Datenschutzgesetz 2018 (DSG) sowie für Finanzinstitute FMA-Rundschreiben, die in ihrer Struktur MaRisk AT 9 entsprechen. Schweizer Organisationen, die unter dem nDSG operieren und sich auf den extraterritorialen Geltungsbereich der EU-KI-Verordnung vorbereiten (Systeme, die EU-Personen betreffen), sollten dieselbe Anhang-III-Scoping-Logik anwenden; die FINMA-Orientierungshilfe 05/2024 zu algorithmischen Modellen im Finanzsektor ist das schweizerische Gegenstück zu MaRisk AT 9.</p>
+<hr>
+<h2>Abschluss: Starten Sie mit dem Quick Scan <a id="abschluss-starten-sie-mit-dem-quick-scan"></a></h2>
+<p>Die Klassifizierung nach Anhang III ist keine einmalige Übung. Systeme entwickeln sich weiter, Anwendungsfälle weiten sich aus, und Artikel 7 räumt der Kommission die Befugnis ein, die Liste zu aktualisieren. Organisationen, die eine wiederholbare Scoping-Disziplin aufbauen — anstatt eines einmaligen Audits — werden dies mit deutlich geringerem Non-Compliance-Risiko an den Durchsetzungsstichtagen bewältigen.</p>
+<p>Haben Sie noch kein Inventar Ihrer KI-Systeme anhand der Anhang-III-Kategorien erstellt, bietet der strukturierte 10-Minuten-Quick Scan der EU-KI-Verordnung unter <a href="https://app.ekmgc.de">app.ekmgc.de</a> eine Basisbewertung mit kategoriebezogenem Output.</p>
+<p>Für Organisationen, die potenzielle Anhang-III-Systeme identifiziert haben und eine strukturierte Gap-Analyse gegenüber den Artikeln 9, 10, 14 und 17 benötigen, finden Sie die Beratungsübersicht unter <a href="https://ekmgc.de/eu-ai-act.html">ekmgc.de/eu-ai-act.html</a>.</p>
+<hr>
+<h2>FAQ <a id="faq"></a></h2>
+<p><strong>F1. Muss ein KI-System vollständig automatisierte Entscheidungen treffen, um unter Anhang III zu fallen?</strong>
+Nein. Artikel 3 Abs. 1 der Verordnung (EU) 2024/1689 definiert ein KI-System als maschinenbasiertes System, das mit unterschiedlichem Autonomiegrad ausgelegt ist. Ein System, das eine Empfehlung oder Rangfolge für die menschliche Prüfung erstellt, qualifiziert weiterhin als KI-System. Die entscheidende Frage für Anhang III lautet, ob es unter eine aufgeführte Kategorie fällt und ob der Output eine wesentliche Entscheidung beeinflusst, die natürliche Personen betrifft — nicht, ob die abschließende Maßnahme ohne menschliche Beteiligung erfolgt.</p>
+<p><strong>F2. Wir haben ein System von einem Lieferanten erworben, der erklärt, es sei kein Hochrisiko-System. Sind wir damit abgesichert?</strong>
+Eine Selbstdeklaration des Lieferanten überträgt keine rechtliche Verantwortung. Artikel 26 begründet eigenständige Pflichten für Betreiber, einschließlich der Pflicht, zu verifizieren, dass die Dokumentation des Anbieters vollständig ist und das System in der eingesetzten Form die Anforderungen von Kapitel III Abschnitt 2 erfüllt. Ist die Bewertung des Lieferanten unzutreffend, bleibt Ihre Organisation als Betreiber dem Durchsetzungsrisiko ausgesetzt. Eine vertragliche Freistellungsvereinbarung ersetzt keine regulatorische Compliance.</p>
+<p><strong>F3. Unser HR-Softwareanbieter hat im Rahmen eines Updates KI-Funktionen hinzugefügt. Löst das Anhang III aus?</strong>
+Möglicherweise ja. Wird ein bislang nicht KI-basiertes System wesentlich dahingehend modifiziert, dass es KI-Funktionen umfasst, die unter eine Anhang-III-Kategorie fallen, kann für das aktualisierte System eine erneute Konformitätsbewertung erforderlich sein. Artikel 6 gilt für das System in der eingesetzten Form. Organisationen sollten Anbieter-Update-Hinweise gegen die Anhang-III-Kategorien prüfen und bei Einführung von KI-Funktionen aktualisierte Compliance-Dokumentation anfordern.</p>
+<p><strong>F4. Wir sind ein Schweizer Unternehmen. Gilt Anhang III für uns?</strong>
+Die Schweiz ist kein EU-Mitgliedstaat; die EU-KI-Verordnung gilt dort nicht unmittelbar. Jedoch unterliegt jede Schweizer Organisation, die KI-Systeme betreibt oder bereitstellt, die innerhalb der EU eingesetzt werden — einschließlich Systeme, die von EU-Tochtergesellschaften, EU-Kunden oder EU-Beschäftigten genutzt werden —, den Bestimmungen zum extraterritorialen Geltungsbereich. Für diese Einsatzszenarien gelten dieselben Anhang-III-Kategorien.</p>
+<p><strong>F5. Wie interagiert Anhang III mit dem Verbot vollständig automatisierter Entscheidungen nach Art. 22 DSGVO?</strong>
+Beide Regelwerke ergänzen sich, sind jedoch eigenständig. Art. 22 DSGVO beschränkt automatisierte Entscheidungen, die rechtliche oder ähnlich bedeutsame Wirkungen ohne menschliche Prüfung entfalten; er gilt bereits jetzt. Die Klassifizierung nach Anhang III der EU-KI-Verordnung begründet einen umfassenderen Katalog technischer und organisatorischer Pflichten; er gilt ab August 2026. Ein System der Kategorie 4 (Beschäftigung) oder Kategorie 5 (wesentliche Dienste) wird aller Wahrscheinlichkeit nach beide Regelwerke gleichzeitig berühren. DPIA-Dokumentation, die nach Art. 35 DSGVO erstellt wurde, sollte um die Anhang-III-Klassifizierung und die Anforderungen des Risikomanagementsystems nach Artikel 9 ergänzt werden.</p>
+<p><strong>F6. Was ist der Unterschied zwischen verbotener KI nach Artikel 5 und Hochrisiko-KI nach Anhang III?</strong>
+Artikel 5 listet Praktiken auf, die vollständig verboten sind — darunter biometrische Echtzeit-Fernidentifizierung in öffentlich zugänglichen Räumen (mit engen Ausnahmen), Social Scoring durch Behörden und Manipulation schutzbedürftiger Personen. Diese sind mit der höchsten Sanktion belegt: EUR 35 Mio. oder 7 % des weltweiten Umsatzes. Anhang-III-Systeme sind nicht verboten; sie sind reguliert. Sie dürfen weiterhin betrieben werden, sofern das vollständige Compliance-Regime eingehalten wird. Jedes System, das möglicherweise unter Artikel 5 und Anhang III fällt, ist zunächst auf das Verbot hin zu prüfen.</p>
+<p><strong>F7. Wir betreiben ein KI-System im Produktivbetrieb, das vor August 2024 eingeführt wurde. Gelten die Pflichten aus Anhang III für uns?</strong>
+Ja, vorbehaltlich der Übergangsbestimmungen. Artikel 111 sieht einen gestuften Umsetzungsplan vor. KI-Systeme, die vor dem 2. August 2026 auf dem Markt bereitgestellt oder in Betrieb genommen wurden, müssen ab diesem Datum die Pflichten aus Anhang III erfüllen — es sei denn, sie werden vorher wesentlich modifiziert; in diesem Fall gelten die Compliance-Pflichten ab dem Zeitpunkt der Modifizierung. Der Begriff "wesentliche Modifizierung" ist in Artikel 3 Abs. 23 definiert und umfasst Änderungen, die die Systemleistung für den bestimmungsgemäßen Zweck oder den Personenkreis, an den das System gerichtet ist, beeinflussen.</p>
+<p><strong>F8. Welche Mindestdokumentation sollte Ihr Haus vor August 2026 vorbereiten?</strong>
+Mindestens: (1) ein vollständiges Inventar der genutzten oder bereitgestellten KI-Systeme, zugeordnet zu den acht Anhang-III-Kategorien; (2) eine Rollenbestimmung für jedes System (Anbieter, Betreiber oder beides); (3) für jedes Anhang-III-System einen Entwurf eines Risikomanagementsystems nach Artikel 9; (4) die Technische Dokumentation nach Anhang IV, entweder selbst erstellt oder vom Lieferanten beschafft und verifiziert; (5) Verfahren zur menschlichen Aufsicht nach Artikel 14. Dies ist nicht abschließend — es ist der Mindeststandard für eine glaubwürdige Compliance-Positionierung.</p>
+<hr>
+<h2>Quellen <a id="quellen"></a></h2>
+<ol>
+<li>Verordnung (EU) 2024/1689 des Europäischen Parlaments und des Rates über künstliche Intelligenz (EU-KI-Verordnung). EUR-Lex: <a href="https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX:32024R1689">https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX:32024R1689</a></li>
+<li>EU-KI-Verordnung Anhang III — Hochrisiko-KI-Systeme gemäß Artikel 6 Abs. 2. EUR-Lex (dasselbe Dokument, Anhang III).</li>
+<li>EU AI Office — Überblick zu Hochrisiko-KI-Systemen. <a href="https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai">https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai</a></li>
+<li>BaFin — Mindestanforderungen an das Risikomanagement (MaRisk), AT 9 Auslagerung. <a href="https://www.bafin.de/DE/Aufsicht/BankenFinanzdienstleister/Anforderungen/MaRisk/maRisk_node.html">https://www.bafin.de/DE/Aufsicht/BankenFinanzdienstleister/Anforderungen/MaRisk/maRisk_node.html</a></li>
+<li>BfDI — Stellungnahme zu KI-Systemen im Beschäftigungskontext. <a href="https://www.bfdi.bund.de/DE/Home/home_node.html">https://www.bfdi.bund.de/DE/Home/home_node.html</a></li>
+<li>BSI — Cloud Computing Compliance Criteria Catalogue (C5:2020). <a href="https://www.bsi.bund.de/EN/Themen/Unternehmen-und-Organisationen/Informationen-und-Empfehlungen/Empfehlungen-nach-Angriffszielen/Cloud-Computing/Kriterienkatalog-C5/kriterienkatalog-c5_node.html">https://www.bsi.bund.de/EN/Themen/Unternehmen-und-Organisationen/Informationen-und-Empfehlungen/Empfehlungen-nach-Angriffszielen/Cloud-Computing/Kriterienkatalog-C5/kriterienkatalog-c5_node.html</a></li>
+<li>Europäischer Datenschutzausschuss (EDSA) — Leitlinien zu automatisierten Einzelentscheidungen und Profiling (aktualisierte Fassung). <a href="https://www.edpb.europa.eu/our-work-tools/our-documents/guidelines/guidelines-automated-individual-decision-making-and_en">https://www.edpb.europa.eu/our-work-tools/our-documents/guidelines/guidelines-automated-individual-decision-making-and_en</a></li>
+<li>FINMA — Orientierungshilfe 05/2024 zum Einsatz von KI-Modellen im Finanzsektor (Schweiz). <a href="https://www.finma.ch/en/">https://www.finma.ch/en/</a></li>
+</ol>
+<hr>
+<p><strong>Schema.org-Empfehlung:</strong> Diese Seite mit <code>FAQPage</code>-strukturierten Daten für die acht FAQ-Einträge sowie mit <code>Article</code>-Schema mit <code>author</code> auf die Organisationsentität auszeichnen. Die Vergleichstabelle im Abschnitt zur Scoping-Checkliste profitiert dort, wo das CMS dies unterstützt, von <code>Table</code>-strukturierten Daten.</p>
+<p><strong>Interne Verlinkung:</strong>
+- Dieser Cluster-Artikel verweist auf: <code>/insights/article-9-risikomanagementsystem-leitfaden.html</code> (Pillarseite, Abschnitt 5), <code>https://app.ekmgc.de</code> (CTA), <code>https://ekmgc.de/eu-ai-act.html</code> (CTA).
+- Die Pillarseite sollte in ihrem Abschnitt "Scoping-Voraussetzungen" oder "Vorbedingungen" auf diesen Cluster-Artikel zurückverweisen.
+- Empfohlene künftige Cluster-Artikel mit Verlinkung auf diesen Beitrag: Cluster zu Artikel 10 Daten-Governance; Cluster zu Anhang IV Technische Dokumentation; Cluster zur Intersection von DACH-Beschäftigungs-KI und Art. 22 DSGVO.</p>
+<hr>
+<p><em>EKM Global Consulting GmbH — betrieben von der EKM Global Consulting GmbH, Baden-Baden, gegründet im Januar 2013. Autor: Elshan Musayev, <a href="https://www.linkedin.com/in/elshan-musayev/">LinkedIn</a>. Dieser Beitrag stellt keine Rechtsberatung dar.</em></p>
+    </article>
+  </section>
+
+  <!-- ============ RELATED ============ -->
+  <section class="container">
+    <div class="insight-related">
+      <h3>Verwandte Beiträge</h3>
+      <p class="insight-related__alt"><a href="/insights/annex-iii-scoping-checklist.html">Read in English →</a></p>
+      <ul>
+    <li><a href="article-9-risikomanagementsystem-leitfaden.html"><strong>EU-KI-Verordnung Artikel 9 — Risikomanagementsystem: Praxisleitfaden</strong></a><span class="insight-related__desc">Praxisleitfaden zu Artikel 9 der Verordnung (EU) 2024/1689: der vierstufige iterative Zyklus, Dokumentationspflichten, Lebenszyklus-Charakter und DACH-spezifisc…</span></li>
+  </ul>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__copy">&copy; 2026 EKM Global Consulting GmbH. Baden-Baden, Germany. Founded 2013.</div>
+      <ul class="footer__links" role="list">
+        <li><a href="/insights/">Insights</a></li>
+        <li><a href="/eu-ai-act.html">EU AI Act</a></li>
+        <li><a href="https://app.ekmgc.de" rel="noopener">Quick Scan</a></li>
+        <li><a href="mailto:elshan.musayev@ekmgc.de">Contact</a></li>
+      </ul>
+      <div class="footer__social">
+        <a href="https://www.linkedin.com/company/ekm-global-consulting-gmbh/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
